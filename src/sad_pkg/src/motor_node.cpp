@@ -90,6 +90,11 @@ private:
             return;
         }
 
+        RCLCPP_INFO(this->get_logger(),
+        "[/joint_velocity] Received: [%.3f %.3f %.3f %.3f %.3f %.3f]",
+        msg->data[0], msg->data[1], msg->data[2],
+        msg->data[3], msg->data[4], msg->data[5]);
+
         std::vector<double> dc_vals(msg->data.begin(), msg->data.begin() + 4); // STM32에 4개 전달
         sendToSTM32(dc_vals);
 

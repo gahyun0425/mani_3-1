@@ -130,6 +130,8 @@ CMakeFiles/my_vision_msgs: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stampe
 CMakeFiles/my_vision_msgs: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 CMakeFiles/my_vision_msgs: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 CMakeFiles/my_vision_msgs: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
+CMakeFiles/my_vision_msgs: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+CMakeFiles/my_vision_msgs: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 
 my_vision_msgs: CMakeFiles/my_vision_msgs
 my_vision_msgs: CMakeFiles/my_vision_msgs.dir/build.make

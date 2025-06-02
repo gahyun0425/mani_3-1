@@ -262,6 +262,69 @@ map_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map_node.dir/build.make CMakeFiles/map_node.dir/build
 .PHONY : map_node/fast
 
+#=============================================================================
+# Target rules for targets named path_node
+
+# Build rule for target.
+path_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 path_node
+.PHONY : path_node
+
+# fast build rule for target.
+path_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/build
+.PHONY : path_node/fast
+
+#=============================================================================
+# Target rules for targets named Inverse_node
+
+# Build rule for target.
+Inverse_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Inverse_node
+.PHONY : Inverse_node
+
+# fast build rule for target.
+Inverse_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Inverse_node.dir/build.make CMakeFiles/Inverse_node.dir/build
+.PHONY : Inverse_node/fast
+
+#=============================================================================
+# Target rules for targets named motor_node
+
+# Build rule for target.
+motor_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor_node
+.PHONY : motor_node
+
+# fast build rule for target.
+motor_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_node.dir/build.make CMakeFiles/motor_node.dir/build
+.PHONY : motor_node/fast
+
+src/Inverse_node.o: src/Inverse_node.cpp.o
+.PHONY : src/Inverse_node.o
+
+# target to build an object file
+src/Inverse_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Inverse_node.dir/build.make CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o
+.PHONY : src/Inverse_node.cpp.o
+
+src/Inverse_node.i: src/Inverse_node.cpp.i
+.PHONY : src/Inverse_node.i
+
+# target to preprocess a source file
+src/Inverse_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Inverse_node.dir/build.make CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.i
+.PHONY : src/Inverse_node.cpp.i
+
+src/Inverse_node.s: src/Inverse_node.cpp.s
+.PHONY : src/Inverse_node.s
+
+# target to generate assembly for a file
+src/Inverse_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Inverse_node.dir/build.make CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.s
+.PHONY : src/Inverse_node.cpp.s
+
 src/forward_node.o: src/forward_node.cpp.o
 .PHONY : src/forward_node.o
 
@@ -310,6 +373,30 @@ src/map_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map_node.dir/build.make CMakeFiles/map_node.dir/src/map_node.cpp.s
 .PHONY : src/map_node.cpp.s
 
+src/motor_node.o: src/motor_node.cpp.o
+.PHONY : src/motor_node.o
+
+# target to build an object file
+src/motor_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_node.dir/build.make CMakeFiles/motor_node.dir/src/motor_node.cpp.o
+.PHONY : src/motor_node.cpp.o
+
+src/motor_node.i: src/motor_node.cpp.i
+.PHONY : src/motor_node.i
+
+# target to preprocess a source file
+src/motor_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_node.dir/build.make CMakeFiles/motor_node.dir/src/motor_node.cpp.i
+.PHONY : src/motor_node.cpp.i
+
+src/motor_node.s: src/motor_node.cpp.s
+.PHONY : src/motor_node.s
+
+# target to generate assembly for a file
+src/motor_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_node.dir/build.make CMakeFiles/motor_node.dir/src/motor_node.cpp.s
+.PHONY : src/motor_node.cpp.s
+
 src/obstacle_node.o: src/obstacle_node.cpp.o
 .PHONY : src/obstacle_node.o
 
@@ -333,6 +420,30 @@ src/obstacle_node.s: src/obstacle_node.cpp.s
 src/obstacle_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_node.dir/build.make CMakeFiles/obstacle_node.dir/src/obstacle_node.cpp.s
 .PHONY : src/obstacle_node.cpp.s
+
+src/path_node.o: src/path_node.cpp.o
+.PHONY : src/path_node.o
+
+# target to build an object file
+src/path_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.o
+.PHONY : src/path_node.cpp.o
+
+src/path_node.i: src/path_node.cpp.i
+.PHONY : src/path_node.i
+
+# target to preprocess a source file
+src/path_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.i
+.PHONY : src/path_node.cpp.i
+
+src/path_node.s: src/path_node.cpp.s
+.PHONY : src/path_node.s
+
+# target to generate assembly for a file
+src/path_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.s
+.PHONY : src/path_node.cpp.s
 
 src/rrt_node.o: src/rrt_node.cpp.o
 .PHONY : src/rrt_node.o
@@ -397,20 +508,32 @@ help:
 	@echo "... test"
 	@echo "... sad_pkg_uninstall"
 	@echo "... uninstall"
+	@echo "... Inverse_node"
 	@echo "... forward_node"
 	@echo "... map_node"
+	@echo "... motor_node"
 	@echo "... obstacle_node"
+	@echo "... path_node"
 	@echo "... rrt_node"
 	@echo "... spline_node"
+	@echo "... src/Inverse_node.o"
+	@echo "... src/Inverse_node.i"
+	@echo "... src/Inverse_node.s"
 	@echo "... src/forward_node.o"
 	@echo "... src/forward_node.i"
 	@echo "... src/forward_node.s"
 	@echo "... src/map_node.o"
 	@echo "... src/map_node.i"
 	@echo "... src/map_node.s"
+	@echo "... src/motor_node.o"
+	@echo "... src/motor_node.i"
+	@echo "... src/motor_node.s"
 	@echo "... src/obstacle_node.o"
 	@echo "... src/obstacle_node.i"
 	@echo "... src/obstacle_node.s"
+	@echo "... src/path_node.o"
+	@echo "... src/path_node.i"
+	@echo "... src/path_node.s"
 	@echo "... src/rrt_node.o"
 	@echo "... src/rrt_node.i"
 	@echo "... src/rrt_node.s"

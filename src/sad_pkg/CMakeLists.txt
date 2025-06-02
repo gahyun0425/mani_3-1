@@ -25,6 +25,9 @@ find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(control_msgs REQUIRED)
+find_package(serial REQUIRED)
+find_package(dynamixel_sdk REQUIRED)
+
 
 include_directories(${EIGEN3_INCLUDE_DIRS}
     ${rclcpp_INCLUDE_DIRS}
@@ -54,8 +57,7 @@ ament_target_dependencies(path_node rclcpp geometry_msgs std_msgs visualization_
   tf2_geometry_msgs)
 ament_target_dependencies(Inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs my_vision_msgs rosidl_default_runtime tf2
   tf2_geometry_msgs)
-ament_target_dependencies(motor_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs my_vision_msgs rosidl_default_runtime tf2
-  tf2_geometry_msgs)
+ament_target_dependencies(motor_node rclcpp std_msgs serial dynamixel_sdk)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

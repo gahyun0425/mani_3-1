@@ -111,10 +111,6 @@ rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/hu
 rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/rosgraph_msgs/msg/Clock.idl
-rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/statistics_msgs/msg/MetricsMessage.idl
-rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataPoint.idl
-rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataType.idl
 rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_c/my_vision_msgs/msg/crop_pose__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -229,11 +225,7 @@ libmy_vision_msgs__rosidl_typesupport_c.so: CMakeFiles/my_vision_msgs__rosidl_ty
 libmy_vision_msgs__rosidl_typesupport_c.so: CMakeFiles/my_vision_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_vision_msgs/msg/harvest_ordering__type_support.cpp.o
 libmy_vision_msgs__rosidl_typesupport_c.so: CMakeFiles/my_vision_msgs__rosidl_typesupport_c.dir/build.make
 libmy_vision_msgs__rosidl_typesupport_c.so: libmy_vision_msgs__rosidl_generator_c.so
-libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
-libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
 libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
-libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
-libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
 libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 libmy_vision_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_typesupport_c.so

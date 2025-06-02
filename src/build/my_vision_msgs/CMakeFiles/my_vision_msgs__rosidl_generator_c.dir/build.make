@@ -118,10 +118,6 @@ rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/std_msg
 rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/rosgraph_msgs/msg/Clock.idl
-rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/statistics_msgs/msg/MetricsMessage.idl
-rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataPoint.idl
-rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataType.idl
 rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_c/my_vision_msgs/msg/crop_pose.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -283,8 +279,6 @@ libmy_vision_msgs__rosidl_generator_c.so: CMakeFiles/my_vision_msgs__rosidl_gene
 libmy_vision_msgs__rosidl_generator_c.so: CMakeFiles/my_vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/my_vision_msgs/msg/detail/detected_crop_array__functions.c.o
 libmy_vision_msgs__rosidl_generator_c.so: CMakeFiles/my_vision_msgs__rosidl_generator_c.dir/rosidl_generator_c/my_vision_msgs/msg/detail/harvest_ordering__functions.c.o
 libmy_vision_msgs__rosidl_generator_c.so: CMakeFiles/my_vision_msgs__rosidl_generator_c.dir/build.make
-libmy_vision_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
-libmy_vision_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 libmy_vision_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libmy_vision_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 libmy_vision_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so

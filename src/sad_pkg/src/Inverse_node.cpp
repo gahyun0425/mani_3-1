@@ -180,6 +180,8 @@ public:
             "/joint_trajectory_controller/joint_trajectory", 10
         );
 
+        joint_vel_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/joint_velocity", 10);
+
         // 4) 주기적으로 IK 계산할 타이머(100ms)
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(10),
@@ -193,6 +195,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr     path_sub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr         joint_state_sub_;
     rclcpp::TimerBase::SharedPtr                                          timer_;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr joint_vel_pub_;
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -391,6 +394,15 @@ private:
             // 속도가 제한 범위를 벗어나지 않도록 클램핑
             q_dot(i) = std::max(min_limit, std::min(max_limit, q_dot(i)));
         }
+
+        // q_dot를 Float64MultiArray로 publish
+        std_msgs::msg::Float64MultiArray dq_msg;
+        dq_msg.data.resize(6);
+        for (int i = 0; i < 6; ++i) {
+            dq_msg.data[i] = q_dot(i);
+        }
+        joint_vel_pub_->publish(dq_msg);
+
 
         // 1) JointTrajectory 퍼블리시
         sendJointTrajectory(next_q, current_joint_angles_, dt);

@@ -113,10 +113,6 @@ rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesu
 rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/rosgraph_msgs/msg/Clock.idl
-rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/statistics_msgs/msg/MetricsMessage.idl
-rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataPoint.idl
-rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataType.idl
 rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -243,11 +239,7 @@ libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/my_vision_msgs__
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/my_vision_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_vision_msgs/msg/detail/harvest_ordering__type_support_c.cpp.o
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/my_vision_msgs__rosidl_typesupport_fastrtps_c.dir/build.make
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: libmy_vision_msgs__rosidl_generator_c.so
-libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
-libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
-libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
-libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so

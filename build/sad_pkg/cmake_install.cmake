@@ -210,7 +210,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/motor_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/motor_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/serial/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/motor_node")

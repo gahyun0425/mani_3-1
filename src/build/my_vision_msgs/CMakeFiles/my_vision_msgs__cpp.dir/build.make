@@ -139,10 +139,6 @@ rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/std
 rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/rosgraph_msgs/msg/Clock.idl
-rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/statistics_msgs/msg/MetricsMessage.idl
-rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataPoint.idl
-rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/statistics_msgs/msg/StatisticDataType.idl
 rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/my_vision_msgs/msg/crop_pose.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
