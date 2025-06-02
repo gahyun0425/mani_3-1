@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from vision_msgs/msg/CropPose.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module vision_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "작물의 3D 포즈 정보")
+    struct CropPose {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "작물 ID (감지된 작물과 매칭)")
+      uint32 crop_id;
+
+      @verbatim (language="comment", text=
+        "3D 위치")
+      geometry_msgs::msg::Point cutting_point;
+
+      @verbatim (language="comment", text=
+        "신뢰도")
+      float confidence;
+    };
+  };
+};

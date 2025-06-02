@@ -1,0 +1,11 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::sendJointTrajectory(const VectorXd&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:262:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_dot[m[K’ was not declared in this scope
+  262 |         pt.velocities = std::vector<double>([01;31m[Kq_dot[m[K.data(), q_dot.data()+q_dot.size());
+      |                                             [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:263:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope; did you mean ‘[01m[Kd7[m[K’?
+  263 |         pt.time_from_start = rclcpp::Duration::from_seconds([01;31m[Kdt[m[K);
+      |                                                             [01;31m[K^~[m[K
+      |                                                             [32m[Kd7[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

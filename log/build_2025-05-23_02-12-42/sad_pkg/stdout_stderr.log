@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 71%] Built target spline_node
+[ 71%] Built target obstacle_node
+[ 71%] Built target map_node
+[ 85%] Built target path_node
+[ 85%] Built target forward_node
+[ 85%] Built target rrt_node
+[ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timer_callback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:290:18:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kposition_error[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  290 |         Vector3d [01;35m[Kposition_error[m[K = target_position_ - current_position_;
+      |                  [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d, Eigen::Vector3d)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:453:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kposition_error[m[K’ was not declared in this scope; did you mean ‘[01m[Korientation_error[m[K’?
+  453 |         if ([01;31m[Kposition_error[m[K.norm() < position_deadband && orientation_error.norm() < orientation_deadband)
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+      |             [32m[Korientation_error[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:463:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kposition_error[m[K’ was not declared in this scope; did you mean ‘[01m[Korientation_error[m[K’?
+  463 |         u_feedback.head<3>() = K_p_position * [01;31m[Kposition_error[m[K;
+      |                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                               [32m[Korientation_error[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:412:53:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_position[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  412 |     VectorXd computeFeedbackVelocity([01;35m[Kconst Vector3d target_position[m[K, const Vector3d target_orientation)
+      |                                      [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

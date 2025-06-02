@@ -1,0 +1,794 @@
+[0.000000] (-) TimerEvent: {}
+[0.000625] (mani_urdf) JobQueued: {'identifier': 'mani_urdf', 'dependencies': OrderedDict()}
+[0.000762] (my_vision_msgs) JobQueued: {'identifier': 'my_vision_msgs', 'dependencies': OrderedDict()}
+[0.000820] (sad_pkg) JobQueued: {'identifier': 'sad_pkg', 'dependencies': OrderedDict([('my_vision_msgs', '/home/gaga/sad_ws/install/my_vision_msgs')])}
+[0.000841] (my_vision_msgs) JobStarted: {'identifier': 'my_vision_msgs'}
+[0.005385] (mani_urdf) JobStarted: {'identifier': 'mani_urdf'}
+[0.009402] (my_vision_msgs) JobProgress: {'identifier': 'my_vision_msgs', 'progress': 'cmake'}
+[0.009720] (my_vision_msgs) JobProgress: {'identifier': 'my_vision_msgs', 'progress': 'build'}
+[0.010216] (my_vision_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/my_vision_msgs', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/my_vision_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/my_vision_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.013034] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'cmake'}
+[0.013124] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'build'}
+[0.013175] (mani_urdf) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/mani_urdf', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/mani_urdf', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/mani_urdf'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.046694] (mani_urdf) CommandEnded: {'returncode': 0}
+[0.047399] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'install'}
+[0.055409] (mani_urdf) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/mani_urdf'], 'cwd': '/home/gaga/sad_ws/build/mani_urdf', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/mani_urdf'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.059329] (my_vision_msgs) StdoutLine: {'line': b'[  1%] Built target my_vision_msgs__cpp\n'}
+[0.059834] (my_vision_msgs) StdoutLine: {'line': b'[ 12%] Built target my_vision_msgs__rosidl_generator_c\n'}
+[0.062489] (mani_urdf) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.062773] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description\n'}
+[0.062912] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_robot.urdf.xacro\n'}
+[0.062963] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh\n'}
+[0.062996] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/before.zip\n'}
+[0.063024] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link3.stl\n'}
+[0.063053] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link1.stl\n'}
+[0.063080] (my_vision_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_my_vision_msgs\n'}
+[0.063114] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link5.stl\n'}
+[0.063142] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link6.stl\n'}
+[0.063170] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link7.stl\n'}
+[0.063199] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link2.stl\n'}
+[0.063225] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link4.stl\n'}
+[0.063251] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/endeffector.stl\n'}
+[0.063277] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link5_1.stl\n'}
+[0.063305] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_gazebo.xacro\n'}
+[0.063332] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_include.xacro\n'}
+[0.063359] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch\n'}
+[0.063388] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch/rsp.launch.py\n'}
+[0.063415] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch/rsp_sim.launch.py\n'}
+[0.063444] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/worlds\n'}
+[0.063471] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/worlds/test_world.world\n'}
+[0.063686] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/config\n'}
+[0.063825] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/config/gazebo_controll.yaml\n'}
+[0.063917] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/package_run_dependencies/mani_urdf\n'}
+[0.064019] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/parent_prefix_path/mani_urdf\n'}
+[0.064103] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/ament_prefix_path.sh\n'}
+[0.064183] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/ament_prefix_path.dsv\n'}
+[0.064263] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/path.sh\n'}
+[0.064483] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/path.dsv\n'}
+[0.064845] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.bash\n'}
+[0.065514] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.sh\n'}
+[0.065740] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.zsh\n'}
+[0.065897] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.dsv\n'}
+[0.066013] (mani_urdf) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/package.dsv\n'}
+[0.066087] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/packages/mani_urdf\n'}
+[0.066157] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/cmake/mani_urdfConfig.cmake\n'}
+[0.066225] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/cmake/mani_urdfConfig-version.cmake\n'}
+[0.066294] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/package.xml\n'}
+[0.066361] (mani_urdf) CommandEnded: {'returncode': 0}
+[0.077261] (my_vision_msgs) StdoutLine: {'line': b'[ 23%] Built target my_vision_msgs__rosidl_typesupport_cpp\n'}
+[0.077601] (my_vision_msgs) StdoutLine: {'line': b'[ 34%] Built target my_vision_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.079236] (mani_urdf) JobEnded: {'identifier': 'mani_urdf', 'rc': 0}
+[0.080104] (my_vision_msgs) StdoutLine: {'line': b'[ 45%] Built target my_vision_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.080730] (my_vision_msgs) StdoutLine: {'line': b'[ 56%] Built target my_vision_msgs__rosidl_typesupport_introspection_c\n'}
+[0.081093] (my_vision_msgs) StdoutLine: {'line': b'[ 67%] Built target my_vision_msgs__rosidl_typesupport_c\n'}
+[0.085629] (my_vision_msgs) StdoutLine: {'line': b'[ 78%] Built target my_vision_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.100017] (-) TimerEvent: {}
+[0.102422] (my_vision_msgs) StdoutLine: {'line': b'[ 78%] Built target my_vision_msgs\n'}
+[0.127593] (my_vision_msgs) StdoutLine: {'line': b'[ 80%] Built target my_vision_msgs__py\n'}
+[0.147998] (my_vision_msgs) StdoutLine: {'line': b'[ 89%] Built target my_vision_msgs__rosidl_generator_py\n'}
+[0.169032] (my_vision_msgs) StdoutLine: {'line': b'[ 92%] Built target my_vision_msgs__rosidl_typesupport_c__pyext\n'}
+[0.170226] (my_vision_msgs) StdoutLine: {'line': b'[ 96%] Built target my_vision_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.170409] (my_vision_msgs) StdoutLine: {'line': b'[100%] Built target my_vision_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.200120] (-) TimerEvent: {}
+[0.228577] (my_vision_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.229095] (my_vision_msgs) StdoutLine: {'line': b'writing my_vision_msgs.egg-info/PKG-INFO\n'}
+[0.229280] (my_vision_msgs) StdoutLine: {'line': b'writing dependency_links to my_vision_msgs.egg-info/dependency_links.txt\n'}
+[0.229393] (my_vision_msgs) StdoutLine: {'line': b'writing top-level names to my_vision_msgs.egg-info/top_level.txt\n'}
+[0.231296] (my_vision_msgs) StdoutLine: {'line': b"reading manifest file 'my_vision_msgs.egg-info/SOURCES.txt'\n"}
+[0.231581] (my_vision_msgs) StdoutLine: {'line': b"writing manifest file 'my_vision_msgs.egg-info/SOURCES.txt'\n"}
+[0.255727] (my_vision_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_my_vision_msgs_egg\n'}
+[0.264661] (my_vision_msgs) CommandEnded: {'returncode': 0}
+[0.265414] (my_vision_msgs) JobProgress: {'identifier': 'my_vision_msgs', 'progress': 'install'}
+[0.265578] (my_vision_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/my_vision_msgs'], 'cwd': '/home/gaga/sad_ws/build/my_vision_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/my_vision_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.274184] (my_vision_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.274355] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/rosidl_interfaces/my_vision_msgs\n'}
+[0.274553] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.274729] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.274840] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop.h\n'}
+[0.275034] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.275255] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/crop_pose.h\n'}
+[0.275353] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/harvest_ordering.h\n'}
+[0.275525] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.275620] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__functions.c\n'}
+[0.275704] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__struct.h\n'}
+[0.275856] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__functions.c\n'}
+[0.275957] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__struct.h\n'}
+[0.276049] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__functions.c\n'}
+[0.276165] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__struct.h\n'}
+[0.276273] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__struct.h\n'}
+[0.276366] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__functions.h\n'}
+[0.276470] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.h\n'}
+[0.276666] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__functions.h\n'}
+[0.276777] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.h\n'}
+[0.276906] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__functions.c\n'}
+[0.276964] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.h\n'}
+[0.276998] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__functions.h\n'}
+[0.277025] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__functions.h\n'}
+[0.277074] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.h\n'}
+[0.277110] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop_array.h\n'}
+[0.277148] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/library_path.sh\n'}
+[0.277184] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/library_path.dsv\n'}
+[0.277220] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_generator_c.so\n'}
+[0.277257] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.277291] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.277328] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.277366] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.277403] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.277439] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.277476] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_fastrtps_c.h\n'}
+[0.277509] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_fastrtps_c.h\n'}
+[0.277551] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.277587] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.277623] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.277659] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.277694] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop.hpp\n'}
+[0.277736] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/harvest_ordering.hpp\n'}
+[0.277770] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop_array.hpp\n'}
+[0.277806] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.277842] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__builder.hpp\n'}
+[0.277881] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__traits.hpp\n'}
+[0.277909] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__builder.hpp\n'}
+[0.277937] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__struct.hpp\n'}
+[0.277975] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__struct.hpp\n'}
+[0.278006] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.hpp\n'}
+[0.278040] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__builder.hpp\n'}
+[0.278075] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.hpp\n'}
+[0.278103] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__builder.hpp\n'}
+[0.278138] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__struct.hpp\n'}
+[0.278169] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__struct.hpp\n'}
+[0.278211] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.hpp\n'}
+[0.278246] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__traits.hpp\n'}
+[0.278281] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__traits.hpp\n'}
+[0.278316] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.hpp\n'}
+[0.278355] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__traits.hpp\n'}
+[0.278387] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/crop_pose.hpp\n'}
+[0.278423] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.278457] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.278491] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.278525] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.278560] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.278589] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/dds_fastrtps\n'}
+[0.278615] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.278639] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.278664] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.278688] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.278717] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.278743] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.278769] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.278797] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.278828] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.c\n'}
+[0.278862] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.c\n'}
+[0.278893] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.c\n'}
+[0.278921] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_introspection_c.h\n'}
+[0.278948] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_introspection_c.h\n'}
+[0.278972] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.c\n'}
+[0.278999] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.279023] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_introspection_c.h\n'}
+[0.279047] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.279071] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_c.so\n'}
+[0.279096] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.279121] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.279148] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.279171] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.cpp\n'}
+[0.279195] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.279218] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.279242] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.cpp\n'}
+[0.279266] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.279289] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.cpp\n'}
+[0.279312] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.cpp\n'}
+[0.279337] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.279363] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.279387] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_cpp.so\n'}
+[0.279412] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/pythonpath.sh\n'}
+[0.279436] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/pythonpath.dsv\n'}
+[0.279460] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info\n'}
+[0.279485] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.279511] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[0.279538] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[0.279563] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.279588] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs\n'}
+[0.279612] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/_my_vision_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.279636] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/libmy_vision_msgs__rosidl_generator_py.so\n'}
+[0.279661] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/__init__.py\n'}
+[0.279685] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg\n'}
+[0.279720] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_harvest_ordering_s.c\n'}
+[0.279756] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/__init__.py\n'}
+[0.279789] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop_s.c\n'}
+[0.279814] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_crop_pose.py\n'}
+[0.279837] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop_array_s.c\n'}
+[0.279861] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop_array.py\n'}
+[0.279884] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_crop_pose_s.c\n'}
+[0.279913] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_harvest_ordering.py\n'}
+[0.279945] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop.py\n'}
+[0.279969] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.280007] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/_my_vision_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.280044] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.280075] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.280108] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/_my_vision_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.300219] (-) TimerEvent: {}
+[0.302815] (my_vision_msgs) StdoutLine: {'line': b"Listing '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs'...\n"}
+[0.303000] (my_vision_msgs) StdoutLine: {'line': b"Listing '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg'...\n"}
+[0.306179] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.306367] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.306588] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.306781] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_generator_py.so\n'}
+[0.306886] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/CropPose.idl\n'}
+[0.307015] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCrop.idl\n'}
+[0.307070] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCropArray.idl\n'}
+[0.307120] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/HarvestOrdering.idl\n'}
+[0.307218] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/CropPose.msg\n'}
+[0.307273] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCrop.msg\n'}
+[0.307318] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCropArray.msg\n'}
+[0.307358] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/HarvestOrdering.msg\n'}
+[0.307400] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/package_run_dependencies/my_vision_msgs\n'}
+[0.307510] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/parent_prefix_path/my_vision_msgs\n'}
+[0.307567] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/ament_prefix_path.sh\n'}
+[0.307623] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/ament_prefix_path.dsv\n'}
+[0.307674] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/path.sh\n'}
+[0.307733] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/path.dsv\n'}
+[0.307785] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.bash\n'}
+[0.307834] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.sh\n'}
+[0.307883] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.zsh\n'}
+[0.307933] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.dsv\n'}
+[0.308035] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/package.dsv\n'}
+[0.308089] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/packages/my_vision_msgs\n'}
+[0.308140] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_cExport.cmake\n'}
+[0.308222] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.308271] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.308337] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.308389] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.308439] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.308489] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.308540] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.308589] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.308639] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.308689] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.308744] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.308807] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.308857] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.308906] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.308997] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.309044] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.309084] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.309123] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.309167] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.309208] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.309251] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.309292] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.309331] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.309370] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgsConfig.cmake\n'}
+[0.309406] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgsConfig-version.cmake\n'}
+[0.309444] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/package.xml\n'}
+[0.310863] (my_vision_msgs) CommandEnded: {'returncode': 0}
+[0.319448] (my_vision_msgs) JobEnded: {'identifier': 'my_vision_msgs', 'rc': 0}
+[0.320039] (sad_pkg) JobStarted: {'identifier': 'sad_pkg'}
+[0.327835] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'cmake'}
+[0.328347] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'build'}
+[0.328582] (sad_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/sad_pkg', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/sad_pkg', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/sad_pkg'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.380842] (sad_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Inverse_node\x1b[0m\n'}
+[0.387442] (sad_pkg) StdoutLine: {'line': b'[ 14%] Built target obstacle_node\n'}
+[0.387831] (sad_pkg) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/path_node.dir/src/path_node.cpp.o\x1b[0m\n'}
+[0.387946] (sad_pkg) StdoutLine: {'line': b'[ 35%] Built target forward_node\n'}
+[0.388071] (sad_pkg) StdoutLine: {'line': b'[ 50%] Built target map_node\n'}
+[0.390607] (sad_pkg) StdoutLine: {'line': b'[ 64%] Built target spline_node\n'}
+[0.391006] (sad_pkg) StdoutLine: {'line': b'[ 78%] Built target rrt_node\n'}
+[0.396463] (sad_pkg) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o\x1b[0m\n'}
+[0.400311] (-) TimerEvent: {}
+[0.500715] (-) TimerEvent: {}
+[0.600997] (-) TimerEvent: {}
+[0.701314] (-) TimerEvent: {}
+[0.801592] (-) TimerEvent: {}
+[0.901886] (-) TimerEvent: {}
+[1.002202] (-) TimerEvent: {}
+[1.102582] (-) TimerEvent: {}
+[1.202887] (-) TimerEvent: {}
+[1.303239] (-) TimerEvent: {}
+[1.403635] (-) TimerEvent: {}
+[1.504056] (-) TimerEvent: {}
+[1.604296] (-) TimerEvent: {}
+[1.704579] (-) TimerEvent: {}
+[1.804928] (-) TimerEvent: {}
+[1.905294] (-) TimerEvent: {}
+[2.005659] (-) TimerEvent: {}
+[2.106029] (-) TimerEvent: {}
+[2.206302] (-) TimerEvent: {}
+[2.282643] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:242:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmarker_pub_\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[2.282872] (sad_pkg) StderrLine: {'line': b'  242 |         \x1b[01;31m\x1b[Kmarker_pub_\x1b[m\x1b[K->publish(ma);\n'}
+[2.282914] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.283076] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:245:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.283124] (sad_pkg) StderrLine: {'line': b'  245 |         \x1b[01;31m\x1b[Kif\x1b[m\x1b[K (!path_published_ && splineCP_.size() >= static_cast<size_t>(splineDegree_ + 1)) {\n'}
+[2.283155] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.283181] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:250:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 after class definition\n'}
+[2.283207] (sad_pkg) StderrLine: {'line': b'  250 |     }\n'}
+[2.283232] (sad_pkg) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.283256] (sad_pkg) StderrLine: {'line': b'      |      \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[2.283279] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRSNode::RSNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.283304] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:33:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KRSNode\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[Kgen_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.283331] (sad_pkg) StderrLine: {'line': b'   33 |       \x1b[01;31m\x1b[Kgen_\x1b[m\x1b[K(42),              // \xeb\x82\x9c\xec\x88\x98 \xec\x83\x9d\xec\x84\xb1\xea\xb8\xb0 \xec\x8b\x9c\xeb\x93\x9c \xea\xb3\xa0\xec\xa0\x95\n'}
+[2.283356] (sad_pkg) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.283380] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:34:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KRSNode\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[Kfirst_plan_done_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.283405] (sad_pkg) StderrLine: {'line': b'   34 |       \x1b[01;31m\x1b[Kfirst_plan_done_\x1b[m\x1b[K(false), // \xec\xb5\x9c\xec\xb4\x88 \xec\x8b\xa4\xed\x96\x89 \xec\x97\xac\xeb\xb6\x80 \xed\x94\x8c\xeb\x9e\x98\xea\xb7\xb8\n'}
+[2.283429] (sad_pkg) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.283452] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:35:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KRSNode\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[Kpath_published_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.283477] (sad_pkg) StderrLine: {'line': b'   35 |       \x1b[01;31m\x1b[Kpath_published_\x1b[m\x1b[K(false)\n'}
+[2.283500] (sad_pkg) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.289426] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:40:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kobstacle_sub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.289583] (sad_pkg) StderrLine: {'line': b'   40 |         \x1b[01;31m\x1b[Kobstacle_sub_\x1b[m\x1b[K = this->create_subscription<my_vision_msgs::msg::HarvestOrdering>(\n'}
+[2.289623] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.306441] (-) TimerEvent: {}
+[2.325198] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:46:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmarker_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.325433] (sad_pkg) StderrLine: {'line': b'   46 |         \x1b[01;31m\x1b[Kmarker_pub_\x1b[m\x1b[K = this->create_publisher<visualization_msgs::msg::MarkerArray>(\n'}
+[2.325521] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.332298] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:51:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpath_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.332575] (sad_pkg) StderrLine: {'line': b'   51 |         \x1b[01;31m\x1b[Kpath_pub_\x1b[m\x1b[K = this->create_publisher<geometry_msgs::msg::PoseArray>(\n'}
+[2.332664] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.339152] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:56:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.339434] (sad_pkg) StderrLine: {'line': b'   56 |         \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(\n'}
+[2.339526] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.339605] (sad_pkg) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[2.349234] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:61:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.349469] (sad_pkg) StderrLine: {'line': b'   61 |         \x1b[01;31m\x1b[Kstart_\x1b[m\x1b[K = makePoint(0.1435, 0.0, 0.976);\n'}
+[2.349552] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.354110] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:61:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KmakePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.354341] (sad_pkg) StderrLine: {'line': b'   61 |         start_ = \x1b[01;31m\x1b[KmakePoint\x1b[m\x1b[K(0.1435, 0.0, 0.976);\n'}
+[2.354431] (sad_pkg) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.357677] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:62:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.357872] (sad_pkg) StderrLine: {'line': b'   62 |         \x1b[01;31m\x1b[Kgoal_\x1b[m\x1b[K  = makePoint(0.6,    0.0, 0.57);\n'}
+[2.357916] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.365384] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RSNode::obstacleCallback(my_vision_msgs::msg::HarvestOrdering_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.365505] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:77:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kobstacles_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kobstack\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.365548] (sad_pkg) StderrLine: {'line': b'   77 |         \x1b[01;31m\x1b[Kobstacles_\x1b[m\x1b[K.clear();\n'}
+[2.365579] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.365604] (sad_pkg) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kobstack\x1b[m\x1b[K\n'}
+[2.370934] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:79:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KmakePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.371077] (sad_pkg) StderrLine: {'line': b'   79 |             auto pt = \x1b[01;31m\x1b[KmakePoint\x1b[m\x1b[K(obj.x, obj.y, obj.z);\n'}
+[2.371112] (sad_pkg) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.379659] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:86:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfirst_plan_done_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.379949] (sad_pkg) StderrLine: {'line': b'   86 |         if (!\x1b[01;31m\x1b[Kfirst_plan_done_\x1b[m\x1b[K) {\n'}
+[2.380059] (sad_pkg) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.387821] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RSNode::planRRTstar()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.388021] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:113:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knodes_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.388116] (sad_pkg) StderrLine: {'line': b'  113 |         \x1b[01;31m\x1b[Knodes_\x1b[m\x1b[K.clear();\n'}
+[2.388198] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.388281] (sad_pkg) StderrLine: {'line': b'      |         \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[2.392829] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:114:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.393052] (sad_pkg) StderrLine: {'line': b'  114 |         nodes_.push_back({ \x1b[01;31m\x1b[Kstart_\x1b[m\x1b[K, -1, 0.0 });\n'}
+[2.393161] (sad_pkg) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.396574] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:120:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgen_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.396815] (sad_pkg) StderrLine: {'line': b'  120 |                 (ub(\x1b[01;31m\x1b[Kgen_\x1b[m\x1b[K) < goal_bias) ? goal_ : makePoint(ux(gen_), uy(gen_), uz(gen_));\n'}
+[2.396900] (sad_pkg) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.400547] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:120:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.400809] (sad_pkg) StderrLine: {'line': b'  120 |                 (ub(gen_) < goal_bias) ? \x1b[01;31m\x1b[Kgoal_\x1b[m\x1b[K : makePoint(ux(gen_), uy(gen_), uz(gen_));\n'}
+[2.400897] (sad_pkg) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.405538] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:120:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KmakePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.405848] (sad_pkg) StderrLine: {'line': b'  120 |                 (ub(gen_) < goal_bias) ? goal_ : \x1b[01;31m\x1b[KmakePoint\x1b[m\x1b[K(ux(gen_), uy(gen_), uz(gen_));\n'}
+[2.405947] (sad_pkg) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.406519] (-) TimerEvent: {}
+[2.410611] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:122:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KnearestNode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.410690] (sad_pkg) StderrLine: {'line': b'  122 |             int nid = \x1b[01;31m\x1b[KnearestNode\x1b[m\x1b[K(rnd);\n'}
+[2.410726] (sad_pkg) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.414242] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:124:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksteer\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstderr\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.414300] (sad_pkg) StderrLine: {'line': b'  124 |             auto new_pt = \x1b[01;31m\x1b[Ksteer\x1b[m\x1b[K(nodes_[nid].point, rnd, step);\n'}
+[2.414329] (sad_pkg) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.414355] (sad_pkg) StderrLine: {'line': b'      |                           \x1b[32m\x1b[Kstderr\x1b[m\x1b[K\n'}
+[2.418962] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:126:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcollision\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.419081] (sad_pkg) StderrLine: {'line': b'  126 |             if (\x1b[01;31m\x1b[Kcollision\x1b[m\x1b[K(nodes_[nid].point, new_pt)) continue;\n'}
+[2.419113] (sad_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.422447] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:129:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdist\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.422529] (sad_pkg) StderrLine: {'line': b'  129 |                 nodes_[nid].cost + \x1b[01;31m\x1b[Kdist\x1b[m\x1b[K(nodes_[nid].point, new_pt) };\n'}
+[2.422556] (sad_pkg) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.427058] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:131:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KnearNodes\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.427105] (sad_pkg) StderrLine: {'line': b'  131 |             auto nbrs = \x1b[01;31m\x1b[KnearNodes\x1b[m\x1b[K(new_pt, radius);\n'}
+[2.427143] (sad_pkg) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.431798] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:134:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcollision\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.431841] (sad_pkg) StderrLine: {'line': b'  134 |                 if (!\x1b[01;31m\x1b[Kcollision\x1b[m\x1b[K(nodes_[j].point, new_pt) && c < new_node.cost) {\n'}
+[2.431873] (sad_pkg) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.438022] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:144:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcollision\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.438136] (sad_pkg) StderrLine: {'line': b'  144 |                 if (!\x1b[01;31m\x1b[Kcollision\x1b[m\x1b[K(new_pt, nodes_[j].point) && c2 < nodes_[j].cost) {\n'}
+[2.438163] (sad_pkg) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.446743] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:152:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgoal_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.446968] (sad_pkg) StderrLine: {'line': b'  152 |         int gid = nearestNode(\x1b[01;31m\x1b[Kgoal_\x1b[m\x1b[K);\n'}
+[2.447005] (sad_pkg) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.454668] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:152:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KnearestNode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.454855] (sad_pkg) StderrLine: {'line': b'  152 |         int gid = \x1b[01;31m\x1b[KnearestNode\x1b[m\x1b[K(goal_);\n'}
+[2.454937] (sad_pkg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.460043] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:153:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcollision\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.460210] (sad_pkg) StderrLine: {'line': b'  153 |         if (!\x1b[01;31m\x1b[Kcollision\x1b[m\x1b[K(nodes_[gid].point, goal_)) {\n'}
+[2.460276] (sad_pkg) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.463995] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:155:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdist\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.464118] (sad_pkg) StderrLine: {'line': b'  155 |                 nodes_[gid].cost + \x1b[01;31m\x1b[Kdist\x1b[m\x1b[K(nodes_[gid].point, goal_) };\n'}
+[2.464152] (sad_pkg) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.470324] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:157:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KreconstructPath\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.470450] (sad_pkg) StderrLine: {'line': b'  157 |             \x1b[01;31m\x1b[KreconstructPath\x1b[m\x1b[K(nodes_.size() - 1);\n'}
+[2.470485] (sad_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.476933] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:159:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KreconstructPath\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.477077] (sad_pkg) StderrLine: {'line': b'  159 |             \x1b[01;31m\x1b[KreconstructPath\x1b[m\x1b[K(nearestNode(goal_));\n'}
+[2.477110] (sad_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.482440] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:164:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineCP_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.482549] (sad_pkg) StderrLine: {'line': b'  164 |         \x1b[01;31m\x1b[KsplineCP_\x1b[m\x1b[K.clear();\n'}
+[2.482582] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.487534] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:165:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbest_path_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.487646] (sad_pkg) StderrLine: {'line': b'  165 |         for (auto &p : \x1b[01;31m\x1b[Kbest_path_\x1b[m\x1b[K) {\n'}
+[2.487678] (sad_pkg) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.501198] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:168:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineDegree_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.501347] (sad_pkg) StderrLine: {'line': b'  168 |         \x1b[01;31m\x1b[KsplineDegree_\x1b[m\x1b[K = 3;\n'}
+[2.501378] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.506477] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:169:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KbuildKnots\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.506569] (-) TimerEvent: {}
+[2.506635] (sad_pkg) StderrLine: {'line': b'  169 |         \x1b[01;31m\x1b[KbuildKnots\x1b[m\x1b[K();\n'}
+[2.506668] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.512346] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RSNode::publishMarkers()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.512436] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:174:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpath_published_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.512481] (sad_pkg) StderrLine: {'line': b'  174 |         if (\x1b[01;31m\x1b[Kpath_published_\x1b[m\x1b[K) {\n'}
+[2.512509] (sad_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.517491] (sad_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.517575] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.517607] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.517644] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.517670] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.517694] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.517724] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.517750] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.517775] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.517800] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.517824] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.517850] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.517874] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:180:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbest_path_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.517900] (sad_pkg) StderrLine: {'line': b'  180 |         RCLCPP_INFO(get_logger(), "=== \xec\xb5\x9c\xec\xa0\x81 \xea\xb2\xbd\xeb\xa1\x9c \xed\x8f\xac\xec\x9d\xb8\xed\x8a\xb8 \xea\xb0\x9c\xec\x88\x98: %zu ===", \x1b[01;31m\x1b[Kbest_path_\x1b[m\x1b[K.size());\n'}
+[2.517925] (sad_pkg) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.522429] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:181:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbest_path_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.522518] (sad_pkg) StderrLine: {'line': b'  181 |         for (size_t i = 0; i < \x1b[01;31m\x1b[Kbest_path_\x1b[m\x1b[K.size(); ++i) {\n'}
+[2.522551] (sad_pkg) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.526512] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:199:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knodes_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.526600] (sad_pkg) StderrLine: {'line': b'  199 |         for (size_t i = 1; i < \x1b[01;31m\x1b[Knodes_\x1b[m\x1b[K.size(); ++i) {\n'}
+[2.526634] (sad_pkg) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.526662] (sad_pkg) StderrLine: {'line': b'      |                                \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[2.531434] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:215:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbest_path_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.531514] (sad_pkg) StderrLine: {'line': b'  215 |         for (auto &pt : \x1b[01;31m\x1b[Kbest_path_\x1b[m\x1b[K) path.points.push_back(pt);\n'}
+[2.531547] (sad_pkg) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.535418] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:219:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kknots_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.535519] (sad_pkg) StderrLine: {'line': b'  219 |             const double t0 = \x1b[01;31m\x1b[Kknots_\x1b[m\x1b[K[splineDegree_];\n'}
+[2.535552] (sad_pkg) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.542003] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:219:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineDegree_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.542119] (sad_pkg) StderrLine: {'line': b'  219 |             const double t0 = knots_[\x1b[01;31m\x1b[KsplineDegree_\x1b[m\x1b[K];\n'}
+[2.542154] (sad_pkg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.546819] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:220:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineCP_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.546931] (sad_pkg) StderrLine: {'line': b'  220 |             const double t1 = knots_[\x1b[01;31m\x1b[KsplineCP_\x1b[m\x1b[K.size()];\n'}
+[2.546964] (sad_pkg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.552026] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:224:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinterpolate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.552119] (sad_pkg) StderrLine: {'line': b'  224 |                 Eigen::Vector3d pi = \x1b[01;31m\x1b[Kinterpolate\x1b[m\x1b[K(t);\n'}
+[2.552154] (sad_pkg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.556058] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:229:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.556162] (sad_pkg) StderrLine: {'line': b'  229 |                 \x1b[01;31m\x1b[Kspline\x1b[m\x1b[K.points.push_back(gp);\n'}
+[2.556197] (sad_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.561291] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:233:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinterpolate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.561403] (sad_pkg) StderrLine: {'line': b'  233 |                 Eigen::Vector3d pi_last = \x1b[01;31m\x1b[Kinterpolate\x1b[m\x1b[K(t1);\n'}
+[2.561439] (sad_pkg) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.565247] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:238:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.565332] (sad_pkg) StderrLine: {'line': b'  238 |                 \x1b[01;31m\x1b[Kspline\x1b[m\x1b[K.points.push_back(gp_last);\n'}
+[2.565365] (sad_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.568952] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:240:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.569033] (sad_pkg) StderrLine: {'line': b'  240 |             ma.markers.push_back(\x1b[01;31m\x1b[Kspline\x1b[m\x1b[K);\n'}
+[2.569075] (sad_pkg) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.572141] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid publishPath()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.572221] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:253:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineCP_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.572255] (sad_pkg) StderrLine: {'line': b'  253 |         if (static_cast<int>(\x1b[01;31m\x1b[KsplineCP_\x1b[m\x1b[K.size()) < splineDegree_ + 1) return;\n'}
+[2.572282] (sad_pkg) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.575635] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:253:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineDegree_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.575720] (sad_pkg) StderrLine: {'line': b'  253 |         if (static_cast<int>(splineCP_.size()) < \x1b[01;31m\x1b[KsplineDegree_\x1b[m\x1b[K + 1) return;\n'}
+[2.575755] (sad_pkg) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.578782] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:263:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kknots_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.578863] (sad_pkg) StderrLine: {'line': b'  263 |         double t0 = \x1b[01;31m\x1b[Kknots_\x1b[m\x1b[K[splineDegree_];\n'}
+[2.578897] (sad_pkg) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.582329] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:263:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineDegree_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.582414] (sad_pkg) StderrLine: {'line': b'  263 |         double t0 = knots_[\x1b[01;31m\x1b[KsplineDegree_\x1b[m\x1b[K];\n'}
+[2.582447] (sad_pkg) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.585309] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:264:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineCP_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.585388] (sad_pkg) StderrLine: {'line': b'  264 |         double t1 = knots_[\x1b[01;31m\x1b[KsplineCP_\x1b[m\x1b[K.size()];\n'}
+[2.585424] (sad_pkg) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.588582] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:269:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinterpolate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.588664] (sad_pkg) StderrLine: {'line': b'  269 |             Eigen::Vector3d pi = \x1b[01;31m\x1b[Kinterpolate\x1b[m\x1b[K(t);\n'}
+[2.588704] (sad_pkg) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.592006] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:278:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinterpolate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.592089] (sad_pkg) StderrLine: {'line': b'  278 |             Eigen::Vector3d pi_last = \x1b[01;31m\x1b[Kinterpolate\x1b[m\x1b[K(t1);\n'}
+[2.592122] (sad_pkg) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.594219] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:288:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Know\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpow\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.594296] (sad_pkg) StderrLine: {'line': b'  288 |         pa.header.stamp = \x1b[01;31m\x1b[Know\x1b[m\x1b[K();\n'}
+[2.594330] (sad_pkg) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.594358] (sad_pkg) StderrLine: {'line': b'      |                           \x1b[32m\x1b[Kpow\x1b[m\x1b[K\n'}
+[2.601506] (sad_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.601623] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.601657] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.601686] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.601721] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.601747] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.601782] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.601808] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.601834] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.601858] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.601888] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.601915] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:306:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krclcpp::get_logger\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.601946] (sad_pkg) StderrLine: {'line': b'  306 |         RCLCPP_INFO(\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(),\n'}
+[2.601970] (sad_pkg) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.601994] (sad_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:23\x1b[m\x1b[K,\n'}
+[2.602017] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.602042] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.602066] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.602089] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.602115] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.602138] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.602162] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.602186] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.602209] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.602232] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.602255] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.602278] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logger.hpp:106:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::get_logger\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[2.602304] (sad_pkg) StderrLine: {'line': b'  106 |   friend Logger \x1b[01;36m\x1b[Krclcpp\x1b[m\x1b[K::get_logger(const std::string & name);\n'}
+[2.602328] (sad_pkg) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.602352] (sad_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.602375] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.602596] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.602645] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.602675] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.602707] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.602737] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.602763] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.602794] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.602821] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.602847] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.602871] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:306:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.602897] (sad_pkg) StderrLine: {'line': b'  306 |         \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(get_logger(),\n'}
+[2.602922] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.602946] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:306:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.602970] (sad_pkg) StderrLine: {'line': b'  306 |         \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(get_logger(),\n'}
+[2.602994] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603018] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:306:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.603041] (sad_pkg) StderrLine: {'line': b'  306 |         \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(get_logger(),\n'}
+[2.603065] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603088] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:311:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krclcpp::get_logger\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.603116] (sad_pkg) StderrLine: {'line': b'  311 |             RCLCPP_INFO(\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(),\n'}
+[2.603143] (sad_pkg) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603166] (sad_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:23\x1b[m\x1b[K,\n'}
+[2.603190] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.603217] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.603240] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.603263] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.603286] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.603310] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.603333] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.603357] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.603380] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.603403] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.603428] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.603453] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logger.hpp:106:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::get_logger\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[2.603477] (sad_pkg) StderrLine: {'line': b'  106 |   friend Logger \x1b[01;36m\x1b[Krclcpp\x1b[m\x1b[K::get_logger(const std::string & name);\n'}
+[2.603500] (sad_pkg) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.603524] (sad_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.603547] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.603570] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.603601] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.603625] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.603648] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.603671] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.603693] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.603722] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.603746] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.603769] (sad_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.603793] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:311:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.603816] (sad_pkg) StderrLine: {'line': b'  311 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(get_logger(),\n'}
+[2.603839] (sad_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603862] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:311:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.603886] (sad_pkg) StderrLine: {'line': b'  311 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(get_logger(),\n'}
+[2.603909] (sad_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603932] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:311:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.603955] (sad_pkg) StderrLine: {'line': b'  311 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(get_logger(),\n'}
+[2.603978] (sad_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.606156] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:319:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpath_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.606226] (sad_pkg) StderrLine: {'line': b'  319 |         \x1b[01;31m\x1b[Kpath_pub_\x1b[m\x1b[K->publish(pa);\n'}
+[2.606258] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.606669] (-) TimerEvent: {}
+[2.609188] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint nearestNode(const Point&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.609264] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:334:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knodes_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.609302] (sad_pkg) StderrLine: {'line': b'  334 |         for (size_t i = 0; i < \x1b[01;31m\x1b[Knodes_\x1b[m\x1b[K.size(); ++i) {\n'}
+[2.609330] (sad_pkg) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.611989] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<int> nearNodes(const Point&, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.612063] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:343:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knodes_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.612095] (sad_pkg) StderrLine: {'line': b'  343 |         for (size_t i = 0; i < \x1b[01;31m\x1b[Knodes_\x1b[m\x1b[K.size(); ++i) {\n'}
+[2.612128] (sad_pkg) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.615410] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kbool collision(const Point&, const Point&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.615490] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:371:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kobstacles_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kobstack\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.615526] (sad_pkg) StderrLine: {'line': b'  371 |         for (auto &obs : \x1b[01;31m\x1b[Kobstacles_\x1b[m\x1b[K) {\n'}
+[2.615553] (sad_pkg) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.615578] (sad_pkg) StderrLine: {'line': b'      |                          \x1b[32m\x1b[Kobstack\x1b[m\x1b[K\n'}
+[2.618851] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid reconstructPath(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.618934] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:393:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbest_path_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.618967] (sad_pkg) StderrLine: {'line': b'  393 |         \x1b[01;31m\x1b[Kbest_path_\x1b[m\x1b[K.clear();\n'}
+[2.618995] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.621213] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:394:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knodes_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.621300] (sad_pkg) StderrLine: {'line': b'  394 |         for (int i = idx; i >= 0; i = \x1b[01;31m\x1b[Knodes_\x1b[m\x1b[K[i].parent) {\n'}
+[2.621333] (sad_pkg) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.623651] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kdouble basis(int, int, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.623760] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:401:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kknots_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.623802] (sad_pkg) StderrLine: {'line': b'  401 |         if (k==0) return (t>=\x1b[01;31m\x1b[Kknots_\x1b[m\x1b[K[i] && t<knots_[i+1])?1.0:0.0;\n'}
+[2.623829] (sad_pkg) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.626105] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:402:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kknots_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.626220] (sad_pkg) StderrLine: {'line': b'  402 |         double d1=\x1b[01;31m\x1b[Kknots_\x1b[m\x1b[K[i+k]-knots_[i], d2=knots_[i+k+1]-knots_[i+1];\n'}
+[2.626252] (sad_pkg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.627982] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:404:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kd2\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kd1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.628062] (sad_pkg) StderrLine: {'line': b'  404 |         double b=(\x1b[01;31m\x1b[Kd2\x1b[m\x1b[K==0?0:(knots_[i+k+1]-t)/d2*basis(i+1,k-1,t));\n'}
+[2.628094] (sad_pkg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.628122] (sad_pkg) StderrLine: {'line': b'      |                   \x1b[32m\x1b[Kd1\x1b[m\x1b[K\n'}
+[2.630794] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid buildKnots()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.630868] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:409:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineCP_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.630901] (sad_pkg) StderrLine: {'line': b'  409 |         int n=(int)\x1b[01;31m\x1b[KsplineCP_\x1b[m\x1b[K.size(), k=splineDegree_;\n'}
+[2.630930] (sad_pkg) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.633041] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:410:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kknots_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.633240] (sad_pkg) StderrLine: {'line': b'  410 |         \x1b[01;31m\x1b[Kknots_\x1b[m\x1b[K.resize(n+k+1);\n'}
+[2.633362] (sad_pkg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.634811] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:410:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.634972] (sad_pkg) StderrLine: {'line': b'  410 |         knots_.resize(n+\x1b[01;31m\x1b[Kk\x1b[m\x1b[K+1);\n'}
+[2.635072] (sad_pkg) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.638419] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KEigen::Vector3d interpolate(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.638620] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:418:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineCP_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.638717] (sad_pkg) StderrLine: {'line': b'  418 |         int n=(int)\x1b[01;31m\x1b[KsplineCP_\x1b[m\x1b[K.size()-1, k=splineDegree_;\n'}
+[2.638809] (sad_pkg) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.640475] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:419:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.640684] (sad_pkg) StderrLine: {'line': b'  419 |         for (int i=0; i<=n; ++i) p+=basis(i,\x1b[01;31m\x1b[Kk\x1b[m\x1b[K,t)*splineCP_[i];\n'}
+[2.640790] (sad_pkg) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.650677] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[2.650953] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:440:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.651079] (sad_pkg) StderrLine: {'line': b'  440 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[2.651166] (sad_pkg) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.706871] (-) TimerEvent: {}
+[2.807199] (-) TimerEvent: {}
+[2.907639] (-) TimerEvent: {}
+[3.007987] (-) TimerEvent: {}
+[3.108470] (-) TimerEvent: {}
+[3.208864] (-) TimerEvent: {}
+[3.309241] (-) TimerEvent: {}
+[3.409850] (-) TimerEvent: {}
+[3.510463] (-) TimerEvent: {}
+[3.610764] (-) TimerEvent: {}
+[3.711078] (-) TimerEvent: {}
+[3.811407] (-) TimerEvent: {}
+[3.911722] (-) TimerEvent: {}
+[4.012022] (-) TimerEvent: {}
+[4.112345] (-) TimerEvent: {}
+[4.212801] (-) TimerEvent: {}
+[4.238029] (sad_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1\n'}
+[4.238264] (sad_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2\n'}
+[4.238304] (sad_pkg) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[4.313006] (-) TimerEvent: {}
+[4.413359] (-) TimerEvent: {}
+[4.513720] (-) TimerEvent: {}
+[4.613968] (-) TimerEvent: {}
+[4.714186] (-) TimerEvent: {}
+[4.814482] (-) TimerEvent: {}
+[4.914811] (-) TimerEvent: {}
+[5.015116] (-) TimerEvent: {}
+[5.115426] (-) TimerEvent: {}
+[5.215778] (-) TimerEvent: {}
+[5.316019] (-) TimerEvent: {}
+[5.416348] (-) TimerEvent: {}
+[5.516830] (-) TimerEvent: {}
+[5.617414] (-) TimerEvent: {}
+[5.717951] (-) TimerEvent: {}
+[5.818517] (-) TimerEvent: {}
+[5.918844] (-) TimerEvent: {}
+[6.019154] (-) TimerEvent: {}
+[6.119565] (-) TimerEvent: {}
+[6.220272] (-) TimerEvent: {}
+[6.321076] (-) TimerEvent: {}
+[6.421481] (-) TimerEvent: {}
+[6.522305] (-) TimerEvent: {}
+[6.623113] (-) TimerEvent: {}
+[6.723575] (-) TimerEvent: {}
+[6.824411] (-) TimerEvent: {}
+[6.925196] (-) TimerEvent: {}
+[7.025437] (-) TimerEvent: {}
+[7.125898] (-) TimerEvent: {}
+[7.227185] (-) TimerEvent: {}
+[7.327761] (-) TimerEvent: {}
+[7.428160] (-) TimerEvent: {}
+[7.528625] (-) TimerEvent: {}
+[7.630132] (-) TimerEvent: {}
+[7.730643] (-) TimerEvent: {}
+[7.831466] (-) TimerEvent: {}
+[7.932640] (-) TimerEvent: {}
+[8.033324] (-) TimerEvent: {}
+[8.133627] (-) TimerEvent: {}
+[8.233873] (-) TimerEvent: {}
+[8.334274] (-) TimerEvent: {}
+[8.434670] (-) TimerEvent: {}
+[8.534918] (-) TimerEvent: {}
+[8.635230] (-) TimerEvent: {}
+[8.735742] (-) TimerEvent: {}
+[8.836332] (-) TimerEvent: {}
+[8.936743] (-) TimerEvent: {}
+[9.037079] (-) TimerEvent: {}
+[9.137589] (-) TimerEvent: {}
+[9.238782] (-) TimerEvent: {}
+[9.339141] (-) TimerEvent: {}
+[9.439551] (-) TimerEvent: {}
+[9.539960] (-) TimerEvent: {}
+[9.640325] (-) TimerEvent: {}
+[9.740813] (-) TimerEvent: {}
+[9.841694] (-) TimerEvent: {}
+[9.942136] (-) TimerEvent: {}
+[10.042423] (-) TimerEvent: {}
+[10.143146] (-) TimerEvent: {}
+[10.243453] (-) TimerEvent: {}
+[10.343718] (-) TimerEvent: {}
+[10.444134] (-) TimerEvent: {}
+[10.545107] (-) TimerEvent: {}
+[10.645327] (-) TimerEvent: {}
+[10.745591] (-) TimerEvent: {}
+[10.846061] (-) TimerEvent: {}
+[10.946558] (-) TimerEvent: {}
+[11.046913] (-) TimerEvent: {}
+[11.147359] (-) TimerEvent: {}
+[11.248196] (-) TimerEvent: {}
+[11.349039] (-) TimerEvent: {}
+[11.449400] (-) TimerEvent: {}
+[11.550307] (-) TimerEvent: {}
+[11.650788] (-) TimerEvent: {}
+[11.751118] (-) TimerEvent: {}
+[11.851425] (-) TimerEvent: {}
+[11.952166] (-) TimerEvent: {}
+[12.053744] (-) TimerEvent: {}
+[12.154141] (-) TimerEvent: {}
+[12.254506] (-) TimerEvent: {}
+[12.355205] (-) TimerEvent: {}
+[12.455548] (-) TimerEvent: {}
+[12.556056] (-) TimerEvent: {}
+[12.656889] (-) TimerEvent: {}
+[12.757231] (-) TimerEvent: {}
+[12.857583] (-) TimerEvent: {}
+[12.958012] (-) TimerEvent: {}
+[13.058547] (-) TimerEvent: {}
+[13.158956] (-) TimerEvent: {}
+[13.259405] (-) TimerEvent: {}
+[13.360152] (-) TimerEvent: {}
+[13.460717] (-) TimerEvent: {}
+[13.561096] (-) TimerEvent: {}
+[13.661471] (-) TimerEvent: {}
+[13.761854] (-) TimerEvent: {}
+[13.862109] (-) TimerEvent: {}
+[13.962435] (-) TimerEvent: {}
+[14.062758] (-) TimerEvent: {}
+[14.163673] (-) TimerEvent: {}
+[14.264014] (-) TimerEvent: {}
+[14.364423] (-) TimerEvent: {}
+[14.465233] (-) TimerEvent: {}
+[14.565996] (-) TimerEvent: {}
+[14.666317] (-) TimerEvent: {}
+[14.766740] (-) TimerEvent: {}
+[14.867752] (-) TimerEvent: {}
+[14.968025] (-) TimerEvent: {}
+[15.068295] (-) TimerEvent: {}
+[15.168716] (-) TimerEvent: {}
+[15.268968] (-) TimerEvent: {}
+[15.369349] (-) TimerEvent: {}
+[15.469672] (-) TimerEvent: {}
+[15.570116] (-) TimerEvent: {}
+[15.670425] (-) TimerEvent: {}
+[15.770706] (-) TimerEvent: {}
+[15.871164] (-) TimerEvent: {}
+[15.954755] (sad_pkg) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable Inverse_node\x1b[0m\n'}
+[15.971295] (-) TimerEvent: {}
+[16.071725] (-) TimerEvent: {}
+[16.172348] (-) TimerEvent: {}
+[16.273187] (-) TimerEvent: {}
+[16.373961] (-) TimerEvent: {}
+[16.474319] (-) TimerEvent: {}
+[16.574951] (-) TimerEvent: {}
+[16.675441] (-) TimerEvent: {}
+[16.775890] (-) TimerEvent: {}
+[16.876485] (-) TimerEvent: {}
+[16.977378] (-) TimerEvent: {}
+[17.078286] (-) TimerEvent: {}
+[17.096036] (sad_pkg) StdoutLine: {'line': b'[ 92%] Built target Inverse_node\n'}
+[17.097089] (sad_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[17.099377] (sad_pkg) CommandEnded: {'returncode': 2}
+[17.106826] (sad_pkg) JobEnded: {'identifier': 'sad_pkg', 'rc': 2}
+[17.117914] (-) EventReactorShutdown: {}

@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <!-- This is an example of a URDF. -->
+    <!-- As we move through the file, new things to note will be pointed out. -->
+    <!-- It's not meant an example of GOOD design, but an example of some of the various features of URDF/xacro. -->
+
+
+
+    <!-- This will include all the contents of example_include.xacro first. Go check it out! -->
+    <xacro:include filename="example_include.xacro" />
+    <xacro:include filename="example_gazebo.xacro" />
+
+    <link name="world"/>
+    <joint name="fixed_base" type="fixed" disable_fixed_joint_lumping="true">
+        <origin rpy="1.57 0 -1.57" xyz="0 -0.03 0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link1.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/>  
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <link name="link1">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link2.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/> 
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link3.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <link name="link3">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link4.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+    
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link5.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link5.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/> 
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <link name="link5">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link6.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link6.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/link7.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/link7.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/> 
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <link name="link7">
+        <visual>
+            <geometry>
+                <mesh filename="package://mani_urdf/description/mesh/endeffector.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <!-- <mesh filename="package://mani_urdf/description/mesh/endeffector.stl" scale="0.001 0.001 0.001"/> -->
+                <box size="0.055 0.055 0.12" />
+
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/> 
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="-0.044 0.383 -0.001" rpy="0 1.57 0"/>
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+    <joint name="joint2" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="-0.004 0.018 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+    <joint name="joint3" type="revolute">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="0 0.205 0" rpy="0 3.14 3.14"/>
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="0 -0.068 -0.0635" rpy="-1.57 0 0"/>
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+    <joint name="joint5" type="revolute">
+        <parent link="link4"/>
+        <child link="link5"/>
+        <origin xyz="0 -0.0645 -0.202" rpy="1.57 0 1.57"/>
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+    <joint name="joint6" type="revolute">
+        <parent link="link5"/>
+        <child link="link6"/>
+        <origin xyz="0 -0.053 0" rpy="1.57 1.57 0"/>
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+    <joint name="joint7" type="revolute">
+        <parent link="link6"/>
+        <child link="link7"/>
+        <origin xyz="-0.086 0.002 0.04" rpy="-1.57 0 3.14"/>
+        <axis xyz="0 1 0" />
+        <limit effort="1000.0" velocity="0.1" lower="-1.57" upper="1.57" />
+        <dynamics damping="100" friction="50" />
+    </joint>
+
+</robot>

@@ -1,0 +1,609 @@
+[0.000000] (-) TimerEvent: {}
+[0.000210] (mani_urdf) JobQueued: {'identifier': 'mani_urdf', 'dependencies': OrderedDict()}
+[0.000241] (my_vision_msgs) JobQueued: {'identifier': 'my_vision_msgs', 'dependencies': OrderedDict()}
+[0.000272] (sad_pkg) JobQueued: {'identifier': 'sad_pkg', 'dependencies': OrderedDict([('my_vision_msgs', '/home/gaga/sad_ws/install/my_vision_msgs')])}
+[0.000346] (my_vision_msgs) JobStarted: {'identifier': 'my_vision_msgs'}
+[0.005102] (mani_urdf) JobStarted: {'identifier': 'mani_urdf'}
+[0.010095] (my_vision_msgs) JobProgress: {'identifier': 'my_vision_msgs', 'progress': 'cmake'}
+[0.010754] (my_vision_msgs) JobProgress: {'identifier': 'my_vision_msgs', 'progress': 'build'}
+[0.011464] (my_vision_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/my_vision_msgs', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/my_vision_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/my_vision_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.015838] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'cmake'}
+[0.016506] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'build'}
+[0.016828] (mani_urdf) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/mani_urdf', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/mani_urdf', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/mani_urdf'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.052214] (mani_urdf) CommandEnded: {'returncode': 0}
+[0.053305] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'install'}
+[0.061025] (mani_urdf) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/mani_urdf'], 'cwd': '/home/gaga/sad_ws/build/mani_urdf', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/mani_urdf'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.064673] (my_vision_msgs) StdoutLine: {'line': b'[  5%] Built target my_vision_msgs__cpp\n'}
+[0.064912] (my_vision_msgs) StdoutLine: {'line': b'[ 12%] Built target my_vision_msgs__rosidl_generator_c\n'}
+[0.066572] (mani_urdf) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.066866] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description\n'}
+[0.066984] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_robot.urdf.xacro\n'}
+[0.067063] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh\n'}
+[0.067140] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/before.zip\n'}
+[0.067212] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link3.stl\n'}
+[0.067284] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link1.stl\n'}
+[0.067354] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link5.stl\n'}
+[0.067424] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link6.stl\n'}
+[0.067504] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link7.stl\n'}
+[0.067628] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link2.stl\n'}
+[0.067698] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link4.stl\n'}
+[0.067767] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/endeffector.stl\n'}
+[0.067833] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link5_1.stl\n'}
+[0.067900] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_gazebo.xacro\n'}
+[0.067967] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_include.xacro\n'}
+[0.068033] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch\n'}
+[0.068099] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch/rsp.launch.py\n'}
+[0.068173] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch/rsp_sim.launch.py\n'}
+[0.068244] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/worlds\n'}
+[0.068319] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/worlds/test_world.world\n'}
+[0.068390] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/config\n'}
+[0.068459] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/config/gazebo_controll.yaml\n'}
+[0.068539] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/package_run_dependencies/mani_urdf\n'}
+[0.068609] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/parent_prefix_path/mani_urdf\n'}
+[0.068891] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/ament_prefix_path.sh\n'}
+[0.069001] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/ament_prefix_path.dsv\n'}
+[0.069078] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/path.sh\n'}
+[0.069151] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/path.dsv\n'}
+[0.069223] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.bash\n'}
+[0.069296] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.sh\n'}
+[0.069367] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.zsh\n'}
+[0.069437] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.dsv\n'}
+[0.069636] (mani_urdf) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/package.dsv\n'}
+[0.069866] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/packages/mani_urdf\n'}
+[0.069945] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/cmake/mani_urdfConfig.cmake\n'}
+[0.070018] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/cmake/mani_urdfConfig-version.cmake\n'}
+[0.070089] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/package.xml\n'}
+[0.070899] (mani_urdf) CommandEnded: {'returncode': 0}
+[0.071543] (my_vision_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_my_vision_msgs\n'}
+[0.084040] (mani_urdf) JobEnded: {'identifier': 'mani_urdf', 'rc': 0}
+[0.084624] (my_vision_msgs) StdoutLine: {'line': b'[ 23%] Built target my_vision_msgs__rosidl_typesupport_c\n'}
+[0.085518] (my_vision_msgs) StdoutLine: {'line': b'[ 34%] Built target my_vision_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.086091] (my_vision_msgs) StdoutLine: {'line': b'[ 45%] Built target my_vision_msgs__rosidl_typesupport_introspection_c\n'}
+[0.088625] (my_vision_msgs) StdoutLine: {'line': b'[ 60%] Built target my_vision_msgs__rosidl_typesupport_cpp\n'}
+[0.088742] (my_vision_msgs) StdoutLine: {'line': b'[ 67%] Built target my_vision_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.089289] (my_vision_msgs) StdoutLine: {'line': b'[ 78%] Built target my_vision_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.099408] (-) TimerEvent: {}
+[0.109771] (my_vision_msgs) StdoutLine: {'line': b'[ 78%] Built target my_vision_msgs\n'}
+[0.135395] (my_vision_msgs) StdoutLine: {'line': b'[ 80%] Built target my_vision_msgs__py\n'}
+[0.158780] (my_vision_msgs) StdoutLine: {'line': b'[ 89%] Built target my_vision_msgs__rosidl_generator_py\n'}
+[0.178911] (my_vision_msgs) StdoutLine: {'line': b'[ 96%] Built target my_vision_msgs__rosidl_typesupport_c__pyext\n'}
+[0.179110] (my_vision_msgs) StdoutLine: {'line': b'[ 96%] Built target my_vision_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.180121] (my_vision_msgs) StdoutLine: {'line': b'[100%] Built target my_vision_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.199632] (-) TimerEvent: {}
+[0.234591] (my_vision_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.234958] (my_vision_msgs) StdoutLine: {'line': b'writing my_vision_msgs.egg-info/PKG-INFO\n'}
+[0.235123] (my_vision_msgs) StdoutLine: {'line': b'writing dependency_links to my_vision_msgs.egg-info/dependency_links.txt\n'}
+[0.235249] (my_vision_msgs) StdoutLine: {'line': b'writing top-level names to my_vision_msgs.egg-info/top_level.txt\n'}
+[0.236622] (my_vision_msgs) StdoutLine: {'line': b"reading manifest file 'my_vision_msgs.egg-info/SOURCES.txt'\n"}
+[0.236947] (my_vision_msgs) StdoutLine: {'line': b"writing manifest file 'my_vision_msgs.egg-info/SOURCES.txt'\n"}
+[0.257622] (my_vision_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_my_vision_msgs_egg\n'}
+[0.266834] (my_vision_msgs) CommandEnded: {'returncode': 0}
+[0.267445] (my_vision_msgs) JobProgress: {'identifier': 'my_vision_msgs', 'progress': 'install'}
+[0.268179] (my_vision_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/my_vision_msgs'], 'cwd': '/home/gaga/sad_ws/build/my_vision_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/my_vision_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.275917] (my_vision_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.276175] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/rosidl_interfaces/my_vision_msgs\n'}
+[0.276430] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.276549] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.276788] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop.h\n'}
+[0.276939] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.277043] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/crop_pose.h\n'}
+[0.277202] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/harvest_ordering.h\n'}
+[0.277305] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.277443] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__functions.c\n'}
+[0.277585] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__struct.h\n'}
+[0.277676] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__functions.c\n'}
+[0.277818] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__struct.h\n'}
+[0.277918] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__functions.c\n'}
+[0.278045] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__struct.h\n'}
+[0.278243] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__struct.h\n'}
+[0.278328] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__functions.h\n'}
+[0.278410] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.h\n'}
+[0.278501] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__functions.h\n'}
+[0.278590] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.h\n'}
+[0.278672] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__functions.c\n'}
+[0.278754] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.h\n'}
+[0.278835] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__functions.h\n'}
+[0.278915] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__functions.h\n'}
+[0.279007] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.h\n'}
+[0.279080] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop_array.h\n'}
+[0.279153] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/library_path.sh\n'}
+[0.279227] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/library_path.dsv\n'}
+[0.279305] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_generator_c.so\n'}
+[0.279378] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.279450] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.279537] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.279622] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.279697] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.279771] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.279844] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_fastrtps_c.h\n'}
+[0.279918] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_fastrtps_c.h\n'}
+[0.280001] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.280076] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.280149] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.280223] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.280297] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop.hpp\n'}
+[0.280372] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/harvest_ordering.hpp\n'}
+[0.280445] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detected_crop_array.hpp\n'}
+[0.280533] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.280624] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__builder.hpp\n'}
+[0.280702] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__traits.hpp\n'}
+[0.280778] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__builder.hpp\n'}
+[0.280853] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__struct.hpp\n'}
+[0.280927] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__struct.hpp\n'}
+[0.281000] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.hpp\n'}
+[0.281074] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__builder.hpp\n'}
+[0.281147] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.hpp\n'}
+[0.281220] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__builder.hpp\n'}
+[0.281292] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__struct.hpp\n'}
+[0.281365] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__struct.hpp\n'}
+[0.281451] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.hpp\n'}
+[0.281534] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__traits.hpp\n'}
+[0.281740] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__traits.hpp\n'}
+[0.281823] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.hpp\n'}
+[0.281864] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__traits.hpp\n'}
+[0.281893] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/crop_pose.hpp\n'}
+[0.281922] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.281949] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.281976] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.282003] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.282030] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.282056] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/dds_fastrtps\n'}
+[0.282083] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.282109] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.282135] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.282160] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.282185] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.282210] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.282237] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.282267] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.282293] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.c\n'}
+[0.282318] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.c\n'}
+[0.282342] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.c\n'}
+[0.282365] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_introspection_c.h\n'}
+[0.282390] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_introspection_c.h\n'}
+[0.282414] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.c\n'}
+[0.282440] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.282468] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_introspection_c.h\n'}
+[0.282496] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.282526] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_c.so\n'}
+[0.282551] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs\n'}
+[0.282576] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg\n'}
+[0.282604] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail\n'}
+[0.282629] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__type_support.cpp\n'}
+[0.282652] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.282677] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.282701] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__type_support.cpp\n'}
+[0.282724] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/detected_crop__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.282748] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__type_support.cpp\n'}
+[0.282772] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/harvest_ordering__type_support.cpp\n'}
+[0.282796] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/include/my_vision_msgs/my_vision_msgs/msg/detail/crop_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.282820] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.282844] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_typesupport_cpp.so\n'}
+[0.282869] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/pythonpath.sh\n'}
+[0.282892] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/pythonpath.dsv\n'}
+[0.282915] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info\n'}
+[0.282939] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.282965] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[0.282991] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[0.283014] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.283038] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs\n'}
+[0.283062] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/_my_vision_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.283085] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/libmy_vision_msgs__rosidl_generator_py.so\n'}
+[0.283108] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/__init__.py\n'}
+[0.283132] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg\n'}
+[0.283156] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_harvest_ordering_s.c\n'}
+[0.283179] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/__init__.py\n'}
+[0.283202] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop_s.c\n'}
+[0.283226] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_crop_pose.py\n'}
+[0.283249] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop_array_s.c\n'}
+[0.283272] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop_array.py\n'}
+[0.283295] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_crop_pose_s.c\n'}
+[0.283319] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_harvest_ordering.py\n'}
+[0.283348] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg/_detected_crop.py\n'}
+[0.283372] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.283396] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/_my_vision_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.283420] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.283446] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.283470] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/_my_vision_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.299837] (-) TimerEvent: {}
+[0.300989] (my_vision_msgs) StdoutLine: {'line': b"Listing '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs'...\n"}
+[0.301095] (my_vision_msgs) StdoutLine: {'line': b"Listing '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/msg'...\n"}
+[0.304028] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.304264] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.304337] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages/my_vision_msgs/my_vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.304516] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/lib/libmy_vision_msgs__rosidl_generator_py.so\n'}
+[0.304646] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/CropPose.idl\n'}
+[0.304681] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCrop.idl\n'}
+[0.304710] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCropArray.idl\n'}
+[0.304740] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/HarvestOrdering.idl\n'}
+[0.304769] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/CropPose.msg\n'}
+[0.304796] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCrop.msg\n'}
+[0.304842] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/DetectedCropArray.msg\n'}
+[0.304870] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/msg/HarvestOrdering.msg\n'}
+[0.304896] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/package_run_dependencies/my_vision_msgs\n'}
+[0.304924] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/parent_prefix_path/my_vision_msgs\n'}
+[0.304952] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/ament_prefix_path.sh\n'}
+[0.304979] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/ament_prefix_path.dsv\n'}
+[0.305005] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/path.sh\n'}
+[0.305031] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/environment/path.dsv\n'}
+[0.305057] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.bash\n'}
+[0.305085] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.sh\n'}
+[0.305109] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.zsh\n'}
+[0.305155] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/local_setup.dsv\n'}
+[0.305219] (my_vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/package.dsv\n'}
+[0.305243] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/ament_index/resource_index/packages/my_vision_msgs\n'}
+[0.305292] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_cExport.cmake\n'}
+[0.305328] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.305353] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.305414] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.305443] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.305469] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.305502] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.305530] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.305556] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.305582] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.305608] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.305634] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.305695] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.305720] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.305744] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.305767] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.305792] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/export_my_vision_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.305816] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.305840] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.305867] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.305891] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.305915] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.305939] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.305963] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.305988] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgsConfig.cmake\n'}
+[0.306011] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/cmake/my_vision_msgsConfig-version.cmake\n'}
+[0.306035] (my_vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/my_vision_msgs/share/my_vision_msgs/package.xml\n'}
+[0.307119] (my_vision_msgs) CommandEnded: {'returncode': 0}
+[0.319335] (my_vision_msgs) JobEnded: {'identifier': 'my_vision_msgs', 'rc': 0}
+[0.319728] (sad_pkg) JobStarted: {'identifier': 'sad_pkg'}
+[0.328352] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'cmake'}
+[0.328727] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'build'}
+[0.328983] (sad_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/sad_pkg', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/sad_pkg', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/sad_pkg'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.372661] (sad_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Inverse_node\x1b[0m\n'}
+[0.383017] (sad_pkg) StdoutLine: {'line': b'[ 28%] Built target forward_node\n'}
+[0.383429] (sad_pkg) StdoutLine: {'line': b'[ 28%] Built target spline_node\n'}
+[0.383735] (sad_pkg) StdoutLine: {'line': b'[ 42%] Built target obstacle_node\n'}
+[0.383979] (sad_pkg) StdoutLine: {'line': b'[ 57%] Built target map_node\n'}
+[0.385240] (sad_pkg) StdoutLine: {'line': b'[ 71%] Built target rrt_node\n'}
+[0.385764] (sad_pkg) StdoutLine: {'line': b'[ 85%] Built target path_node\n'}
+[0.391418] (sad_pkg) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o\x1b[0m\n'}
+[0.399961] (-) TimerEvent: {}
+[0.500347] (-) TimerEvent: {}
+[0.600863] (-) TimerEvent: {}
+[0.701276] (-) TimerEvent: {}
+[0.801741] (-) TimerEvent: {}
+[0.902159] (-) TimerEvent: {}
+[1.002608] (-) TimerEvent: {}
+[1.102969] (-) TimerEvent: {}
+[1.203328] (-) TimerEvent: {}
+[1.303725] (-) TimerEvent: {}
+[1.404119] (-) TimerEvent: {}
+[1.504461] (-) TimerEvent: {}
+[1.604991] (-) TimerEvent: {}
+[1.705349] (-) TimerEvent: {}
+[1.805846] (-) TimerEvent: {}
+[1.906315] (-) TimerEvent: {}
+[2.006696] (-) TimerEvent: {}
+[2.107217] (-) TimerEvent: {}
+[2.207699] (-) TimerEvent: {}
+[2.308111] (-) TimerEvent: {}
+[2.408542] (-) TimerEvent: {}
+[2.508838] (-) TimerEvent: {}
+[2.609138] (-) TimerEvent: {}
+[2.615504] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ManipulatorNode::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.615655] (sad_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:321:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KqA\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.615691] (sad_pkg) StderrLine: {'line': b'  321 |         Eigen::Quaterniond \x1b[01;35m\x1b[KqA\x1b[m\x1b[K =\n'}
+[2.615717] (sad_pkg) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.709264] (-) TimerEvent: {}
+[2.809619] (-) TimerEvent: {}
+[2.909873] (-) TimerEvent: {}
+[3.010163] (-) TimerEvent: {}
+[3.110526] (-) TimerEvent: {}
+[3.210771] (-) TimerEvent: {}
+[3.311057] (-) TimerEvent: {}
+[3.411432] (-) TimerEvent: {}
+[3.511833] (-) TimerEvent: {}
+[3.612367] (-) TimerEvent: {}
+[3.712727] (-) TimerEvent: {}
+[3.812998] (-) TimerEvent: {}
+[3.913336] (-) TimerEvent: {}
+[4.013675] (-) TimerEvent: {}
+[4.113972] (-) TimerEvent: {}
+[4.214302] (-) TimerEvent: {}
+[4.314672] (-) TimerEvent: {}
+[4.415077] (-) TimerEvent: {}
+[4.515479] (-) TimerEvent: {}
+[4.615855] (-) TimerEvent: {}
+[4.716110] (-) TimerEvent: {}
+[4.816433] (-) TimerEvent: {}
+[4.916866] (-) TimerEvent: {}
+[5.017206] (-) TimerEvent: {}
+[5.117685] (-) TimerEvent: {}
+[5.218025] (-) TimerEvent: {}
+[5.318487] (-) TimerEvent: {}
+[5.418792] (-) TimerEvent: {}
+[5.519241] (-) TimerEvent: {}
+[5.619759] (-) TimerEvent: {}
+[5.720266] (-) TimerEvent: {}
+[5.820624] (-) TimerEvent: {}
+[5.921053] (-) TimerEvent: {}
+[6.021396] (-) TimerEvent: {}
+[6.121746] (-) TimerEvent: {}
+[6.222195] (-) TimerEvent: {}
+[6.323803] (-) TimerEvent: {}
+[6.425252] (-) TimerEvent: {}
+[6.525838] (-) TimerEvent: {}
+[6.626242] (-) TimerEvent: {}
+[6.726980] (-) TimerEvent: {}
+[6.827857] (-) TimerEvent: {}
+[6.929674] (-) TimerEvent: {}
+[7.031060] (-) TimerEvent: {}
+[7.132209] (-) TimerEvent: {}
+[7.234140] (-) TimerEvent: {}
+[7.335572] (-) TimerEvent: {}
+[7.436936] (-) TimerEvent: {}
+[7.537995] (-) TimerEvent: {}
+[7.639268] (-) TimerEvent: {}
+[7.740327] (-) TimerEvent: {}
+[7.841177] (-) TimerEvent: {}
+[7.942756] (-) TimerEvent: {}
+[8.043247] (-) TimerEvent: {}
+[8.144232] (-) TimerEvent: {}
+[8.245619] (-) TimerEvent: {}
+[8.346094] (-) TimerEvent: {}
+[8.447187] (-) TimerEvent: {}
+[8.548953] (-) TimerEvent: {}
+[8.650210] (-) TimerEvent: {}
+[8.750623] (-) TimerEvent: {}
+[8.851599] (-) TimerEvent: {}
+[8.953294] (-) TimerEvent: {}
+[9.054915] (-) TimerEvent: {}
+[9.156061] (-) TimerEvent: {}
+[9.257202] (-) TimerEvent: {}
+[9.358704] (-) TimerEvent: {}
+[9.459732] (-) TimerEvent: {}
+[9.560749] (-) TimerEvent: {}
+[9.662396] (-) TimerEvent: {}
+[9.763894] (-) TimerEvent: {}
+[9.865562] (-) TimerEvent: {}
+[9.966605] (-) TimerEvent: {}
+[10.067937] (-) TimerEvent: {}
+[10.168907] (-) TimerEvent: {}
+[10.269587] (-) TimerEvent: {}
+[10.370852] (-) TimerEvent: {}
+[10.472401] (-) TimerEvent: {}
+[10.573163] (-) TimerEvent: {}
+[10.674404] (-) TimerEvent: {}
+[10.775973] (-) TimerEvent: {}
+[10.877158] (-) TimerEvent: {}
+[10.978273] (-) TimerEvent: {}
+[11.079017] (-) TimerEvent: {}
+[11.179581] (-) TimerEvent: {}
+[11.280349] (-) TimerEvent: {}
+[11.381177] (-) TimerEvent: {}
+[11.482602] (-) TimerEvent: {}
+[11.583185] (-) TimerEvent: {}
+[11.683770] (-) TimerEvent: {}
+[11.784316] (-) TimerEvent: {}
+[11.884849] (-) TimerEvent: {}
+[11.985738] (-) TimerEvent: {}
+[12.087302] (-) TimerEvent: {}
+[12.188175] (-) TimerEvent: {}
+[12.289447] (-) TimerEvent: {}
+[12.390381] (-) TimerEvent: {}
+[12.490992] (-) TimerEvent: {}
+[12.591376] (-) TimerEvent: {}
+[12.691751] (-) TimerEvent: {}
+[12.792202] (-) TimerEvent: {}
+[12.892730] (-) TimerEvent: {}
+[12.993016] (-) TimerEvent: {}
+[13.093709] (-) TimerEvent: {}
+[13.194515] (-) TimerEvent: {}
+[13.295303] (-) TimerEvent: {}
+[13.396667] (-) TimerEvent: {}
+[13.497763] (-) TimerEvent: {}
+[13.598882] (-) TimerEvent: {}
+[13.700238] (-) TimerEvent: {}
+[13.800584] (-) TimerEvent: {}
+[13.901342] (-) TimerEvent: {}
+[14.002299] (-) TimerEvent: {}
+[14.103523] (-) TimerEvent: {}
+[14.204462] (-) TimerEvent: {}
+[14.305638] (-) TimerEvent: {}
+[14.406790] (-) TimerEvent: {}
+[14.507608] (-) TimerEvent: {}
+[14.608812] (-) TimerEvent: {}
+[14.710219] (-) TimerEvent: {}
+[14.810838] (-) TimerEvent: {}
+[14.911551] (-) TimerEvent: {}
+[15.012585] (-) TimerEvent: {}
+[15.112952] (-) TimerEvent: {}
+[15.213732] (-) TimerEvent: {}
+[15.314514] (-) TimerEvent: {}
+[15.415806] (-) TimerEvent: {}
+[15.516402] (-) TimerEvent: {}
+[15.617942] (-) TimerEvent: {}
+[15.719181] (-) TimerEvent: {}
+[15.819654] (-) TimerEvent: {}
+[15.920125] (-) TimerEvent: {}
+[16.021437] (-) TimerEvent: {}
+[16.122769] (-) TimerEvent: {}
+[16.223521] (-) TimerEvent: {}
+[16.324969] (-) TimerEvent: {}
+[16.426082] (-) TimerEvent: {}
+[16.527013] (-) TimerEvent: {}
+[16.628336] (-) TimerEvent: {}
+[16.729566] (-) TimerEvent: {}
+[16.831047] (-) TimerEvent: {}
+[16.931975] (-) TimerEvent: {}
+[17.032363] (-) TimerEvent: {}
+[17.133449] (-) TimerEvent: {}
+[17.234101] (-) TimerEvent: {}
+[17.335015] (-) TimerEvent: {}
+[17.436709] (-) TimerEvent: {}
+[17.537950] (-) TimerEvent: {}
+[17.638776] (-) TimerEvent: {}
+[17.739994] (-) TimerEvent: {}
+[17.840882] (-) TimerEvent: {}
+[17.942004] (-) TimerEvent: {}
+[18.042708] (-) TimerEvent: {}
+[18.143717] (-) TimerEvent: {}
+[18.245200] (-) TimerEvent: {}
+[18.345761] (-) TimerEvent: {}
+[18.446707] (-) TimerEvent: {}
+[18.548180] (-) TimerEvent: {}
+[18.649250] (-) TimerEvent: {}
+[18.750184] (-) TimerEvent: {}
+[18.851534] (-) TimerEvent: {}
+[18.952936] (-) TimerEvent: {}
+[19.054220] (-) TimerEvent: {}
+[19.154911] (-) TimerEvent: {}
+[19.256161] (-) TimerEvent: {}
+[19.357641] (-) TimerEvent: {}
+[19.458515] (-) TimerEvent: {}
+[19.559296] (-) TimerEvent: {}
+[19.659809] (-) TimerEvent: {}
+[19.760983] (-) TimerEvent: {}
+[19.862094] (-) TimerEvent: {}
+[19.962592] (-) TimerEvent: {}
+[20.063410] (-) TimerEvent: {}
+[20.164294] (-) TimerEvent: {}
+[20.264592] (-) TimerEvent: {}
+[20.365265] (-) TimerEvent: {}
+[20.466349] (-) TimerEvent: {}
+[20.567412] (-) TimerEvent: {}
+[20.668146] (-) TimerEvent: {}
+[20.769111] (-) TimerEvent: {}
+[20.869886] (-) TimerEvent: {}
+[20.971083] (-) TimerEvent: {}
+[21.072041] (-) TimerEvent: {}
+[21.172869] (-) TimerEvent: {}
+[21.274146] (-) TimerEvent: {}
+[21.374900] (-) TimerEvent: {}
+[21.475665] (-) TimerEvent: {}
+[21.577236] (-) TimerEvent: {}
+[21.678459] (-) TimerEvent: {}
+[21.779472] (-) TimerEvent: {}
+[21.880936] (-) TimerEvent: {}
+[21.982066] (-) TimerEvent: {}
+[22.082993] (-) TimerEvent: {}
+[22.184047] (-) TimerEvent: {}
+[22.284801] (-) TimerEvent: {}
+[22.386028] (-) TimerEvent: {}
+[22.487153] (-) TimerEvent: {}
+[22.588017] (-) TimerEvent: {}
+[22.688651] (-) TimerEvent: {}
+[22.789669] (-) TimerEvent: {}
+[22.877703] (sad_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable Inverse_node\x1b[0m\n'}
+[22.889971] (-) TimerEvent: {}
+[22.991002] (-) TimerEvent: {}
+[23.092570] (-) TimerEvent: {}
+[23.194080] (-) TimerEvent: {}
+[23.295458] (-) TimerEvent: {}
+[23.396351] (-) TimerEvent: {}
+[23.497308] (-) TimerEvent: {}
+[23.598135] (-) TimerEvent: {}
+[23.699594] (-) TimerEvent: {}
+[23.801279] (-) TimerEvent: {}
+[23.902978] (-) TimerEvent: {}
+[24.005052] (-) TimerEvent: {}
+[24.106471] (-) TimerEvent: {}
+[24.207771] (-) TimerEvent: {}
+[24.309306] (-) TimerEvent: {}
+[24.410711] (-) TimerEvent: {}
+[24.511676] (-) TimerEvent: {}
+[24.612872] (-) TimerEvent: {}
+[24.713909] (-) TimerEvent: {}
+[24.815103] (-) TimerEvent: {}
+[24.916379] (-) TimerEvent: {}
+[25.017553] (-) TimerEvent: {}
+[25.118948] (-) TimerEvent: {}
+[25.219847] (-) TimerEvent: {}
+[25.321802] (-) TimerEvent: {}
+[25.422917] (-) TimerEvent: {}
+[25.524060] (-) TimerEvent: {}
+[25.624897] (-) TimerEvent: {}
+[25.726217] (-) TimerEvent: {}
+[25.814783] (sad_pkg) StdoutLine: {'line': b'[100%] Built target Inverse_node\n'}
+[25.826992] (-) TimerEvent: {}
+[25.838782] (sad_pkg) CommandEnded: {'returncode': 0}
+[25.840593] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'install'}
+[25.841524] (sad_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/sad_pkg'], 'cwd': '/home/gaga/sad_ws/build/sad_pkg', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/my_vision_msgs/lib:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/gaga/turtlebot3_ws/install/robot_msgs/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/lib:/home/gaga/ssibal_ws/install/robot_msgs/lib:/home/gaga/sad_ws/src/install/vision_msgs/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:/home/gaga/robotprograming_ws/install/rp_pkg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1283'), ('SYSTEMD_EXEC_PID', '2036'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3664'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/turtlebot3_ws/install:/home/gaga/ssibal_ws/install:/home/gaga/sad_ws/src/install:/home/gaga/robotprograming_ws/install:/home/gaga/sad_ws/src/sad_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:18922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1666,unix/gaga:/tmp/.ICE-unix/1666'), ('INVOCATION_ID', '245c6459fe194e2baf24360b49642009'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '25'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f7f40082-158b-45dc-a9fc-0b1537cc7635'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/sad_pkg'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/gaga/turtlebot3_ws/install/dynamixel_sdk/local/lib/python3.10/dist-packages:/home/gaga/ssibal_ws/install/robot_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/src/install/my_vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/robotprograming_ws/install/rp_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[25.856688] (sad_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[25.857331] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch\n'}
+[25.857385] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/rviz.launch.py\n'}
+[25.857421] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/sad.launch.py\n'}
+[25.857452] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/all.launch.py\n'}
+[25.857550] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf\n'}
+[25.857643] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description\n'}
+[25.857723] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description/test.xacro\n'}
+[25.857812] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description/sad.xacro\n'}
+[25.857881] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description/all.xacro\n'}
+[25.857957] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes\n'}
+[25.858020] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/next.stl\n'}
+[25.858105] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link3.stl\n'}
+[25.858176] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link1.stl\n'}
+[25.858261] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link5.stl\n'}
+[25.858308] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link6.stl\n'}
+[25.858338] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link7.stl\n'}
+[25.858363] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link2.stl\n'}
+[25.858389] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/mani.stl\n'}
+[25.858427] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link4.stl\n'}
+[25.858452] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/endeffector.stl\n'}
+[25.858532] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config\n'}
+[25.858560] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install\n'}
+[25.858605] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.zsh\n'}
+[25.858632] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.bash\n'}
+[25.858659] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.ps1\n'}
+[25.858682] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.sh\n'}
+[25.858713] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/COLCON_IGNORE\n'}
+[25.858741] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/_local_setup_util_sh.py\n'}
+[25.858770] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/_local_setup_util_ps1.py\n'}
+[25.858796] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.bash\n'}
+[25.858836] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.sh\n'}
+[25.858863] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/.colcon_install_layout\n'}
+[25.858886] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.ps1\n'}
+[25.858910] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.zsh\n'}
+[25.858932] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/build\n'}
+[25.858957] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/build/COLCON_IGNORE\n'}
+[25.858980] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/build/.built_by\n'}
+[25.859018] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/sad_controllers.yaml\n'}
+[25.859044] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log\n'}
+[25.859067] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/latest_build\n'}
+[25.859089] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/latest\n'}
+[25.859111] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/build_2025-04-02_10-07-56\n'}
+[25.859135] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/build_2025-04-02_10-07-56/logger_all.log\n'}
+[25.859166] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/build_2025-04-02_10-07-56/events.log\n'}
+[25.859189] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/COLCON_IGNORE\n'}
+[25.859213] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/forward_node\n'}
+[25.859236] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/rrt_node\n'}
+[25.859260] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/obstacle_node\n'}
+[25.859283] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/spline_node\n'}
+[25.859310] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/map_node\n'}
+[25.859333] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/path_node\n'}
+[25.859356] (sad_pkg) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/Inverse_node\n'}
+[25.872621] (sad_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/Inverse_node" to ""\n'}
+[25.873565] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/ament_index/resource_index/package_run_dependencies/sad_pkg\n'}
+[25.873657] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/ament_index/resource_index/parent_prefix_path/sad_pkg\n'}
+[25.873723] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/ament_prefix_path.sh\n'}
+[25.873786] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/ament_prefix_path.dsv\n'}
+[25.873847] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/path.sh\n'}
+[25.873908] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/path.dsv\n'}
+[25.873966] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.bash\n'}
+[25.874024] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.sh\n'}
+[25.874081] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.zsh\n'}
+[25.874138] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.dsv\n'}
+[25.874195] (sad_pkg) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/package.dsv\n'}
+[25.874254] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/ament_index/resource_index/packages/sad_pkg\n'}
+[25.874311] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/cmake/sad_pkgConfig.cmake\n'}
+[25.874368] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/cmake/sad_pkgConfig-version.cmake\n'}
+[25.874452] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/package.xml\n'}
+[25.878468] (sad_pkg) CommandEnded: {'returncode': 0}
+[25.891647] (sad_pkg) JobEnded: {'identifier': 'sad_pkg', 'rc': 0}
+[25.892662] (-) EventReactorShutdown: {}

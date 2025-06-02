@@ -1,0 +1,11 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d, Eigen::Vector3d)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:445:18:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[KEigen::Vector3d target_position[m[K’ shadows a parameter
+  445 |         Vector3d [01;31m[Ktarget_position[m[K = target_orientation.head<3>();
+      |                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:420:53:[m[K [01;36m[Knote: [m[K‘[01m[Kconst Vector3d target_position[m[K’ previously declared here
+  420 |     VectorXd computeFeedbackVelocity([01;36m[Kconst Vector3d target_position[m[K, const Vector3d target_orientation)
+      |                                      [01;36m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:420:53:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_position[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

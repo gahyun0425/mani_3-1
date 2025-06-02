@@ -1,0 +1,17 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:353:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+  353 |     VectorXd q_dot = computeFeedbackVelocity([01;31m[Kconst[m[K Vector3d &u_d, const Vector3d &u, const Vector3d &u_dot_d)
+      |                                              [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:353:67:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+  353 |     VectorXd q_dot = computeFeedbackVelocity(const Vector3d &u_d, [01;31m[Kconst[m[K Vector3d &u, const Vector3d &u_dot_d)
+      |                                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:353:86:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+  353 |     VectorXd q_dot = computeFeedbackVelocity(const Vector3d &u_d, const Vector3d &u, [01;31m[Kconst[m[K Vector3d &u_dot_d)
+      |                                                                                      [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope; did you mean ‘[01m[Kd7[m[K’?
+  355 |     VectorXd next_q = current_joint_angles_ + q_dot * [01;31m[Kdt[m[K;
+      |                                                       [01;31m[K^~[m[K
+      |                                                       [32m[Kd7[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

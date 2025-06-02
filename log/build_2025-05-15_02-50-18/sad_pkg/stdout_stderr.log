@@ -1,0 +1,167 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 78%] Built target map_node
+[ 78%] Built target obstacle_node
+[ 78%] Built target spline_node
+[ 78%] Built target rrt_node
+[ 85%] Built target forward_node
+[ 85%] Built target path_node
+[ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d, Eigen::Vector3d)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:170:9:[m[K [01;31m[Kerror: [m[K‘[01m[KVector4d[m[K’ was not declared in this scope; did you mean ‘[01m[KEigen::Vector4d[m[K’?
+  170 |         [01;31m[KVector4d[m[K qdot4; // 임시
+      |         [01;31m[K^~~~~~~~[m[K
+      |         [32m[KEigen::Vector4d[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:2[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:485:34:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::Vector4d[m[K’ declared here
+  485 | typedef Matrix<Type, Size, 1>    [01;36m[KVector[m[K##SizeSuffix##TypeSuffix;  \
+      |                                  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:498:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_MAKE_TYPEDEFS[m[K’
+  498 | [01;36m[KEIGEN_MAKE_TYPEDEFS[m[K(Type, TypeSuffix, 4, 4) \
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:506:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_MAKE_TYPEDEFS_ALL_SIZES[m[K’
+  506 | [01;36m[KEIGEN_MAKE_TYPEDEFS_ALL_SIZES[m[K(double,               d)
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:164[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:2[m[K:
+/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h: In instantiation of ‘[01m[KEigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::CwiseBinaryOp(const Lhs&, const Rhs&, const BinaryOp&) [with BinaryOp = Eigen::internal::scalar_difference_op<double, double>; LhsType = const Eigen::Matrix<double, 3, 1>; RhsType = const Eigen::Matrix<double, 4, 4>; Eigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::Lhs = Eigen::Matrix<double, 3, 1>; Eigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::Rhs = Eigen::Matrix<double, 4, 4>][m[K’:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:19:1:[m[K   required from ‘[01m[Kconst Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<typename Eigen::internal::traits<T>::Scalar, typename Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::MatrixBase<Derived>::operator-(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<double, 4, 4>; Derived = Eigen::Matrix<double, 3, 1>; typename Eigen::internal::traits<OtherDerived>::Scalar = double; typename Eigen::internal::traits<T>::Scalar = double][m[K’
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:160:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+  175 |      [01;31m[K( \[m[K
+      |      [01;31m[K~~~[m[K
+  176 | [01;31m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  177 | [01;31m[K    || (\[m[K
+      |     [01;31m[K^~~~~[m[K
+  178 | [01;31m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  179 | [01;31m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  180 | [01;31m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  181 | [01;31m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  182 | [01;31m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  183 | [01;31m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  184 | [01;31m[K       ) \[m[K
+      |        [01;31m[K~~~[m[K
+  185 | [01;31m[K     )[m[K
+      |      [01;31m[K~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+      |                                                      [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+  194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:115:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+  115 |       [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(Lhs, Rhs)
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;36m[Knote: [m[K‘[01m[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 1> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 4, 4> >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime)))))[m[K’ evaluates to false
+  175 |      [01;36m[K( \[m[K
+      |      [01;36m[K~~~[m[K
+  176 | [01;36m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  177 | [01;36m[K    || (\[m[K
+      |     [01;36m[K^~~~~[m[K
+  178 | [01;36m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  179 | [01;36m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  180 | [01;36m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  181 | [01;36m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  182 | [01;36m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  183 | [01;36m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  184 | [01;36m[K       ) \[m[K
+      |        [01;36m[K~~~[m[K
+  185 | [01;36m[K     )[m[K
+      |      [01;36m[K~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+      |                                                      [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+  194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:115:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+  115 |       [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(Lhs, Rhs)
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘[01m[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 4, 4>; Src = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; Func = Eigen::internal::assign_op<double, double>][m[K’:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; Derived = Eigen::Matrix<double, 4, 4>][m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:594:19:[m[K   required from ‘[01m[KEigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; Derived = Eigen::Matrix<double, 4, 4>][m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:423:29:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:160:34:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+  175 |      [01;31m[K( \[m[K
+      |      [01;31m[K~~~[m[K
+  176 | [01;31m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  177 | [01;31m[K    || (\[m[K
+      |     [01;31m[K^~~~~[m[K
+  178 | [01;31m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  179 | [01;31m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  180 | [01;31m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  181 | [01;31m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  182 | [01;31m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  183 | [01;31m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  184 | [01;31m[K       ) \[m[K
+      |        [01;31m[K~~~[m[K
+  185 | [01;31m[K     )[m[K
+      |      [01;31m[K~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+      |                                                      [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+  194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+  887 |   [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(ActualDstTypeCleaned,Src)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;36m[Knote: [m[K‘[01m[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 4, 4> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> > >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime) == ((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime) == ((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::ColsAtCompileTime)))))[m[K’ evaluates to false
+  175 |      [01;36m[K( \[m[K
+      |      [01;36m[K~~~[m[K
+  176 | [01;36m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  177 | [01;36m[K    || (\[m[K
+      |     [01;36m[K^~~~~[m[K
+  178 | [01;36m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  179 | [01;36m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  180 | [01;36m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  181 | [01;36m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  182 | [01;36m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  183 | [01;36m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+      |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  184 | [01;36m[K       ) \[m[K
+      |        [01;36m[K~~~[m[K
+  185 | [01;36m[K     )[m[K
+      |      [01;36m[K~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+      |                                                      [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+  194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+  887 |   [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(ActualDstTypeCleaned,Src)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,18 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishPoseAndOrientation()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:125:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kidx[m[K’ was not declared in this scope
+  125 |         if ([01;31m[Kidx[m[K == 0) {
+      |             [01;31m[K^~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:126:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvelocity[m[K’ was not declared in this scope
+  126 |             [01;31m[Kvelocity[m[K = interpolate(t + dt) - interpolate(t);  // smoother
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:126:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  126 |             velocity = interpolate([01;31m[Kt[m[K + dt) - interpolate(t);  // smoother
+      |                                    [01;31m[K^[m[K
+      |                                    [32m[Ktm[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:126:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope; did you mean ‘[01m[Kdist[m[K’?
+  126 |             velocity = interpolate(t + [01;31m[Kdt[m[K) - interpolate(t);  // smoother
+      |                                        [01;31m[K^~[m[K
+      |                                        [32m[Kdist[m[K
+gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

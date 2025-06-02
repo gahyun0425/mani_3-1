@@ -1,0 +1,75 @@
+[0.018s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.116s] [35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[0.138s] [ 85%] Built target rrt_node
+[0.138s] [ 85%] Built target obstacle_node
+[0.138s] [ 85%] Built target spline_node
+[0.138s] [ 85%] Built target map_node
+[0.138s] [ 85%] Built target path_node
+[0.138s] [ 85%] Built target forward_node
+[0.153s] [ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[4.569s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_q[m[K’ is not a type
+[4.569s]   355 |     sendJointTrajectory([01;31m[Ktarget_q[m[K, current_joint_angles_, dt);
+[4.569s]       |                         [01;31m[K^~~~~~~~[m[K
+[4.569s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_angles_[m[K’ is not a type
+[4.569s]   355 |     sendJointTrajectory(target_q, [01;31m[Kcurrent_joint_angles_[m[K, dt);
+[4.569s]       |                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.569s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ is not a type
+[4.569s]   355 |     sendJointTrajectory(target_q, current_joint_angles_, [01;31m[Kdt[m[K);
+[4.569s]       |                                                          [01;31m[K^~[m[K
+[4.569s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:5:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KsendJointTrajectory[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.569s]   355 |     [01;31m[KsendJointTrajectory[m[K(target_q, current_joint_angles_, dt);
+[4.569s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.574s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:356:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_angles_[m[K’ does not name a type
+[4.574s]   356 |     [01;31m[Kcurrent_joint_angles_[m[K = target_q;
+[4.574s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.585s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kposition_error[m[K’ was not declared in this scope
+[4.585s]   352 |     VectorXd q_dot = computeFeedbackVelocity([01;31m[Kposition_error[m[K, orientation_error);
+[4.585s]       |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.595s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:62:[m[K [01;31m[Kerror: [m[K‘[01m[Korientation_error[m[K’ was not declared in this scope
+[4.595s]   352 |     VectorXd q_dot = computeFeedbackVelocity(position_error, [01;31m[Korientation_error[m[K);
+[4.595s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[4.607s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeFeedbackVelocity[m[K’ was not declared in this scope
+[4.607s]   352 |     VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity[m[K(position_error, orientation_error);
+[4.607s]       |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.826s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[4.826s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:337:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeFeedbackVelocity[m[K’ was not declared in this scope
+[4.826s]   337 |     VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity[m[K(position_error, orientation_error);
+[4.826s]       |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.826s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:344:25:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KEigen::VectorXd[m[K’ {aka ‘[01m[KEigen::Matrix<double, -1, 1>[m[K’} to ‘[01m[Kint[m[K’
+[4.826s]   344 |     sendJointTrajectory([01;31m[Ktarget_q[m[K, current_joint_angles_, dt);
+[4.826s]       |                         [01;31m[K^~~~~~~~[m[K
+[4.826s]       |                         [01;31m[K|[m[K
+[4.826s]       |                         [01;31m[KEigen::VectorXd {aka Eigen::Matrix<double, -1, 1>}[m[K
+[4.827s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:25:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint ManipulatorNode::sendJointTrajectory(int, int, int)[m[K’
+[4.827s]   355 |     sendJointTrajectory([01;36m[Ktarget_q[m[K, current_joint_angles_, dt);
+[4.827s]       |                         [01;36m[K^~~~~~~~[m[K
+[4.827s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[4.827s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:361:14:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KcomputeJacobian[m[K’
+[4.827s]   361 |     MatrixXd [01;31m[KcomputeJacobian[m[K(const VectorXd &theta) {
+[4.827s]       |              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.878s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In function ‘[01m[KEigen::VectorXd computeFeedbackVelocity(const Vector3d&, const Vector3d&)[m[K’:
+[4.878s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:410:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_angles_[m[K’ was not declared in this scope
+[4.878s]   410 |         MatrixXd J = computeJacobian([01;31m[Kcurrent_joint_angles_[m[K);
+[4.878s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.884s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:410:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeJacobian[m[K’ was not declared in this scope
+[4.884s]   410 |         MatrixXd J = [01;31m[KcomputeJacobian[m[K(current_joint_angles_);
+[4.884s]       |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.893s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:411:27:[m[K [01;31m[Kerror: [m[K‘[01m[KdampedPseudoInverse[m[K’ was not declared in this scope
+[4.893s]   411 |         MatrixXd J_pinv = [01;31m[KdampedPseudoInverse[m[K(J);
+[4.893s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[5.005s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In function ‘[01m[Kvoid sendJointTrajectory(const VectorXd&, const VectorXd&, double)[m[K’:
+[5.006s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:447:28:[m[K [01;31m[Kerror: [m[K‘[01m[Know[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+[5.006s]   447 |         msg.header.stamp = [01;31m[Know[m[K();
+[5.006s]       |                            [01;31m[K^~~[m[K
+[5.006s]       |                            [32m[Kpow[m[K
+[5.015s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:460:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_trajectory_pub_[m[K’ was not declared in this scope
+[5.015s]   460 |         [01;31m[Kjoint_trajectory_pub_[m[K->publish(msg);
+[5.015s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[5.015s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[5.015s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:462:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[5.015s]   462 | [01;31m[K}[m[K;
+[5.015s]       | [01;31m[K^[m[K
+[13.787s] gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+[13.787s] gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+[13.787s] gmake: *** [Makefile:146: all] Error 2
+[13.789s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

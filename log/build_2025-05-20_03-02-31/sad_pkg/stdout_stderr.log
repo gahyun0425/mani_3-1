@@ -1,0 +1,35 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 85%] Built target spline_node
+[ 85%] Built target forward_node
+[ 85%] Built target rrt_node
+[ 85%] Built target map_node
+[ 85%] Built target obstacle_node
+[ 85%] Built target path_node
+[ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:308:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  308 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:70:45:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   70 | class ManipulatorNode : public rclcpp::Node [01;36m[K{[m[K
+      |                                             [01;36m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::jointStateCallback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:133:13:[m[K [01;31m[Kerror: [m[K‘[01m[KsendJointTrajectory[m[K’ was not declared in this scope
+  133 |             [01;31m[KsendJointTrajectory[m[K(desired_joint_angles_);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d, Eigen::Vector3d)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:217:33:[m[K [01;31m[Kerror: [m[K‘[01m[KdampedPseudoInverse[m[K’ was not declared in this scope
+  217 |         MatrixXd J_pseudo_inv = [01;31m[KdampedPseudoInverse[m[K(J);
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:232:53:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  232 |     MatrixXd dampedPseudoInverse(const MatrixXd &J) [01;31m[K{[m[K
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:254:60:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  254 |     void sendJointTrajectory(const VectorXd& joint_angles) [01;31m[K{[m[K
+      |                                                            [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:308:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  308 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

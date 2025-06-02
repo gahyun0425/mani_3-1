@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 14%] Built target forward_node
+[ 85%] Built target rrt_node
+[ 85%] Built target obstacle_node
+[ 85%] Built target path_node
+[ 85%] Built target spline_node
+[ 85%] Built target map_node
+[ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:375:66:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KQuaternion[m[K’ to ‘[01m[Kconst Vector3d&[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<double, 3, 1>&[m[K’}
+  375 |         VectorXd q_dot = computeFeedbackVelocity(position_error, [01;31m[Kq_error[m[K, desired_velocity_position);
+      |                                                                  [01;31m[K^~~~~~~[m[K
+      |                                                                  [01;31m[K|[m[K
+      |                                                                  [01;31m[KQuaternion[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:442:85:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(const Vector3d&, const Vector3d&, const Vector3d&)[m[K’
+  442 |     VectorXd computeFeedbackVelocity(const Vector3d &position_error,[01;36m[Kconst Vector3d &orientation_error[m[K,const Vector3d &desired_linear_velocity)
+      |                                                                     [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,46 @@
+[ 85%] Built target obstacle_node
+[ 85%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[ 85%] Built target forward_node
+[ 92%] Built target map_node
+[ 92%] Built target rrt_node
+[ 92%] Built target path_node
+[ 85%] Built target spline_node
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:532:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  532 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:190:45:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  190 | class ManipulatorNode : public rclcpp::Node [01;36m[K{[m[K
+      |                                             [01;36m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In constructor ‘[01m[KManipulatorNode::ManipulatorNode(const Vector3d&, const Vector3d&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:214:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_callback[m[K’ is not a member of ‘[01m[KManipulatorNode[m[K’
+  214 |           std::bind(&ManipulatorNode::[01;31m[Kpath_callback[m[K, this, std::placeholders::_1)
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timer_callback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:311:26:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeFeedbackVelocity[m[K’ was not declared in this scope
+  311 |         VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity[m[K(target_position_, target_orientation_);
+      |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:336:9:[m[K [01;31m[Kerror: [m[K‘[01m[KsendJointTrajectory[m[K’ was not declared in this scope
+  336 |         [01;31m[KsendJointTrajectory[m[K(target_q, current_joint_angles_, dt);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:80:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  352 |         void path_callback(const geometry_msgs::msg::PoseArray::SharedPtr msg) [01;31m[K{[m[K
+      |                                                                                [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:373:5:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  373 |     [01;31m[K{[m[K
+      |     [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:412:5:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  412 |     [01;31m[K{[m[K
+      |     [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:476:53:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  476 |     MatrixXd dampedPseudoInverse(const MatrixXd &J) [01;31m[K{[m[K
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:498:94:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  498 |     void sendJointTrajectory(const VectorXd& target_q, const VectorXd& current_q, double dt) [01;31m[K{[m[K
+      |                                                                                              [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:532:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  532 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

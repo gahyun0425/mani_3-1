@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target path_node[0m
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 64%] Built target map_node
+[ 64%] Built target spline_node
+[ 71%] Built target obstacle_node
+[ 71%] Built target forward_node
+[ 71%] Built target rrt_node
+[ 78%] [32mBuilding CXX object CMakeFiles/path_node.dir/src/path_node.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:353:45:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d&, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::Matrix<double, 3, 1>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 3, 1> > >)[m[K’
+  353 |     VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity(position_error, axis * angle_rad)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:403:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(const Vector3d&, const Vector3d&, const Vector3d&)[m[K’
+  403 |     VectorXd [01;36m[KcomputeFeedbackVelocity[m[K(const Vector3d &u_d, const Vector3d &u, const Vector3d &u_dot_d)
+      |              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:403:14:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[ 92%] [32m[1mLinking CXX executable path_node[0m
+[ 92%] Built target path_node
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,16 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timer_callback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:330:18:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::VectorXd q_dot[m[K’
+  330 |         VectorXd [01;31m[Kq_dot[m[K = computeFeedbackVelocity(target_position_,
+      |                  [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:308:18:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::VectorXd q_dot[m[K’ previously declared here
+  308 |         VectorXd [01;36m[Kq_dot[m[K = computeFeedbackVelocity(target_position_, target_orientation_);
+      |                  [01;36m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:304:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kposition_deadband[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  304 |         double [01;35m[Kposition_deadband[m[K = 0.005;  // 5mm 정도는 무시
+      |                [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:305:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Korientation_deadband[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  305 |         const double [01;35m[Korientation_deadband[m[K = 0.05;   // 약 3°
+      |                      [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

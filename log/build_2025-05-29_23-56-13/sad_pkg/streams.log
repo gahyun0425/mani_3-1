@@ -1,0 +1,48 @@
+[0.016s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.111s] [ 85%] Built target obstacle_node
+[0.112s] [ 85%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[0.112s] [ 85%] Built target forward_node
+[0.112s] [ 92%] Built target map_node
+[0.112s] [ 92%] Built target rrt_node
+[0.112s] [ 92%] Built target path_node
+[0.112s] [ 85%] Built target spline_node
+[4.064s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:532:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[4.065s]   532 | }
+[4.065s]       |  [01;31m[K^[m[K
+[4.065s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:190:45:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[4.065s]   190 | class ManipulatorNode : public rclcpp::Node [01;36m[K{[m[K
+[4.065s]       |                                             [01;36m[K^[m[K
+[4.088s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In constructor ‘[01m[KManipulatorNode::ManipulatorNode(const Vector3d&, const Vector3d&)[m[K’:
+[4.088s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:214:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_callback[m[K’ is not a member of ‘[01m[KManipulatorNode[m[K’
+[4.088s]   214 |           std::bind(&ManipulatorNode::[01;31m[Kpath_callback[m[K, this, std::placeholders::_1)
+[4.088s]       |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[4.224s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timer_callback()[m[K’:
+[4.224s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:311:26:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeFeedbackVelocity[m[K’ was not declared in this scope
+[4.224s]   311 |         VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity[m[K(target_position_, target_orientation_);
+[4.224s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.264s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:336:9:[m[K [01;31m[Kerror: [m[K‘[01m[KsendJointTrajectory[m[K’ was not declared in this scope
+[4.265s]   336 |         [01;31m[KsendJointTrajectory[m[K(target_q, current_joint_angles_, dt);
+[4.265s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.265s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:80:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[4.265s]   352 |         void path_callback(const geometry_msgs::msg::PoseArray::SharedPtr msg) [01;31m[K{[m[K
+[4.265s]       |                                                                                [01;31m[K^[m[K
+[4.265s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:373:5:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[4.266s]   373 |     [01;31m[K{[m[K
+[4.266s]       |     [01;31m[K^[m[K
+[4.266s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:412:5:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[4.266s]   412 |     [01;31m[K{[m[K
+[4.266s]       |     [01;31m[K^[m[K
+[4.266s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:476:53:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[4.266s]   476 |     MatrixXd dampedPseudoInverse(const MatrixXd &J) [01;31m[K{[m[K
+[4.266s]       |                                                     [01;31m[K^[m[K
+[4.266s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:498:94:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[4.266s]   498 |     void sendJointTrajectory(const VectorXd& target_q, const VectorXd& current_q, double dt) [01;31m[K{[m[K
+[4.266s]       |                                                                                              [01;31m[K^[m[K
+[4.271s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[4.272s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:532:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[4.272s]   532 | }
+[4.272s]       |  [01;31m[K^[m[K
+[6.561s] gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+[6.561s] gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+[6.561s] gmake: *** [Makefile:146: all] Error 2
+[6.564s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

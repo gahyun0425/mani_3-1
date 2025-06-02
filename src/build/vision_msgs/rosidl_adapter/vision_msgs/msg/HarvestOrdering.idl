@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from vision_msgs/msg/HarvestOrdering.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+#include "vision_msgs/msg/DetectedCrop.idl"
+
+module vision_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "수확 순서 정보")
+    struct HarvestOrdering {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "수확할 작물 ID 순서" "\n"
+        "우선순위만 넘어옴")
+      sequence<uint32> crop_ids;
+
+      @verbatim (language="comment", text=
+        "작물 객체 정보" "\n"
+        "1번 xyz, 2번 xyz 이런 식으로 순서 맞춰서 좌표값 넘어옴")
+      sequence<vision_msgs::msg::DetectedCrop> objects;
+
+      @verbatim (language="comment", text=
+        "총 작물 수")
+      uint32 total_objects;
+    };
+  };
+};

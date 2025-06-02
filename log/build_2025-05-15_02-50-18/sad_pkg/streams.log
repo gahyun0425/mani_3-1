@@ -1,0 +1,169 @@
+[0.022s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.108s] [35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[0.136s] [ 78%] Built target map_node
+[0.136s] [ 78%] Built target obstacle_node
+[0.136s] [ 78%] Built target spline_node
+[0.136s] [ 78%] Built target rrt_node
+[0.136s] [ 85%] Built target forward_node
+[0.136s] [ 85%] Built target path_node
+[0.146s] [ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[3.829s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d, Eigen::Vector3d)[m[K’:
+[3.829s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:170:9:[m[K [01;31m[Kerror: [m[K‘[01m[KVector4d[m[K’ was not declared in this scope; did you mean ‘[01m[KEigen::Vector4d[m[K’?
+[3.829s]   170 |         [01;31m[KVector4d[m[K qdot4; // 임시
+[3.829s]       |         [01;31m[K^~~~~~~~[m[K
+[3.829s]       |         [32m[KEigen::Vector4d[m[K
+[3.829s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+[3.829s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[3.829s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:2[m[K:
+[3.829s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:485:34:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::Vector4d[m[K’ declared here
+[3.829s]   485 | typedef Matrix<Type, Size, 1>    [01;36m[KVector[m[K##SizeSuffix##TypeSuffix;  \
+[3.829s]       |                                  [01;36m[K^~~~~~[m[K
+[3.829s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:498:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_MAKE_TYPEDEFS[m[K’
+[3.829s]   498 | [01;36m[KEIGEN_MAKE_TYPEDEFS[m[K(Type, TypeSuffix, 4, 4) \
+[3.829s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.829s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:506:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_MAKE_TYPEDEFS_ALL_SIZES[m[K’
+[3.829s]   506 | [01;36m[KEIGEN_MAKE_TYPEDEFS_ALL_SIZES[m[K(double,               d)
+[3.829s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.493s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:164[m[K,
+[4.493s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[4.493s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:2[m[K:
+[4.493s] /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h: In instantiation of ‘[01m[KEigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::CwiseBinaryOp(const Lhs&, const Rhs&, const BinaryOp&) [with BinaryOp = Eigen::internal::scalar_difference_op<double, double>; LhsType = const Eigen::Matrix<double, 3, 1>; RhsType = const Eigen::Matrix<double, 4, 4>; Eigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::Lhs = Eigen::Matrix<double, 3, 1>; Eigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::Rhs = Eigen::Matrix<double, 4, 4>][m[K’:
+[4.493s] [01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:19:1:[m[K   required from ‘[01m[Kconst Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<typename Eigen::internal::traits<T>::Scalar, typename Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::MatrixBase<Derived>::operator-(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<double, 4, 4>; Derived = Eigen::Matrix<double, 3, 1>; typename Eigen::internal::traits<OtherDerived>::Scalar = double; typename Eigen::internal::traits<T>::Scalar = double][m[K’
+[4.493s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:160:35:[m[K   required from here
+[4.493s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+[4.493s]   175 |      [01;31m[K( \[m[K
+[4.493s]       |      [01;31m[K~~~[m[K
+[4.493s]   176 | [01;31m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+[4.493s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.493s]   177 | [01;31m[K    || (\[m[K
+[4.493s]       |     [01;31m[K^~~~~[m[K
+[4.493s]   178 | [01;31m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.493s]       |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.493s]   179 | [01;31m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.493s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.493s]   180 | [01;31m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+[4.494s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   181 | [01;31m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.494s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   182 | [01;31m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.494s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   183 | [01;31m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+[4.494s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   184 | [01;31m[K       ) \[m[K
+[4.494s]       |        [01;31m[K~~~[m[K
+[4.494s]   185 | [01;31m[K     )[m[K
+[4.494s]       |      [01;31m[K~[m[K
+[4.494s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+[4.494s]    33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+[4.494s]       |                                                      [01;36m[K^[m[K
+[4.494s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+[4.494s]   194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+[4.494s]       |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s] [01m[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:115:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+[4.494s]   115 |       [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(Lhs, Rhs)
+[4.494s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;36m[Knote: [m[K‘[01m[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 1> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 4, 4> >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime)))))[m[K’ evaluates to false
+[4.494s]   175 |      [01;36m[K( \[m[K
+[4.494s]       |      [01;36m[K~~~[m[K
+[4.494s]   176 | [01;36m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+[4.494s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   177 | [01;36m[K    || (\[m[K
+[4.494s]       |     [01;36m[K^~~~~[m[K
+[4.494s]   178 | [01;36m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.494s]       |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   179 | [01;36m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.494s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   180 | [01;36m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+[4.494s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   181 | [01;36m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.494s]       |       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   182 | [01;36m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[4.494s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   183 | [01;36m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+[4.494s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.494s]   184 | [01;36m[K       ) \[m[K
+[4.494s]       |        [01;36m[K~~~[m[K
+[4.495s]   185 | [01;36m[K     )[m[K
+[4.495s]       |      [01;36m[K~[m[K
+[4.495s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+[4.495s]    33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+[4.495s]       |                                                      [01;36m[K^[m[K
+[4.495s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+[4.495s]   194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+[4.495s]       |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.495s] [01m[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:115:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+[4.495s]   115 |       [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(Lhs, Rhs)
+[4.495s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.096s] /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘[01m[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 4, 4>; Src = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; Func = Eigen::internal::assign_op<double, double>][m[K’:
+[5.096s] [01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; Derived = Eigen::Matrix<double, 4, 4>][m[K’
+[5.096s] [01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:594:19:[m[K   required from ‘[01m[KEigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; Derived = Eigen::Matrix<double, 4, 4>][m[K’
+[5.096s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:423:29:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+[5.096s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:160:34:[m[K   required from here
+[5.097s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+[5.097s]   175 |      [01;31m[K( \[m[K
+[5.097s]       |      [01;31m[K~~~[m[K
+[5.097s]   176 | [01;31m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+[5.097s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.097s]   177 | [01;31m[K    || (\[m[K
+[5.097s]       |     [01;31m[K^~~~~[m[K
+[5.097s]   178 | [01;31m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.097s]       |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.097s]   179 | [01;31m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.097s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.097s]   180 | [01;31m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+[5.097s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.097s]   181 | [01;31m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.097s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.098s]   182 | [01;31m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.098s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.098s]   183 | [01;31m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+[5.098s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.098s]   184 | [01;31m[K       ) \[m[K
+[5.098s]       |        [01;31m[K~~~[m[K
+[5.098s]   185 | [01;31m[K     )[m[K
+[5.098s]       |      [01;31m[K~[m[K
+[5.098s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+[5.098s]    33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+[5.098s]       |                                                      [01;36m[K^[m[K
+[5.098s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+[5.098s]   194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+[5.098s]       |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.099s] [01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+[5.099s]   887 |   [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(ActualDstTypeCleaned,Src)
+[5.099s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.099s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:[m[K [01;36m[Knote: [m[K‘[01m[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 4, 4> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> > >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 4, 4>::RowsAtCompileTime) == ((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 4, 4>::ColsAtCompileTime) == ((int)Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >::ColsAtCompileTime)))))[m[K’ evaluates to false
+[5.099s]   175 |      [01;36m[K( \[m[K
+[5.099s]       |      [01;36m[K~~~[m[K
+[5.099s]   176 | [01;36m[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \[m[K
+[5.099s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.099s]   177 | [01;36m[K    || (\[m[K
+[5.099s]       |     [01;36m[K^~~~~[m[K
+[5.099s]   178 | [01;36m[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.099s]       |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.099s]   179 | [01;36m[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.100s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.100s]   180 | [01;36m[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \[m[K
+[5.100s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.100s]   181 | [01;36m[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.100s]       |       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.100s]   182 | [01;36m[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \[m[K
+[5.100s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.100s]   183 | [01;36m[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\[m[K
+[5.100s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.100s]   184 | [01;36m[K       ) \[m[K
+[5.100s]       |        [01;36m[K~~~[m[K
+[5.101s]   185 | [01;36m[K     )[m[K
+[5.101s]       |      [01;36m[K~[m[K
+[5.101s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_STATIC_ASSERT[m[K’
+[5.101s]    33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert([01;36m[KX[m[K,#MSG);
+[5.101s]       |                                                      [01;36m[K^[m[K
+[5.101s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K’
+[5.101s]   194 |      [01;36m[KEIGEN_PREDICATE_SAME_MATRIX_SIZE[m[K(TYPE0,TYPE1),\
+[5.101s]       |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.101s] [01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K’
+[5.101s]   887 |   [01;36m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(ActualDstTypeCleaned,Src)
+[5.101s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[14.869s] gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+[14.869s] gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+[14.869s] gmake: *** [Makefile:146: all] Error 2
+[14.875s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

@@ -1,0 +1,65 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_q[m[K’ is not a type
+  355 |     sendJointTrajectory([01;31m[Ktarget_q[m[K, current_joint_angles_, dt);
+      |                         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_angles_[m[K’ is not a type
+  355 |     sendJointTrajectory(target_q, [01;31m[Kcurrent_joint_angles_[m[K, dt);
+      |                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ is not a type
+  355 |     sendJointTrajectory(target_q, current_joint_angles_, [01;31m[Kdt[m[K);
+      |                                                          [01;31m[K^~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:5:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KsendJointTrajectory[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  355 |     [01;31m[KsendJointTrajectory[m[K(target_q, current_joint_angles_, dt);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:356:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_angles_[m[K’ does not name a type
+  356 |     [01;31m[Kcurrent_joint_angles_[m[K = target_q;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kposition_error[m[K’ was not declared in this scope
+  352 |     VectorXd q_dot = computeFeedbackVelocity([01;31m[Kposition_error[m[K, orientation_error);
+      |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:62:[m[K [01;31m[Kerror: [m[K‘[01m[Korientation_error[m[K’ was not declared in this scope
+  352 |     VectorXd q_dot = computeFeedbackVelocity(position_error, [01;31m[Korientation_error[m[K);
+      |                                                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:352:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeFeedbackVelocity[m[K’ was not declared in this scope
+  352 |     VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity[m[K(position_error, orientation_error);
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:337:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeFeedbackVelocity[m[K’ was not declared in this scope
+  337 |     VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity[m[K(position_error, orientation_error);
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:344:25:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KEigen::VectorXd[m[K’ {aka ‘[01m[KEigen::Matrix<double, -1, 1>[m[K’} to ‘[01m[Kint[m[K’
+  344 |     sendJointTrajectory([01;31m[Ktarget_q[m[K, current_joint_angles_, dt);
+      |                         [01;31m[K^~~~~~~~[m[K
+      |                         [01;31m[K|[m[K
+      |                         [01;31m[KEigen::VectorXd {aka Eigen::Matrix<double, -1, 1>}[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:355:25:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint ManipulatorNode::sendJointTrajectory(int, int, int)[m[K’
+  355 |     sendJointTrajectory([01;36m[Ktarget_q[m[K, current_joint_angles_, dt);
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:361:14:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KcomputeJacobian[m[K’
+  361 |     MatrixXd [01;31m[KcomputeJacobian[m[K(const VectorXd &theta) {
+      |              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In function ‘[01m[KEigen::VectorXd computeFeedbackVelocity(const Vector3d&, const Vector3d&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:410:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_angles_[m[K’ was not declared in this scope
+  410 |         MatrixXd J = computeJacobian([01;31m[Kcurrent_joint_angles_[m[K);
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:410:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeJacobian[m[K’ was not declared in this scope
+  410 |         MatrixXd J = [01;31m[KcomputeJacobian[m[K(current_joint_angles_);
+      |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:411:27:[m[K [01;31m[Kerror: [m[K‘[01m[KdampedPseudoInverse[m[K’ was not declared in this scope
+  411 |         MatrixXd J_pinv = [01;31m[KdampedPseudoInverse[m[K(J);
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In function ‘[01m[Kvoid sendJointTrajectory(const VectorXd&, const VectorXd&, double)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:447:28:[m[K [01;31m[Kerror: [m[K‘[01m[Know[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+  447 |         msg.header.stamp = [01;31m[Know[m[K();
+      |                            [01;31m[K^~~[m[K
+      |                            [32m[Kpow[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:460:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_trajectory_pub_[m[K’ was not declared in this scope
+  460 |         [01;31m[Kjoint_trajectory_pub_[m[K->publish(msg);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:462:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  462 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,248 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 50%] Built target rrt_node
+[ 50%] [32mBuilding CXX object CMakeFiles/path_node.dir/src/path_node.cpp.o[0m
+[ 50%] Built target forward_node
+[ 50%] Built target obstacle_node
+[ 64%] Built target map_node
+[ 92%] Built target Inverse_node
+[ 92%] Built target spline_node
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:441:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  441 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:29:36:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   29 | class RSNode : public rclcpp::Node [01;36m[K{[m[K
+      |                                    [01;36m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In constructor ‘[01m[KRSNode::RSNode()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:33:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRSNode[m[K’ does not have any field named ‘[01m[Kgen_[m[K’
+   33 |       [01;31m[Kgen_[m[K(42),              // 난수 생성기 시드 고정
+      |       [01;31m[K^~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:34:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRSNode[m[K’ does not have any field named ‘[01m[Kfirst_plan_done_[m[K’
+   34 |       [01;31m[Kfirst_plan_done_[m[K(false), // 최초 실행 여부 플래그
+      |       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:35:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRSNode[m[K’ does not have any field named ‘[01m[Kpath_published_[m[K’
+   35 |       [01;31m[Kpath_published_[m[K(false)
+      |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:40:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacle_sub_[m[K’ was not declared in this scope
+   40 |         [01;31m[Kobstacle_sub_[m[K = this->create_subscription<my_vision_msgs::msg::HarvestOrdering>(
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:46:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmarker_pub_[m[K’ was not declared in this scope
+   46 |         [01;31m[Kmarker_pub_[m[K = this->create_publisher<visualization_msgs::msg::MarkerArray>(
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_pub_[m[K’ was not declared in this scope
+   51 |         [01;31m[Kpath_pub_[m[K = this->create_publisher<geometry_msgs::msg::PoseArray>(
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:56:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   56 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:61:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_[m[K’ was not declared in this scope
+   61 |         [01;31m[Kstart_[m[K = makePoint(0.1435, 0.0, 0.976);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:61:18:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+   61 |         start_ = [01;31m[KmakePoint[m[K(0.1435, 0.0, 0.976);
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:62:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_[m[K’ was not declared in this scope
+   62 |         [01;31m[Kgoal_[m[K  = makePoint(0.6,    0.0, 0.57);
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::obstacleCallback(my_vision_msgs::msg::HarvestOrdering_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:77:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacles_[m[K’ was not declared in this scope; did you mean ‘[01m[Kobstack[m[K’?
+   77 |         [01;31m[Kobstacles_[m[K.clear();
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Kobstack[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:79:23:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+   79 |             auto pt = [01;31m[KmakePoint[m[K(obj.x, obj.y, obj.z);
+      |                       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:86:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kfirst_plan_done_[m[K’ was not declared in this scope
+   86 |         if (![01;31m[Kfirst_plan_done_[m[K) {
+      |              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::planRRTstar()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:113:9:[m[K [01;31m[Kerror: [m[K‘[01m[Knodes_[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  113 |         [01;31m[Knodes_[m[K.clear();
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[KNode[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:114:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_[m[K’ was not declared in this scope
+  114 |         nodes_.push_back({ [01;31m[Kstart_[m[K, -1, 0.0 });
+      |                            [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:120:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kgen_[m[K’ was not declared in this scope
+  120 |                 (ub([01;31m[Kgen_[m[K) < goal_bias) ? goal_ : makePoint(ux(gen_), uy(gen_), uz(gen_));
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:120:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_[m[K’ was not declared in this scope
+  120 |                 (ub(gen_) < goal_bias) ? [01;31m[Kgoal_[m[K : makePoint(ux(gen_), uy(gen_), uz(gen_));
+      |                                          [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:120:50:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+  120 |                 (ub(gen_) < goal_bias) ? goal_ : [01;31m[KmakePoint[m[K(ux(gen_), uy(gen_), uz(gen_));
+      |                                                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:122:23:[m[K [01;31m[Kerror: [m[K‘[01m[KnearestNode[m[K’ was not declared in this scope
+  122 |             int nid = [01;31m[KnearestNode[m[K(rnd);
+      |                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:124:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteer[m[K’ was not declared in this scope; did you mean ‘[01m[Kstderr[m[K’?
+  124 |             auto new_pt = [01;31m[Ksteer[m[K(nodes_[nid].point, rnd, step);
+      |                           [01;31m[K^~~~~[m[K
+      |                           [32m[Kstderr[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:126:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision[m[K’ was not declared in this scope
+  126 |             if ([01;31m[Kcollision[m[K(nodes_[nid].point, new_pt)) continue;
+      |                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:129:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kdist[m[K’ was not declared in this scope
+  129 |                 nodes_[nid].cost + [01;31m[Kdist[m[K(nodes_[nid].point, new_pt) };
+      |                                    [01;31m[K^~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[KnearNodes[m[K’ was not declared in this scope
+  131 |             auto nbrs = [01;31m[KnearNodes[m[K(new_pt, radius);
+      |                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:134:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision[m[K’ was not declared in this scope
+  134 |                 if (![01;31m[Kcollision[m[K(nodes_[j].point, new_pt) && c < new_node.cost) {
+      |                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:144:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision[m[K’ was not declared in this scope
+  144 |                 if (![01;31m[Kcollision[m[K(new_pt, nodes_[j].point) && c2 < nodes_[j].cost) {
+      |                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:152:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_[m[K’ was not declared in this scope
+  152 |         int gid = nearestNode([01;31m[Kgoal_[m[K);
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:152:19:[m[K [01;31m[Kerror: [m[K‘[01m[KnearestNode[m[K’ was not declared in this scope
+  152 |         int gid = [01;31m[KnearestNode[m[K(goal_);
+      |                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:153:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision[m[K’ was not declared in this scope
+  153 |         if (![01;31m[Kcollision[m[K(nodes_[gid].point, goal_)) {
+      |              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:155:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kdist[m[K’ was not declared in this scope
+  155 |                 nodes_[gid].cost + [01;31m[Kdist[m[K(nodes_[gid].point, goal_) };
+      |                                    [01;31m[K^~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:157:13:[m[K [01;31m[Kerror: [m[K‘[01m[KreconstructPath[m[K’ was not declared in this scope
+  157 |             [01;31m[KreconstructPath[m[K(nodes_.size() - 1);
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:159:13:[m[K [01;31m[Kerror: [m[K‘[01m[KreconstructPath[m[K’ was not declared in this scope
+  159 |             [01;31m[KreconstructPath[m[K(nearestNode(goal_));
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:164:9:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+  164 |         [01;31m[KsplineCP_[m[K.clear();
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:165:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kbest_path_[m[K’ was not declared in this scope
+  165 |         for (auto &p : [01;31m[Kbest_path_[m[K) {
+      |                        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:168:9:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+  168 |         [01;31m[KsplineDegree_[m[K = 3;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:169:9:[m[K [01;31m[Kerror: [m[K‘[01m[KbuildKnots[m[K’ was not declared in this scope
+  169 |         [01;31m[KbuildKnots[m[K();
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishMarkers()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:174:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_published_[m[K’ was not declared in this scope
+  174 |         if ([01;31m[Kpath_published_[m[K) {
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3[m[K:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:180:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kbest_path_[m[K’ was not declared in this scope
+  180 |         RCLCPP_INFO(get_logger(), "=== 최적 경로 포인트 개수: %zu ===", [01;31m[Kbest_path_[m[K.size());
+      |                                                                         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:181:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kbest_path_[m[K’ was not declared in this scope
+  181 |         for (size_t i = 0; i < [01;31m[Kbest_path_[m[K.size(); ++i) {
+      |                                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:199:32:[m[K [01;31m[Kerror: [m[K‘[01m[Knodes_[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  199 |         for (size_t i = 1; i < [01;31m[Knodes_[m[K.size(); ++i) {
+      |                                [01;31m[K^~~~~~[m[K
+      |                                [32m[KNode[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:215:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kbest_path_[m[K’ was not declared in this scope
+  215 |         for (auto &pt : [01;31m[Kbest_path_[m[K) path.points.push_back(pt);
+      |                         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:219:30:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+  219 |         if (static_cast<int>([01;31m[KsplineCP_[m[K.size()) >= splineDegree_ + 1){
+      |                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:219:51:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+  219 |         if (static_cast<int>(splineCP_.size()) >= [01;31m[KsplineDegree_[m[K + 1){
+      |                                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:230:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kknots_[m[K’ was not declared in this scope
+  230 |             double t0 = [01;31m[Kknots_[m[K[splineDegree_];
+      |                         [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:233:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolate[m[K’ was not declared in this scope
+  233 |                 Eigen::Vector3d pi = [01;31m[Kinterpolate[m[K(t);
+      |                                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:241:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmarker_pub_[m[K’ was not declared in this scope
+  241 |         [01;31m[Kmarker_pub_[m[K->publish(ma);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:244:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_published_[m[K’ was not declared in this scope
+  244 |         if (![01;31m[Kpath_published_[m[K && splineCP_.size() >= static_cast<size_t>(splineDegree_ + 1)) {
+      |              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:244:33:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+  244 |         if (!path_published_ && [01;31m[KsplineCP_[m[K.size() >= static_cast<size_t>(splineDegree_ + 1)) {
+      |                                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:244:73:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+  244 |         if (!path_published_ && splineCP_.size() >= static_cast<size_t>([01;31m[KsplineDegree_[m[K + 1)) {
+      |                                                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:247:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+  247 |                 [01;31m[Ktimer_[m[K->cancel();        // 타이머 멈춰서 publishMarkers도 멈춤
+      |                 [01;31m[K^~~~~~[m[K
+      |                 [32m[Ktimer_t[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishPath()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:252:30:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+  252 |         if (static_cast<int>([01;31m[KsplineCP_[m[K.size()) < splineDegree_ + 1) return;
+      |                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:252:50:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+  252 |         if (static_cast<int>(splineCP_.size()) < [01;31m[KsplineDegree_[m[K + 1) return;
+      |                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:259:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kknots_[m[K’ was not declared in this scope
+  259 |         double t0 = [01;31m[Kknots_[m[K[splineDegree_];
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:259:28:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+  259 |         double t0 = knots_[[01;31m[KsplineDegree_[m[K];
+      |                            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:260:28:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+  260 |         double t1 = knots_[[01;31m[KsplineCP_[m[K.size()];
+      |                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:273:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolate[m[K’ was not declared in this scope
+  273 |             Eigen::Vector3d pi = [01;31m[Kinterpolate[m[K(t);
+      |                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:313:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_pub_[m[K’ was not declared in this scope
+  313 |         [01;31m[Kpath_pub_[m[K->publish(pa);
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:317:89:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  317 |     double dist(const geometry_msgs::msg::Point &a, const geometry_msgs::msg::Point &b) [01;31m[K{[m[K
+      |                                                                                         [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:321:71:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  321 |     geometry_msgs::msg::Point makePoint(double x, double y, double z) [01;31m[K{[m[K
+      |                                                                       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:325:57:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  325 |     int nearestNode(const geometry_msgs::msg::Point &p) [01;31m[K{[m[K
+      |                                                         [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:335:79:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  335 |     std::vector<int> nearNodes(const geometry_msgs::msg::Point &pt, double r) [01;31m[K{[m[K
+      |                                                                               [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:347:7:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  347 |     ) [01;31m[K{[m[K
+      |       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:364:7:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  364 |     ) [01;31m[K{[m[K
+      |       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:386:35:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  386 |     void reconstructPath(int idx) [01;31m[K{[m[K
+      |                                   [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:394:42:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  394 |     double basis(int i, int k, double t) [01;31m[K{[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:402:23:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  402 |     void buildKnots() [01;31m[K{[m[K
+      |                       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:410:43:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  410 |     Eigen::Vector3d interpolate(double t) [01;31m[K{[m[K
+      |                                           [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:432:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfirst_plan_done_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  432 |     bool [01;35m[Kfirst_plan_done_[m[K;
+      |          [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:433:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpath_published_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  433 |     bool [01;35m[Kpath_published_[m[K;
+      |          [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:441:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  441 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

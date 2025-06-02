@@ -1,0 +1,153 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 42%] Built target map_node
+[ 71%] Built target spline_node
+[ 78%] Built target forward_node
+[ 78%] Built target obstacle_node
+[ 78%] [32mBuilding CXX object CMakeFiles/path_node.dir/src/path_node.cpp.o[0m
+[ 78%] Built target rrt_node
+[ 92%] Built target Inverse_node
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:382:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  382 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:25:36:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   25 | class RSNode : public rclcpp::Node [01;36m[K{[m[K
+      |                                    [01;36m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In constructor ‘[01m[KRSNode::RSNode()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:29:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRSNode[m[K’ does not have any field named ‘[01m[Kgen_[m[K’
+   29 |       [01;31m[Kgen_[m[K(42),              // 난수 생성기 시드 고정
+      |       [01;31m[K^~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:30:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRSNode[m[K’ does not have any field named ‘[01m[Kfirst_plan_done_[m[K’
+   30 |       [01;31m[Kfirst_plan_done_[m[K(false) // 최초 실행 여부 플래그
+      |       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:35:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacle_sub_[m[K’ was not declared in this scope
+   35 |         [01;31m[Kobstacle_sub_[m[K = this->create_subscription<my_vision_msgs::msg::HarvestOrdering>(
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:41:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmarker_pub_[m[K’ was not declared in this scope
+   41 |         [01;31m[Kmarker_pub_[m[K = this->create_publisher<visualization_msgs::msg::MarkerArray>(
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:47:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   47 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:48:40:[m[K [01;31m[Kerror: [m[K‘[01m[KpublishMarkers[m[K’ is not a member of ‘[01m[KRSNode[m[K’
+   48 |             1000ms, std::bind(&RSNode::[01;31m[KpublishMarkers[m[K, this)
+      |                                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_[m[K’ was not declared in this scope
+   52 |         [01;31m[Kstart_[m[K = makePoint(0.1435, 0.0, 0.976);
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+   52 |         start_ = [01;31m[KmakePoint[m[K(0.1435, 0.0, 0.976);
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:53:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_[m[K’ was not declared in this scope
+   53 |         [01;31m[Kgoal_[m[K  = makePoint(0.6,    0.0, 0.57);
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:56:9:[m[K [01;31m[Kerror: [m[K‘[01m[Korientation_pub_[m[K’ was not declared in this scope
+   56 |         [01;31m[Korientation_pub_[m[K = this->create_publisher<std_msgs::msg::Float64MultiArray>("path_to_inverse_kinematics", 10);
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::obstacleCallback(my_vision_msgs::msg::HarvestOrdering_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:70:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacles_[m[K’ was not declared in this scope; did you mean ‘[01m[Kobstack[m[K’?
+   70 |         [01;31m[Kobstacles_[m[K.clear();
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Kobstack[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:72:23:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+   72 |             auto pt = [01;31m[KmakePoint[m[K(obj.x, obj.y, obj.z);
+      |                       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:78:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kfirst_plan_done_[m[K’ was not declared in this scope
+   78 |         if (![01;31m[Kfirst_plan_done_[m[K) {
+      |              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:80:13:[m[K [01;31m[Kerror: [m[K‘[01m[KplanRRTstar[m[K’ was not declared in this scope
+   80 |             [01;31m[KplanRRTstar[m[K();
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishPoseAndOrientation()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:93:30:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+   93 |         if (static_cast<int>([01;31m[KsplineCP_[m[K.size()) < splineDegree_ + 1) {
+      |                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:93:50:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+   93 |         if (static_cast<int>(splineCP_.size()) < [01;31m[KsplineDegree_[m[K + 1) {
+      |                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:100:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kknots_[m[K’ was not declared in this scope
+  100 |         double t0 = [01;31m[Kknots_[m[K[splineDegree_];
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:100:28:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineDegree_[m[K’ was not declared in this scope
+  100 |         double t0 = knots_[[01;31m[KsplineDegree_[m[K];
+      |                            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:101:28:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineCP_[m[K’ was not declared in this scope
+  101 |         double t1 = knots_[[01;31m[KsplineCP_[m[K.size()];
+      |                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:109:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kinterpolate[m[K’ was not declared in this scope
+  109 |             Eigen::Vector3d pi = [01;31m[Kinterpolate[m[K(t);
+      |                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:117:9:[m[K [01;31m[Kerror: [m[K‘[01m[Korientation_pub_[m[K’ was not declared in this scope
+  117 |         [01;31m[Korientation_pub_[m[K->publish(msg);
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3[m[K:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:119:13:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%zu[m[K’ expects argument of type ‘[01m[Ksize_t[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  119 |             [01;35m[K"[RSNode] 스플라인 %zu개 샘플 퍼블리시 (t범위: %.3f ~ %.3f)"[m[K,
+      |             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  120 |             [32m[K(int)( (t1 - t0) / dt ) + 1[m[K, t0, t1
+      |             [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                     [32m[K|[m[K
+      |                                     [32m[Kint[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:119:34:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  119 |             "[RSNode] 스플라인 [01;36m[K%zu[m[K개 샘플 퍼블리시 (t범위: %.3f ~ %.3f)",
+      |                                [01;36m[K~~^[m[K
+      |                                  [01;36m[K|[m[K
+      |                                  [01;36m[Klong unsigned int[m[K
+      |                                [32m[K%u[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:125:24:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  125 |     void planRRTstar() [01;31m[K{[m[K
+      |                        [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:202:27:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  202 |     void publishMarkers() [01;31m[K{[m[K
+      |                           [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:261:89:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  261 |     double dist(const geometry_msgs::msg::Point &a, const geometry_msgs::msg::Point &b) [01;31m[K{[m[K
+      |                                                                                         [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:265:71:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  265 |     geometry_msgs::msg::Point makePoint(double x, double y, double z) [01;31m[K{[m[K
+      |                                                                       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:269:57:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  269 |     int nearestNode(const geometry_msgs::msg::Point &p) [01;31m[K{[m[K
+      |                                                         [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:279:79:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  279 |     std::vector<int> nearNodes(const geometry_msgs::msg::Point &pt, double r) [01;31m[K{[m[K
+      |                                                                               [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:291:7:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  291 |     ) [01;31m[K{[m[K
+      |       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:308:7:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  308 |     ) [01;31m[K{[m[K
+      |       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:330:35:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  330 |     void reconstructPath(int idx) [01;31m[K{[m[K
+      |                                   [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:338:42:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  338 |     double basis(int i, int k, double t) [01;31m[K{[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:346:23:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  346 |     void buildKnots() [01;31m[K{[m[K
+      |                       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:354:43:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  354 |     Eigen::Vector3d interpolate(double t) [01;31m[K{[m[K
+      |                                           [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:374:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfirst_plan_done_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  374 |     bool [01;35m[Kfirst_plan_done_[m[K;
+      |          [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:382:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  382 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

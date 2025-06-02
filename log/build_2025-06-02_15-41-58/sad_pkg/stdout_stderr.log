@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target path_node[0m
+[ 14%] Built target forward_node
+[ 28%] Built target obstacle_node
+[ 42%] Built target Inverse_node
+[ 71%] Built target map_node
+[ 71%] Built target rrt_node
+[ 85%] Built target spline_node
+[ 92%] [32mBuilding CXX object CMakeFiles/path_node.dir/src/path_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishPoseAndOrientation()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:147:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_pi[m[K’ was not declared in this scope
+  147 |                 velocity = (pi - [01;31m[Kprev_pi[m[K) / dt;
+      |                                  [01;31m[K^~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:149:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_pi[m[K’ was not declared in this scope
+  149 |             [01;31m[Kprev_pi[m[K = pi;  // 다음 루프에서 사용하기 위해 저장
+      |             [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

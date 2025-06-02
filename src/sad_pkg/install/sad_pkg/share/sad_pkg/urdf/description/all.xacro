@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<robot name="sad_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:property name="hardware_interface" value="hardware_interface/PositionJointInterface"/>
+
+<link name="world"/>
+
+<link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="/home/ga/sad_ws/src/sad_pkg/meshes/mani.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.57 0 3.14"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="/home/ga/sad_ws/src/sad_pkg/meshes/mani.stl" scale="0.005 0.005 0.005"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.57 0 3.14"/>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/>  <!-- 중력이 없어도 최소 질량 필요 -->
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
+
+    <joint name="fixed_base" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!-- Gazebo에서 중력 무시 설정 추가 -->
+    <gazebo reference="base_link">
+        <static>true</static>  <!-- 중력 제거 -->
+    </gazebo>
+
+    <!-- 새로운 판 link 추가 -->
+    <link name="plate_link">
+        <visual>
+        <geometry>
+            <box size="4.8 0.1 4.5"/>  
+        </geometry>
+        <material name="myBlue">
+            <color rgba="0.0 0.0 1.0 1.0"/>
+        </material>
+        <origin xyz="3.3 0 2.25" rpy="0 0 1.57"/> 
+        </visual>
+        <collision>
+        <geometry>
+            <box size="4.8 0.1 4.5"/>
+        </geometry>
+        <origin xyz="3.3 0 2.25" rpy="0 0 1.57"/>
+        </collision>
+        <inertial>
+        <mass value="1.0"/>
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                iyy="0.01" iyz="0.0"
+                izz="0.01"/>
+        </inertial>
+    </link>
+
+    <!-- world에 고정시키기 위한 fixed joint -->
+    <joint name="fixed_plate" type="fixed">
+        <parent link="world"/>
+        <child link="plate_link"/>
+    </joint>
+
+    <!-- Gazebo에서 판을 static으로 설정 (중력 영향 X) -->
+    <gazebo reference="plate_link">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_1">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 0 3.5.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 0 3.5.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_1" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_1"/>
+    </joint>
+
+    <gazebo reference="ellipse_1">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_2">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 0.5 3.5.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 0.5 3.5.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_2" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_2"/>
+    </joint>
+
+    <gazebo reference="ellipse_2">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_3">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 1.0 3.5.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 1.0 3.5.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_3" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_3"/>
+    </joint>
+
+    <gazebo reference="ellipse_3">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_4">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 -0.5 3.5.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 -0.5 3.5.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_4" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_4"/>
+    </joint>
+
+    <gazebo reference="ellipse_4">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_5">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 -1.0 3.5.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 -1.0 3.5.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_5" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_5"/>
+    </joint>
+
+    <gazebo reference="ellipse_5">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_6">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 0 3.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 0 3.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_6" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_6"/>
+    </joint>
+
+    <gazebo reference="ellipse_6">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_7">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 0.5 3.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 0.5 3.3.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_7" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_7"/>
+    </joint>
+
+    <gazebo reference="ellipse_7">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_8">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 1.0 3.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 1.0 3.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_8" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_8"/>
+    </joint>
+
+    <gazebo reference="ellipse_8">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_9">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 -0.5 3.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 -0.5 3.3.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_9" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_9"/>
+    </joint>
+
+    <gazebo reference="ellipse_9">
+        <static>true</static>
+    </gazebo>
+
+    <link name="ellipse_10">
+        <visual>
+        <geometry>
+            <sphere radius="0.2" />
+        </geometry>
+        <origin xyz="2.8 -1.0 3.0" rpy="1.57 0 0"/>
+        <material name="myRed">
+            <color rgba="1 0 0 1"/>
+        </material>
+        </visual>
+        <collision>
+        <geometry>
+            <sphere radius="0.2"/>
+        </geometry>
+        <origin xyz="2.8 -1.0 3.0" rpy="1.57 0 0"/>
+        </collision>
+        <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+                iyy="0.001" iyz="0.0"
+                izz="0.001"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_ellipse_10" type="fixed">
+        <parent link="world"/>
+        <child link="ellipse_10"/>
+    </joint>
+
+    <gazebo reference="ellipse_10">
+        <static>true</static>
+    </gazebo>
+
+
+
+</robot>

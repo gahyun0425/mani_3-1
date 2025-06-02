@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 14%] Built target path_node
+[ 50%] Built target obstacle_node
+[ 78%] Built target rrt_node
+[ 78%] Built target map_node
+[ 78%] Built target forward_node
+[ 85%] Built target spline_node
+[ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:332:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float64MultiArray_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Subscription<std_msgs::msg::Float64MultiArray_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Ksize[m[K’
+  332 |             if (current_index_ >= path_sub_.[01;31m[Ksize[m[K()) {
+      |                                             [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:8[m[K:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:362:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_position_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktarget_position_[m[K’?
+  362 |             [01;31m[Kcurrent_position_[m[K.x(), current_position_.y(), current_position_.z());
+      |             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

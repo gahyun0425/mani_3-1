@@ -1,0 +1,17 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::sendJointTrajectory(const VectorXd&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:276:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_q[m[K’ was not declared in this scope
+  276 |         p0.positions = std::vector<double>([01;31m[Kcurrent_q[m[K.data(), current_q.data()+current_q.size());
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:282:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_q[m[K’ was not declared in this scope
+  282 |         p1.positions = std::vector<double>([01;31m[Ktarget_q[m[K.data(), target_q.data()+target_q.size());
+      |                                            [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:283:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope; did you mean ‘[01m[Kd7[m[K’?
+  283 |         p1.time_from_start = rclcpp::Duration::from_seconds([01;31m[Kdt[m[K);
+      |                                                             [01;31m[K^~[m[K
+      |                                                             [32m[Kd7[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:268:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjoint_angles[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  268 |     void sendJointTrajectory([01;35m[Kconst VectorXd& joint_angles[m[K) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

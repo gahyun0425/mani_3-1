@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- This file demonstrates the use of some <gazebo> tags -->
+
+    <!-- To include it add the following line -->
+    <!-- <xacro:include filename="example_gazebo.xacro" /> -->
+
+
+
+    <!-- Gazebo is unable to use the same <material> tags that are already in the URDF (that RViz uses). -->
+    <!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
+
+
+    <!-- <gazebo reference="base">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo reference="shoulder_link_1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="shoulder_link_2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="shoulder_link_3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="wrist_link_1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="wrist_link_2">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="wrist_link_3">
+        <material>Gazebo/Blue</material>
+    </gazebo> -->
+
+    <ros2_control name="GazeboSimSystem" type="system">
+		<hardware>
+			<plugin>gazebo_ros2_control/GazeboSystem</plugin>
+		</hardware>
+		<joint name="joint1">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+		<joint name="joint2">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+		<joint name="joint3">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+		<joint name="joint4">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+        <joint name="joint5">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+        <joint name="joint6">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+		<joint name="joint7">
+			<command_interface name="position"/>
+			<state_interface name="position">
+				<param name="initial_value">0.0</param>
+			</state_interface>
+			<state_interface name="velocity"/>
+			<state_interface name="effort"/>
+		</joint>
+	</ros2_control>
+
+    <gazebo>
+		<plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+			<robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
+			<parameters>/home/anjunho/ros2_ws/install/mani_urdf/share/mani_urdf/config/gazebo_controll.yaml</parameters>
+		</plugin>
+	</gazebo>
+
+</robot>

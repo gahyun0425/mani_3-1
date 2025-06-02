@@ -1,0 +1,32 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In constructor ‘[01m[KRSNode::RSNode()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:48:40:[m[K [01;31m[Kerror: [m[K‘[01m[KpublishMarkers[m[K’ is not a member of ‘[01m[KRSNode[m[K’
+   48 |             1000ms, std::bind(&RSNode::[01;31m[KpublishMarkers[m[K, this)
+      |                                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+   52 |         start_ = [01;31m[KmakePoint[m[K(0.1435, 0.0, 0.976);
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::obstacleCallback(my_vision_msgs::msg::HarvestOrdering_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:74:23:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePoint[m[K’ was not declared in this scope
+   74 |             auto pt = [01;31m[KmakePoint[m[K(obj.x, obj.y, obj.z);
+      |                       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:82:13:[m[K [01;31m[Kerror: [m[K‘[01m[KplanRRTstar[m[K’ was not declared in this scope
+   82 |             [01;31m[KplanRRTstar[m[K();
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishPoseAndOrientation()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:124:37:[m[K [01;31m[Kerror: [m[K‘[01m[KinterpolateOrientation[m[K’ was not declared in this scope
+  124 |             Eigen::Vector3d euler = [01;31m[KinterpolateOrientation[m[K(t);
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:353:45:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KManipulatorNode::computeFeedbackVelocity(Eigen::Vector3d&, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::Matrix<double, 3, 1>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 3, 1> > >)[m[K’
+  353 |     VectorXd q_dot = [01;31m[KcomputeFeedbackVelocity(position_error, axis * angle_rad)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:403:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::VectorXd ManipulatorNode::computeFeedbackVelocity(const Vector3d&, const Vector3d&, const Vector3d&)[m[K’
+  403 |     VectorXd [01;36m[KcomputeFeedbackVelocity[m[K(const Vector3d &u_d, const Vector3d &u, const Vector3d &u_dot_d)
+      |              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:403:14:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target Inverse_node[0m
+[ 85%] Built target spline_node
+[ 85%] Built target path_node
+[ 85%] Built target forward_node
+[ 85%] Built target map_node
+[ 85%] Built target obstacle_node
+[ 85%] Built target rrt_node
+[ 92%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[KEigen::MatrixXd ManipulatorNode::computeJacobian(const VectorXd&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:161:25:[m[K [01;31m[Kerror: [m[Koperands to ‘[01m[K?:[m[K’ have different types ‘[01m[Kconst ConstantReturnType[m[K’ {aka ‘[01m[Kconst Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, Eigen::Matrix<double, 3, 1> >[m[K’} and ‘[01m[KEigen::DenseBase<Eigen::Matrix<double, 4, 4> >::FixedBlockXpr<3, 1>::Type[m[K’ {aka ‘[01m[KEigen::Block<Eigen::Matrix<double, 4, 4>, 3, 1, false>[m[K’}
+  160 |             Vector3d Oi = ([01;31m[Ki == 0[m[K
+      |                            [01;31m[K~~~~~~[m[K
+  161 | [01;31m[K                        ? Vector3d::Zero()[m[K
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+  162 | [01;31m[K                        : T[i-1].block<3,1>(0,3)[m[K);
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

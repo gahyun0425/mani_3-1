@@ -1,0 +1,95 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ was not declared in this scope
+   99 |     rclcpp::Subscription<[01;31m[Kgeometry_msgs[m[K::msg::PoseArray>::SharedPtr path_sub_;
+      |                          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   99 |     rclcpp::Subscription<geometry_msgs::msg::PoseArray[01;31m[K>[m[K::SharedPtr path_sub_;
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   99 |     rclcpp::Subscription<geometry_msgs::msg::PoseArray>::[01;31m[KSharedPtr[m[K path_sub_;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [32m[K;[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:99:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_sub_[m[K’ does not name a type
+   99 |     rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr [01;31m[Kpath_sub_[m[K;
+      |                                                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:105:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ was not declared in this scope
+  105 |     std::vector<[01;31m[Kgeometry_msgs[m[K::msg::Pose> path_poses_;
+      |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:105:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  105 |     std::vector<geometry_msgs::msg::Pose[01;31m[K>[m[K path_poses_;
+      |                                         [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:105:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timer_callback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:113:42:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[K((ManipulatorNode*)this)->ManipulatorNode::path_poses_[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  113 |         if (current_index_ < path_poses_.[01;31m[Ksize[m[K()) {
+      |                                          [01;31m[K^~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:114:37:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  114 |             auto &pose = path_poses_[01;31m[K[[m[Kcurrent_index_];
+      |                                     [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:116:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+  116 |             [01;31m[Ktf2[m[K::Quaternion q;
+      |             [01;31m[K^~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:117:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+  117 |             [01;31m[Ktf2[m[K::fromMsg(pose.orientation, q);
+      |             [01;31m[K^~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:117:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kq[m[K’ was not declared in this scope
+  117 |             tf2::fromMsg(pose.orientation, [01;31m[Kq[m[K);
+      |                                            [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:119:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+  119 |             [01;31m[Ktf2[m[K::Matrix3x3(q).getRPY(roll, pitch, yaw);
+      |             [01;31m[K^~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:366:43:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseArray[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’
+  366 |     rclcpp::Publisher<geometry_msgs::msg::[01;31m[KPoseArray[m[K>::SharedPtr path_pub_;
+      |                                           [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:366:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  366 |     rclcpp::Publisher<geometry_msgs::msg::PoseArray[01;31m[K>[m[K::SharedPtr path_pub_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:366:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  366 |     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::[01;31m[KSharedPtr[m[K path_pub_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:366:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_pub_[m[K’ does not name a type
+  366 |     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr [01;31m[Kpath_pub_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In constructor ‘[01m[KRSNode::RSNode()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:45:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_pub_[m[K’ was not declared in this scope
+   45 |         [01;31m[Kpath_pub_[m[K = this->create_publisher<geometry_msgs::msg::PoseArray>(
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:45:64:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseArray[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’
+   45 |         path_pub_ = this->create_publisher<geometry_msgs::msg::[01;31m[KPoseArray[m[K>(
+      |                                                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:45:74:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRSNode::create_publisher<<expression error> >(const char [17], int)[m[K’
+   45 |         path_pub_ = [01;31m[Kthis->create_publisher<geometry_msgs::msg::PoseArray>([m[K
+      |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   46 | [01;31m[K            "/rrt_spline/path", 10[m[K
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~[m[K                                        
+   47 | [01;31m[K        )[m[K;
+      |         [01;31m[K~[m[K                                                                 
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:3[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:45:74:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   45 |         path_pub_ = [01;31m[Kthis->create_publisher<geometry_msgs::msg::PoseArray>([m[K
+      |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   46 | [01;31m[K            "/rrt_spline/path", 10[m[K
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~[m[K                                        
+   47 | [01;31m[K        )[m[K;
+      |         [01;31m[K~[m[K                                                                 
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::publishMarkers()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/path_node.cpp:224:28:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  224 |         void publishPath() [01;31m[K{[m[K
+      |                            [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/path_node.dir/build.make:76: CMakeFiles/path_node.dir/src/path_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/path_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

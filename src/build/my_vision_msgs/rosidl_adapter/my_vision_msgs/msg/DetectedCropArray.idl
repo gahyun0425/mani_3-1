@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from my_vision_msgs/msg/DetectedCropArray.msg
+// generated code does not contain a copyright notice
+
+#include "my_vision_msgs/msg/DetectedCrop.idl"
+#include "std_msgs/msg/Header.idl"
+
+module my_vision_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "감지된 객체들의 리스트")
+    struct DetectedCropArray {
+      std_msgs::msg::Header header;
+
+      sequence<my_vision_msgs::msg::DetectedCrop> objects;
+
+      uint32 total_objects;
+    };
+  };
+};
