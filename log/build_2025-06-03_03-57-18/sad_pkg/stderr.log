@@ -1,0 +1,16 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:412:18:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::VectorXd q_dot[m[K’
+  412 |         VectorXd [01;31m[Kq_dot[m[K = ctrl.q_dot;
+      |                  [01;31m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:390:18:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::VectorXd q_dot[m[K’ previously declared here
+  390 |         VectorXd [01;36m[Kq_dot[m[K = computeFeedbackVelocity(position_error, axis * angle_rad, desired_velocity_position);
+      |                  [01;36m[K^~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:413:18:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::VectorXd next_q[m[K’
+  413 |         VectorXd [01;31m[Knext_q[m[K = ctrl.next_q;
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:400:18:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::VectorXd next_q[m[K’ previously declared here
+  400 |         VectorXd [01;36m[Knext_q[m[K = current_joint_angles_ + q_dot * dt;
+      |                  [01;36m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:307: CMakeFiles/Inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

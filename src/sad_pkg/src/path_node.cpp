@@ -50,7 +50,7 @@ public:
 
         // 시작점과 목표점 설정 (예시)
         start_ = makePoint(0.1435, 0.0, 0.976);
-        goal_  = makePoint(0.6,    0.1, 0.57);
+        goal_  = makePoint(0.6,    0.0, 0.57);
 
         // 4) 위치·방위 퍼블리셔 생성
         orientation_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(

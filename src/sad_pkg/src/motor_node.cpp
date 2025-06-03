@@ -68,8 +68,11 @@ public:
         timer_ = this->create_wall_timer(std::chrono::milliseconds(100),
             std::bind(&MotorControlNode::readFromSTM32, this));
 
-        current_vel_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("current_velocity", 10);
-        
+        current_qdot_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+            "/current_qdot", 10
+        );
+
+
         RCLCPP_INFO(this->get_logger(), "MotorControlNode initialized");
     }
 
@@ -162,7 +165,7 @@ private:
                         msg.data[4 + i] = radps;
                     }
                     RCLCPP_INFO(this->get_logger(), "Current joint velocities %f %f %f %f %f %f ", msg.data[0], msg.data[1], msg.data[2], msg.data[3], msg.data[4], msg.data[5]);
-                    current_vel_pub_->publish(msg);
+                    current_qdot_pub_->publish(msg);
                 }
             }
         }
@@ -170,8 +173,8 @@ private:
 
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr dq_sub_;
     rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr gripper_sub_;
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr current_vel_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr current_qdot_pub_;
 
     serial::Serial serial_;
     dynamixel::PortHandler *portHandler_;

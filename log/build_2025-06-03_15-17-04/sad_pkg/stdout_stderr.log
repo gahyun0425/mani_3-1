@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target real_inverse_node[0m
+[ 77%] Built target forward_node
+[ 77%] Built target path_node
+[ 77%] Built target motor_node
+[ 77%] Built target rrt_node
+[ 77%] Built target spline_node
+[ 50%] Built target obstacle_node
+[ 77%] Built target map_node
+[ 94%] Built target Inverse_node
+[ 94%] [32mBuilding CXX object CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:387:18:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::VectorXd next_q[m[K’
+  387 |         VectorXd [01;31m[Knext_q[m[K = current_joint_angles_ + q_dot * dt;
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:377:18:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::VectorXd next_q[m[K’ previously declared here
+  377 |         VectorXd [01;36m[Knext_q[m[K = ctrl.next_q;
+      |                  [01;36m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::sendJointTrajectory(const VectorXd&, const VectorXd&, double)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:535:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_trajectory_pub_[m[K’ was not declared in this scope
+  535 |     [01;31m[Kjoint_trajectory_pub_[m[K->publish(msg);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/real_inverse_node.dir/build.make:76: CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:335: CMakeFiles/real_inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

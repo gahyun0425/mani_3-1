@@ -160,27 +160,32 @@ public:
 
         // 2) joint_states 구독
         joint_state_sub_ = this->create_subscription<sensor_msgs::msg::JointState>(
-            "/joint_states", 10,
-            [this](const sensor_msgs::msg::JointState::SharedPtr js) {
-                // joint1~joint6 순서대로 있다고 가정
-                for (size_t i = 0; i < 6; ++i) {
-                    std::string name = "joint" + std::to_string(i+1);
-                    auto it = std::find(js->name.begin(), js->name.end(), name);
-                    if (it != js->name.end()) {
-                        size_t idx = std::distance(js->name.begin(), it);
-                        current_joint_angles_(i) = js->position[idx];
-                    }
-                }
-                have_joint_state_ = true;
+        "/joint_states", 10,
+        [this](const sensor_msgs::msg::JointState::SharedPtr js) {
+            std::map<std::string, double> name_to_pos;
+            for (size_t i = 0; i < js->name.size(); ++i) {
+                name_to_pos[js->name[i]] = js->position[i];
             }
-        );
+
+            for (int i = 0; i < 6; ++i) {
+                std::string expected_name = "joint" + std::to_string(i + 1);
+                if (name_to_pos.find(expected_name) != name_to_pos.end()) {
+                    current_joint_angles_(i) = name_to_pos[expected_name];
+                } else {
+                    RCLCPP_WARN(this->get_logger(),
+                        "Joint '%s' not found in /joint_states", expected_name.c_str());
+                }
+            }
+
+            have_joint_state_ = true;
+        }
+    );
+
 
         // 3) JointTrajectory 퍼블리셔 생성
         joint_trajectory_pub_ = this->create_publisher<trajectory_msgs::msg::JointTrajectory>(
             "/joint_trajectory_controller/joint_trajectory", 10
         );
-
-        joint_vel_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/joint_velocity", 10);
 
         // 4) 주기적으로 IK 계산할 타이머(100ms)
         timer_ = this->create_wall_timer(
@@ -195,7 +200,6 @@ private:
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr     path_sub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr         joint_state_sub_;
     rclcpp::TimerBase::SharedPtr                                          timer_;
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr joint_vel_pub_;
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -377,14 +381,6 @@ private:
         // --- (G) CLIK 제어 수행 (dt = 0.001) ---
         VectorXd q_dot = computeFeedbackVelocity(position_error, axis * angle_rad, desired_velocity_position);
         
-        for (int i = 0; i < 6; ++i) {
-            double min_limit = joint_limits[i][0];  // 최소 제한
-            double max_limit = joint_limits[i][1];  // 최대 제한
-
-            // 속도가 제한 범위를 벗어나지 않도록 클램핑
-            q_dot(i) = std::max(min_limit, std::min(max_limit, q_dot(i)));
-        }
-        
         VectorXd next_q = current_joint_angles_ + q_dot * dt;
 
         for (int i = 0; i < 6; ++i) {
@@ -395,23 +391,11 @@ private:
             q_dot(i) = std::max(min_limit, std::min(max_limit, q_dot(i)));
         }
 
-        // q_dot를 Float64MultiArray로 publish
-        std_msgs::msg::Float64MultiArray dq_msg;
-        dq_msg.data.resize(6);
-        for (int i = 0; i < 6; ++i) {
-            dq_msg.data[i] = q_dot(i);
-        }
-        joint_vel_pub_->publish(dq_msg);
-
-
         // 1) JointTrajectory 퍼블리시
         sendJointTrajectory(next_q, current_joint_angles_, dt);
         // 2) 내부 상태 업데이트
         current_joint_angles_ = next_q;
     }
-
-
-
 
     // 3) computeJacobian: 현재 관절각 theta로부터 6×6 자코비안 계산
     MatrixXd computeJacobian(const VectorXd &theta) {
@@ -454,7 +438,7 @@ private:
     VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity)
     {
         // (1) Kp와 Kd 설정
-        double Kp_pos = 0.2;
+        double Kp_pos = 2.0;
         double Kp_ori = 0.1;
 
         // (2) 목표 속도 벡터 구성
