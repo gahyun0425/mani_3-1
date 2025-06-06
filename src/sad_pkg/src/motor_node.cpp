@@ -65,7 +65,7 @@ public:
         gripper_sub_ = this->create_subscription<std_msgs::msg::Float64>("/gripper_command", 10,
             std::bind(&MotorControlNode::gripper_callback, this, std::placeholders::_1));
 
-        timer_ = this->create_wall_timer(std::chrono::milliseconds(100),
+        timer_ = this->create_wall_timer(std::chrono::milliseconds(10),
             std::bind(&MotorControlNode::readFromSTM32, this));
 
         current_qdot_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(

@@ -28,12 +28,12 @@ bool moved_once_ = false;
 
 // 각 관절의 제한 범위 (단위: 라디안)
 const double joint_limits[6][2] = {
-    {-M_PI, M_PI},               // 관절 1: ±360°
-    {-1.745, 1.745},            // 관절 2: 0 ~ +180°
-    {-M_PI, M_PI},               // 관절 3: -180° ~ +180°
-    {-2.09, 2.09},               // 관절 4: ±360°
-    {-M_PI, M_PI},               // 관절 5: ±360°
-    {-0.5236, M_PI/2}                // 관절 6: ±360°
+    {-M_PI, M_PI},           
+    {-1.745, 1.745},       
+    {-M_PI, M_PI},         
+    {-2.09, 2.09},  
+    {-M_PI, M_PI},          
+    {-1.0472, M_PI/2}     
 };
 
 // Quaternion 구조체
@@ -363,7 +363,7 @@ private:
 
         // --- (E) Deadband 검사: 이미 목표점 근처라면 제어 없이 패스 ---
         double position_deadband    = 0.05;   // 5cm
-        double orientation_deadband = 0.01;    // 약 5.7°
+        double orientation_deadband = 0.1;    // 약 5.7°
         if (pos_err_norm < position_deadband &&
             angle_rad < orientation_deadband) 
         {
@@ -439,7 +439,7 @@ private:
     {
         // (1) Kp와 Kd 설정
         double Kp_pos = 2.0;
-        double Kp_ori = 0.1;
+        double Kp_ori = 0.5;
 
         // (2) 목표 속도 벡터 구성
         VectorXd u_d_with_error(6);

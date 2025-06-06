@@ -80,6 +80,7 @@ private:
         if (!first_plan_done_) {
             RCLCPP_INFO(get_logger(), "RRT* 플래닝 시작...");
             planRRTstar();
+            buildKnots();
             first_plan_done_ = true;
         } else {
             RCLCPP_INFO(get_logger(), "이미 플래닝 완료, 재실행 생략");
@@ -124,7 +125,7 @@ private:
 
         double t0 = knots_[splineDegree_];
         double t1 = knots_[splineCP_.size()];
-        double dt = 0.05;
+        double dt = 0.01;
 
 
         std_msgs::msg::Float64MultiArray msg;
@@ -281,7 +282,6 @@ private:
         }
 
         splineDegree_ = 3;
-        buildKnots();
     }
 
     // ───────────────────────────────────────────────────────────────────────
@@ -336,7 +336,7 @@ private:
             spline.color.a         = 1.0;
             double t0 = knots_[splineDegree_];
             double t1 = knots_[splineCP_.size()];
-            for (double t = t0; t <= t1; t += 0.05) {
+            for (double t = t0; t <= t1; t += 0.01) {
                 Eigen::Vector3d pi = interpolate(t);
                 geometry_msgs::msg::Point gp;
                 gp.x = pi.x(); gp.y = pi.y(); gp.z = pi.z();
@@ -445,6 +445,7 @@ private:
         for (int i = k + 1; i <= n - 1; ++i)   knots_[i] = i - k;
         for (int i = n; i <= n + k; ++i)       knots_[i] = n - k;
     }
+
     // B-Spline 위치 보간
     Eigen::Vector3d interpolate(double t) {
         Eigen::Vector3d p(0,0,0);
