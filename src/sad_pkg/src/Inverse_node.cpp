@@ -363,13 +363,25 @@ private:
 
         // --- (E) Deadband 검사: 이미 목표점 근처라면 제어 없이 패스 ---
         double position_deadband    = 0.05;   // 5cm
-        double orientation_deadband = 0.1;    // 약 5.7°
-        if (pos_err_norm < position_deadband &&
-            angle_rad < orientation_deadband) 
-        {
-            // deadband 안에 있으면 IK 제어 없이 리턴
-            return;
-        }
+        double orientation_deadband;
+            if (current_index_ == targets_.size() - 1) {
+                orientation_deadband = 10.0 * M_PI / 180.0;  // 10도
+            } else {
+                orientation_deadband = 0.05;  // 약 0.57도
+            }
+
+            if (pos_err_norm < position_deadband &&
+                angle_rad < orientation_deadband) 
+            {
+                return;  // Deadband 안에 있으면 제어 생략
+            }
+
+            if (pos_err_norm < position_deadband &&
+                angle_rad < orientation_deadband) 
+            {
+                // deadband 안에 있으면 IK 제어 없이 리턴
+                return;
+            }
 
         double dt = 0.01;
 

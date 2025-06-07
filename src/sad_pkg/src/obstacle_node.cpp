@@ -34,7 +34,7 @@ public:
 
     // 3) 1초 뒤 한 번만 publish
     timer_ = this->create_wall_timer(
-      1000ms, std::bind(&HarvestOrderPublisher::on_timer, this));
+      2000ms, std::bind(&HarvestOrderPublisher::on_timer, this));
   }
 
 private:

@@ -42,13 +42,13 @@ Matrix4d forwardKinematics(const vector<DHParam>& dh_params) {
 int main() {
     // 초기 DH 파라미터 설정 (관절각은 0으로 초기화)
     vector<DHParam> dh_params = {
-        {0, 0.0, 0.402, 0}, // theta, a, d, alpha
+        {0, 0.0, 0.445, 0}, // theta, a, d, alpha
         {0, 0.0, 0.0, M_PI/2},
-        {0, 0.0, 0.278, - M_PI/2},
+        {0, 0.0, 0.27, - M_PI/2},
         {0, 0.0, 0.0, M_PI/2},
-        {0, 0.0, 0.2505, -M_PI/2},
+        {0, 0.0, 0.24, -M_PI/2},
         {0, 0.0, 0.0, M_PI/2},
-        {0, 0.1435, 0.0455, -M_PI/2}
+        {0, 0.14, 0.05, -M_PI/2}
     };
 
     // 사용자로부터 각 관절의 관절각 입력 받기

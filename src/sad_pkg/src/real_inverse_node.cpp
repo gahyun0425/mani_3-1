@@ -21,11 +21,11 @@ using Eigen::Vector3d;
 using Eigen::VectorXd;
 
 // DH 파라미터 정의
-double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.1435;
+double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.14;
 double alpha0 = 0.0, alpha1 = M_PI / 2, alpha2 = -M_PI / 2, alpha3 = M_PI / 2, alpha4 = -M_PI / 2, alpha5 = M_PI / 2, alpha6 = -M_PI / 2;
-double d1 = 0.402, d2 = 0.0, d3 = 0.278, d4 = 0.0, d5 = 0.2505, d6 = 0.0, d7 = 0.0455;
+double d1 = 0.445, d2 = 0.0, d3 = 0.27, d4 = 0.0, d5 = 0.24, d6 = 0.0, d7 = 0.05;
 bool moved_once_ = false;
-bool have_joint_state_ = false;  // ✅ 선언과 동시에 false로 초기화
+bool have_joint_state_ = false;  // 선언과 동시에 false로 초기화
 
 // 각 관절의 제한 범위 (단위: 라디안)
 const double joint_limits[6][2] = {
@@ -366,7 +366,27 @@ private:
 
         // --- (E) Deadband 검사: 이미 목표점 근처라면 제어 없이 패스 ---
         double position_deadband    = 0.05;   // 5cm
-        double orientation_deadband = 0.01;    // 약 5.7°
+        double orientation_deadband;
+        // if (current_index_ == targets_.size() - 1) {
+        //     orientation_deadband = 10.0 * M_PI / 180.0;  // 10도
+        // } else {
+        //     orientation_deadband = 0.05;  // 약 0.57도
+        // }
+
+        if (elapsed > TOTAL_TIME - 0.5) {
+            // 마지막에 충분히 가까워졌을 때만 deadband 확대
+            orientation_deadband = 10.0 * M_PI / 180.0;
+        } else {
+            orientation_deadband = 0.05;
+        }
+
+
+        if (pos_err_norm < position_deadband &&
+            angle_rad < orientation_deadband) 
+        {
+            return;  // Deadband 안에 있으면 제어 생략
+        }
+
         if (pos_err_norm < position_deadband &&
             angle_rad < orientation_deadband) 
         {
@@ -394,6 +414,8 @@ private:
             q_dot(i) = std::clamp(q_dot(i), -max_vel, max_vel);
 
         }
+
+        //q_dot(3) = -q_dot(3);
 
         // q_dot를 Float64MultiArray로 publish
         std_msgs::msg::Float64MultiArray dq_msg;
@@ -469,8 +491,8 @@ private:
     VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity)
     {
         // (1) Kp와 Kd 설정
-        double Kp_pos = 2.0;
-        double Kp_ori = 0.1;
+        double Kp_pos = 150.0;
+        double Kp_ori = 0.0;
 
         // (2) 목표 속도 벡터 구성
         VectorXd u_d_with_error(6);

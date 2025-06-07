@@ -1,0 +1,83 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In constructor ‘[01m[KMotorControlNode::MotorControlNode()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler_[m[K’ was not declared in this scope
+   24 |         [01;31m[KportHandler_[m[K = dynamixel::PortHandler::getPortHandler("/dev/ttyUSB7");// U2D2 연결 포트
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:25:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler_[m[K’ was not declared in this scope
+   25 |         [01;31m[KpacketHandler_[m[K = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:48:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial[m[K’?
+   48 |             [01;31m[Kserial_[m[K.setPort("/dev/ttyUSB6");// STM 연결 포트
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Kserial[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:57:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial[m[K’?
+   57 |         if (![01;31m[Kserial_[m[K.isOpen()) {
+      |              [01;31m[K^~~~~~~[m[K
+      |              [32m[Kserial[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:62:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdq_sub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdsubl[m[K’?
+   62 |         [01;31m[Kdq_sub_[m[K = this->create_subscription<std_msgs::msg::Float64MultiArray>("/joint_velocity", 10,
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Kdsubl[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:65:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_sub_[m[K’ was not declared in this scope
+   65 |         [01;31m[Kgripper_sub_[m[K = this->create_subscription<std_msgs::msg::Float64>("/gripper_command", 10,
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:68:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   68 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(std::chrono::milliseconds(1),
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:71:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_qdot_pub_[m[K’ was not declared in this scope
+   71 |         [01;31m[Kcurrent_qdot_pub_[m[K = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In destructor ‘[01m[Kvirtual MotorControlNode::~MotorControlNode()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:81:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler_[m[K’ was not declared in this scope
+   81 |         [01;31m[KpacketHandler_[m[K->write1ByteTxRx(portHandler_, DXL_ID_1, ADDR_TORQUE_ENABLE, 0, &dxl_error);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:81:40:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler_[m[K’ was not declared in this scope
+   81 |         packetHandler_->write1ByteTxRx([01;31m[KportHandler_[m[K, DXL_ID_1, ADDR_TORQUE_ENABLE, 0, &dxl_error);
+      |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:85:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial[m[K’?
+   85 |         if ([01;31m[Kserial_[m[K.isOpen()) serial_.close();
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Kserial[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::gripper_callback(std_msgs::msg::Float64_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:112:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler_[m[K’ was not declared in this scope
+  112 |         [01;31m[KpacketHandler_[m[K->write4ByteTxRx(portHandler_, DXL_ID_3, ADDR_GOAL_POSITION, static_cast<uint32_t>(gripper_goal), &dxl_error);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:112:40:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler_[m[K’ was not declared in this scope
+  112 |         packetHandler_->write4ByteTxRx([01;31m[KportHandler_[m[K, DXL_ID_3, ADDR_GOAL_POSITION, static_cast<uint32_t>(gripper_goal), &dxl_error);
+      |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::setDynamixelVelocity(uint8_t, int32_t)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:116:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler_[m[K’ was not declared in this scope
+  116 |         [01;31m[KpacketHandler_[m[K->write4ByteTxRx(portHandler_, id, ADDR_GOAL_VELOCITY, static_cast<uint32_t>(vel), &dxl_error);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:116:40:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler_[m[K’ was not declared in this scope
+  116 |         packetHandler_->write4ByteTxRx([01;31m[KportHandler_[m[K, id, ADDR_GOAL_VELOCITY, static_cast<uint32_t>(vel), &dxl_error);
+      |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::sendToSTM32(const std::vector<double, std::allocator<double> >&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:139:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial[m[K’?
+  139 |         [01;31m[Kserial_[m[K.write(packet, 19); //패킷 전달
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Kserial[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::readFromSTM32()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:145:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial[m[K’?
+  145 |         if ([01;31m[Kserial_[m[K.available() >= 19) {
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Kserial[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:162:25:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler_[m[K’ was not declared in this scope
+  162 |                         [01;31m[KpacketHandler_[m[K->read4ByteTxRx(portHandler_, DXL_ID_1 + i, ADDR_PRESENT_VELOCITY,
+      |                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:162:55:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler_[m[K’ was not declared in this scope
+  162 |                         packetHandler_->read4ByteTxRx([01;31m[KportHandler_[m[K, DXL_ID_1 + i, ADDR_PRESENT_VELOCITY,
+      |                                                       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:168:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_qdot_pub_[m[K’ was not declared in this scope
+  168 |                     [01;31m[Kcurrent_qdot_pub_[m[K->publish(msg);
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K At global scope:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:262:5:[m[K [01;31m[Kerror: [m[Kspecializing member ‘[01m[Krclcpp::Subscription<std_msgs::msg::Float64MultiArray_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::Float64MultiArray_<std::allocator<void> >, std_msgs::msg::Float64MultiArray_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::Float64MultiArray_<std::allocator<void> >, std::allocator<void> > >::SharedPtr[m[K’ requires ‘[01m[Ktemplate<>[m[K’ syntax
+  262 |     [01;31m[Krclcpp[m[K::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr dq_sub_;
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:270:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  270 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76: CMakeFiles/motor_node.dir/src/motor_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:361: CMakeFiles/motor_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

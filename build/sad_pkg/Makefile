@@ -276,6 +276,19 @@ path_node/fast:
 .PHONY : path_node/fast
 
 #=============================================================================
+# Target rules for targets named path_test_node
+
+# Build rule for target.
+path_test_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 path_test_node
+.PHONY : path_test_node
+
+# fast build rule for target.
+path_test_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_test_node.dir/build.make CMakeFiles/path_test_node.dir/build
+.PHONY : path_test_node/fast
+
+#=============================================================================
 # Target rules for targets named Inverse_node
 
 # Build rule for target.
@@ -458,6 +471,30 @@ src/path_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.s
 .PHONY : src/path_node.cpp.s
 
+src/path_test_node.o: src/path_test_node.cpp.o
+.PHONY : src/path_test_node.o
+
+# target to build an object file
+src/path_test_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_test_node.dir/build.make CMakeFiles/path_test_node.dir/src/path_test_node.cpp.o
+.PHONY : src/path_test_node.cpp.o
+
+src/path_test_node.i: src/path_test_node.cpp.i
+.PHONY : src/path_test_node.i
+
+# target to preprocess a source file
+src/path_test_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_test_node.dir/build.make CMakeFiles/path_test_node.dir/src/path_test_node.cpp.i
+.PHONY : src/path_test_node.cpp.i
+
+src/path_test_node.s: src/path_test_node.cpp.s
+.PHONY : src/path_test_node.s
+
+# target to generate assembly for a file
+src/path_test_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_test_node.dir/build.make CMakeFiles/path_test_node.dir/src/path_test_node.cpp.s
+.PHONY : src/path_test_node.cpp.s
+
 src/real_inverse_node.o: src/real_inverse_node.cpp.o
 .PHONY : src/real_inverse_node.o
 
@@ -551,6 +588,7 @@ help:
 	@echo "... motor_node"
 	@echo "... obstacle_node"
 	@echo "... path_node"
+	@echo "... path_test_node"
 	@echo "... real_inverse_node"
 	@echo "... rrt_node"
 	@echo "... spline_node"
@@ -572,6 +610,9 @@ help:
 	@echo "... src/path_node.o"
 	@echo "... src/path_node.i"
 	@echo "... src/path_node.s"
+	@echo "... src/path_test_node.o"
+	@echo "... src/path_test_node.i"
+	@echo "... src/path_test_node.s"
 	@echo "... src/real_inverse_node.o"
 	@echo "... src/real_inverse_node.i"
 	@echo "... src/real_inverse_node.s"

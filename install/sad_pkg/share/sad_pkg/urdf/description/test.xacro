@@ -5,10 +5,38 @@
 
     <link name="world"/>
     <joint name="fixed_base" type="fixed" disable_fixed_joint_lumping="true">
-        <origin rpy="1.57 0 -1.57" xyz="0 -0.03 0"/>
+        <origin rpy="0 0 0" xyz="0 -0.03 0.0145"/>
         <parent link="world"/>
+        <child link="box_link"/>
+    </joint>
+
+    <joint name="fixed_base2" type="fixed" disable_fixed_joint_lumping="true">
+        <origin rpy="1.57 0 -1.57" xyz="0 0 0"/>
+        <parent link="box_link"/>
         <child link="base_link"/>
     </joint>
+
+    <!-- 박스 요소 추가 -->
+    <link name="box_link">
+        <visual>
+        <geometry>
+            <box size="0.25 0.25 0.029"/> <!-- x, y, z 크기 -->
+        </geometry>
+        <material name="grey"/>
+        </visual>
+        <collision>
+        <geometry>
+            <box size="0.25 0.25 0.029"/>
+        </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.001"/>  
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                    iyy="0.01" iyz="0.0"
+                    izz="0.01"/>
+        </inertial>
+    </link>
 
     <link name="base_link">
         <visual>
