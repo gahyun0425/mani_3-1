@@ -22,7 +22,7 @@ using Eigen::VectorXd;
 
 // DH 파라미터 정의
 double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.14;
-double alpha0 = 0.0, alpha1 = - M_PI / 2, alpha2 = M_PI / 2, alpha3 = -M_PI / 2, alpha4 = M_PI / 2, alpha5 = - M_PI / 2, alpha6 = -M_PI / 2;
+double alpha0 = 0.0, alpha1 = - M_PI / 2, alpha2 = M_PI / 2, alpha3 = -M_PI / 2, alpha4 = M_PI / 2, alpha5 = - M_PI / 2, alpha6 = M_PI / 2;
 double d1 = 0.445, d2 = 0.0, d3 = 0.27, d4 = 0.0, d5 = 0.24, d6 = 0.0, d7 = 0.05;
 bool moved_once_ = false;
 bool have_joint_state_ = false;  // 선언과 동시에 false로 초기화
@@ -31,12 +31,12 @@ bool reached_current_ = false;  // 선언부 확인
 
 // 각 관절의 제한 범위 (단위: 라디안)
 const double joint_limits[6][2] = {
-    {-M_PI, M_PI},               // 관절 1: ±360°
-    {-1.745, 1.745},            // 관절 2: 0 ~ +180°
-    {-M_PI, M_PI},               // 관절 3: -180° ~ +180°
-    {-2.09, 2.09},               // 관절 4: ±360°
-    {-M_PI, M_PI},               // 관절 5: ±360°
-    {-0.2, M_PI}                // 관절 6: ±360°
+    {-2*M_PI, 2*M_PI},               // 관절 1: ±360°
+    {-2*M_PI, 2*M_PI},            // 관절 2: 0 ~ +180°
+    {-2*M_PI, 2*M_PI},               // 관절 3: -180° ~ +180°
+    {-2*M_PI, 2*M_PI},               // 관절 4: ±360°
+    {-2*M_PI, 2*M_PI},               // 관절 5: ±360°
+    {-2*M_PI, 2*M_PI}                // 관절 6: ±360°
 };
 
 struct ControlOutput {
@@ -98,15 +98,36 @@ Quaternion rotationMatrixToQuaternion(const Eigen::Matrix3d& R) {
     return q;
 }
 
-void quaternionToAngleAxis(const Quaternion& q, Vector3d& axis, double& angle) {
-    angle = 2.0 * acos(q.w);
-    double s = sqrt(1 - q.w * q.w);
+void quaternionToAngleAxis(const Quaternion& q_raw, Vector3d& axis, double& angle) {
+    // 1. 방향성 안정화를 위해 w가 음수면 전체 부호 반전
+    Quaternion q = q_raw;
+    if (q.w < 0.0) {
+        q.w *= -1;
+        q.x *= -1;
+        q.y *= -1;
+        q.z *= -1;
+    }
+
+    // 2. sin(θ/2) 계산
+    double s = std::sqrt(q.x*q.x + q.y*q.y + q.z*q.z);
+
+    // 3. atan2을 이용한 회전각 계산 (방향성 유지, 튐 방지)
+    angle = 2.0 * std::atan2(s, q.w);  // rad
+
+    // 4. 회전축 계산
     if (s < 1e-6) {
-        axis = Vector3d(q.x, q.y, q.z);
+        axis = Vector3d(1.0, 0.0, 0.0);  // 임의 축 (거의 회전 없음)
     } else {
         axis = Vector3d(q.x / s, q.y / s, q.z / s);
     }
+
+    // 5. 각도 클리핑 (선택) → 최소 회전 경로로
+    if (angle > M_PI) {
+        angle = 2.0 * M_PI - angle;
+        axis = -axis;
+    }
 }
+
 
 Quaternion eulerToQuaternion(double roll, double pitch, double yaw) {
     double cy = cos(yaw * 0.5);
@@ -153,6 +174,9 @@ public:
     : Node("manipulator_node"),
     estimated_q_(VectorXd::Zero(6))
     {
+        // estimated_q_ << 0.0, 0.0, 0.0, 0.0, 0.0, 0.0;
+        // have_joint_state_ = true;
+
         // 1) path_node에서 보내온 Float64MultiArray 구독
         path_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/path_to_inverse_kinematics", 10,
@@ -313,12 +337,15 @@ private:
         double sample_interval = TOTAL_TIME / static_cast<double>(targets_.size());
 
         if (elapsed >= TOTAL_TIME) {
-            RCLCPP_INFO(this->get_logger(), "✅ 총 시간이 경과했으므로 제어 종료 (elapsed=%.2f)", elapsed);
-
-            std_msgs::msg::Float64MultiArray dq_msg;
-            dq_msg.data = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-            joint_vel_pub_->publish(dq_msg);
-            return;  // 타이머 콜백 조기 종료
+            RCLCPP_INFO(this->get_logger(), "✅ 총 시간이 경과했으므로 마지막 목표로 정지 피드백 수행 중 (elapsed=%.2f)", elapsed);
+            current_index_ = targets_.size() - 1;  // 마지막 목표 유지
+        } else {
+            // index 계산
+            size_t idx = static_cast<size_t>(std::floor(elapsed / sample_interval));
+            if (idx >= targets_.size()) {
+                idx = targets_.size() - 1;
+            }
+            current_index_ = idx;
         }
 
         // 2) index 계산 (예: elapsed=6.4, sample_interval=0.25 → index= floor(6.4/0.25)=25)
@@ -374,7 +401,22 @@ private:
                                 target_orientation_.y(),
                                 target_orientation_.z()
                             );
+
+        double dot = q_current.w * q_target.w +
+             q_current.x * q_target.x +
+             q_current.y * q_target.y +
+             q_current.z * q_target.z;
+
+        if (dot < 0.0) {
+            q_target.w *= -1.0;
+            q_target.x *= -1.0;
+            q_target.y *= -1.0;
+            q_target.z *= -1.0;
+        }
+
         Quaternion q_error   = q_current.inverse() * q_target;
+
+        
         Eigen::Vector3d axis;
         double angle_rad;
         quaternionToAngleAxis(q_error, axis, angle_rad);
@@ -455,9 +497,10 @@ private:
         
         // 원하는 선속도는 position_error / dt (이미 위에서 계산됨)
         Vector3d desired_velocity = position_error / dt;
+        Eigen::Vector3d desired_velocity_orientation = orientation_axis_angle / dt;
 
         // q_dot 계산
-        out.q_dot = computeFeedbackVelocity(position_error, orientation_axis_angle, desired_velocity);
+        out.q_dot = computeFeedbackVelocity(position_error, orientation_axis_angle, desired_velocity, desired_velocity_orientation);
 
         // next_q 계산
         out.next_q = current_q + out.q_dot * dt;
@@ -503,7 +546,7 @@ private:
     }
 
     // 4) computeFeedbackVelocity: position_error, orientation_error로부터 q_dot 계산
-    VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity)
+    VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity, const Vector3d &desired_angular_velocity)
     {
         // (1) Kp와 Kd 설정
         double Kp_pos = 120.0;
@@ -512,7 +555,7 @@ private:
         // (2) 목표 속도 벡터 구성
         VectorXd u_d_with_error(6);
         u_d_with_error.head<3>() = desired_linear_velocity + Kp_pos * position_error;
-        u_d_with_error.tail<3>() = Kp_ori * orientation_error;
+        u_d_with_error.tail<3>() = desired_angular_velocity + Kp_ori * orientation_error;
 
         // (3) 자코비안 기반 관절 속도 계산
         MatrixXd J = computeJacobian(estimated_q_);

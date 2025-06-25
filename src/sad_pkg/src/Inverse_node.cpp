@@ -381,7 +381,7 @@ private:
             "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
             pos_err_norm, ori_err_deg);
 
-        double dt = 0.001;
+        double dt = 0.01;
 
         // --- (F) desired_velocity 계산 ---
         // 목표 속도 계산 (위치 및 회전 속도)
