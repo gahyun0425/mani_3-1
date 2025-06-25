@@ -1,0 +1,59 @@
+[0.011s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/q_visualizer:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/serial:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.066s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.084s] [ 20%] Built target forward_node
+[0.084s] [ 20%] Built target spline_node
+[0.084s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[0.084s] [ 35%] Built target rrt_node
+[0.084s] [ 45%] Built target Inverse_node
+[0.085s] [ 55%] Built target path_node
+[0.085s] [ 65%] Built target path_test_node
+[0.085s] [ 75%] Built target obstacle_node
+[0.087s] [ 95%] Built target real_inverse_node
+[0.087s] [ 95%] Built target map_node
+[1.396s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In destructor ‘[01m[Kvirtual MotorControlNode::~MotorControlNode()[m[K’:
+[1.396s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:96:54:[m[K [01;31m[Kerror: [m[K‘[01m[KDXL_ID_3[m[K’ was not declared in this scope; did you mean ‘[01m[KDXL_ID_1[m[K’?
+[1.396s]    96 |         packetHandler_->write1ByteTxRx(portHandler_, [01;31m[KDXL_ID_3[m[K, ADDR_TORQUE_ENABLE, 0, &dxl_error);
+[1.396s]       |                                                      [01;31m[K^~~~~~~~[m[K
+[1.397s]       |                                                      [32m[KDXL_ID_1[m[K
+[1.404s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::dq_callback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.404s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:120:9:[m[K [01;31m[Kerror: [m[K‘[01m[KsetDynamixelTorque[m[K’ was not declared in this scope; did you mean ‘[01m[KsetDynamixelVelocity[m[K’?
+[1.404s]   120 |         [01;31m[KsetDynamixelTorque[m[K(DXL_ID_1, torque_1);
+[1.404s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.404s]       |         [32m[KsetDynamixelVelocity[m[K
+[1.408s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::gripper_callback(std_msgs::msg::Float64_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.408s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:126:54:[m[K [01;31m[Kerror: [m[K‘[01m[KDXL_ID_3[m[K’ was not declared in this scope; did you mean ‘[01m[KDXL_ID_1[m[K’?
+[1.408s]   126 |         packetHandler_->write4ByteTxRx(portHandler_, [01;31m[KDXL_ID_3[m[K, ADDR_GOAL_POSITION, static_cast<uint32_t>(gripper_goal), &dxl_error);
+[1.409s]       |                                                      [01;31m[K^~~~~~~~[m[K
+[1.409s]       |                                                      [32m[KDXL_ID_1[m[K
+[1.413s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:126:64:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_GOAL_POSITION[m[K’ was not declared in this scope
+[1.413s]   126 |         packetHandler_->write4ByteTxRx(portHandler_, DXL_ID_3, [01;31m[KADDR_GOAL_POSITION[m[K, static_cast<uint32_t>(gripper_goal), &dxl_error);
+[1.414s]       |                                                                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.419s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::setDynamixelVelocity(uint8_t, int32_t)[m[K’:
+[1.419s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:130:58:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_GOAL_VELOCITY[m[K’ was not declared in this scope
+[1.419s]   130 |         packetHandler_->write4ByteTxRx(portHandler_, id, [01;31m[KADDR_GOAL_VELOCITY[m[K, static_cast<uint32_t>(vel), &dxl_error);
+[1.419s]       |                                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.425s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::readFromSTM32()[m[K’:
+[1.425s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:205:13:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRESENT_VELOCITY[m[K’ was not declared in this scope; did you mean ‘[01m[KADDR_PRESENT_TORQUE[m[K’?
+[1.425s]   205 |             [01;31m[KADDR_PRESENT_VELOCITY[m[K,
+[1.425s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.425s]       |             [32m[KADDR_PRESENT_TORQUE[m[K
+[1.430s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::gripper_open_callback(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[1.430s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:222:68:[m[K [01;31m[Kerror: [m[K‘[01m[KDXL_ID_3[m[K’ was not declared in this scope; did you mean ‘[01m[KDXL_ID_1[m[K’?
+[1.430s]   222 |         auto result = packetHandler_->write4ByteTxRx(portHandler_, [01;31m[KDXL_ID_3[m[K, ADDR_GOAL_POSITION, open_pos, &dxl_error);
+[1.430s]       |                                                                    [01;31m[K^~~~~~~~[m[K
+[1.430s]       |                                                                    [32m[KDXL_ID_1[m[K
+[1.435s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:222:78:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_GOAL_POSITION[m[K’ was not declared in this scope
+[1.435s]   222 |         auto result = packetHandler_->write4ByteTxRx(portHandler_, DXL_ID_3, [01;31m[KADDR_GOAL_POSITION[m[K, open_pos, &dxl_error);
+[1.435s]       |                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.438s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::gripper_close_callback(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[1.438s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:231:68:[m[K [01;31m[Kerror: [m[K‘[01m[KDXL_ID_3[m[K’ was not declared in this scope; did you mean ‘[01m[KDXL_ID_1[m[K’?
+[1.439s]   231 |         auto result = packetHandler_->write4ByteTxRx(portHandler_, [01;31m[KDXL_ID_3[m[K, ADDR_GOAL_POSITION, close_pos, &dxl_error);
+[1.439s]       |                                                                    [01;31m[K^~~~~~~~[m[K
+[1.439s]       |                                                                    [32m[KDXL_ID_1[m[K
+[1.443s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:231:78:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_GOAL_POSITION[m[K’ was not declared in this scope
+[1.443s]   231 |         auto result = packetHandler_->write4ByteTxRx(portHandler_, DXL_ID_3, [01;31m[KADDR_GOAL_POSITION[m[K, close_pos, &dxl_error);
+[1.443s]       |                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.233s] gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76: CMakeFiles/motor_node.dir/src/motor_node.cpp.o] Error 1
+[3.233s] gmake[1]: *** [CMakeFiles/Makefile2:389: CMakeFiles/motor_node.dir/all] Error 2
+[3.233s] gmake: *** [Makefile:146: all] Error 2
+[3.235s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/q_visualizer:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/serial:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

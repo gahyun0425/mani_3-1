@@ -110,7 +110,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/obstacle_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/obstacle_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/obstacle_node")
@@ -150,7 +150,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/map_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/map_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/map_node")
@@ -170,7 +170,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/path_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/path_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/path_node")
@@ -190,7 +190,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/path_test_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/path_test_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/path_test_node")
@@ -210,7 +210,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/Inverse_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/Inverse_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/Inverse_node")
@@ -230,7 +230,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/real_inverse_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/real_inverse_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/my_vision_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/my_vision_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/real_inverse_node")
@@ -250,7 +250,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/motor_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/motor_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/install/serial/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/gaga/sad_ws/src/install/serial/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sad_pkg/motor_node")

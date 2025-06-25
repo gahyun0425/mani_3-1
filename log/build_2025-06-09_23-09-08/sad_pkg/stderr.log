@@ -1,0 +1,11 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::dq_callback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:109:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_mutex_[m[K’ was not declared in this scope
+  109 |         std::lock_guard<std::mutex> lock([01;31m[Kdxl_mutex_[m[K);
+      |                                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::readFromSTM32()[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:204:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_mutex_[m[K’ was not declared in this scope
+  204 |             std::lock_guard<std::mutex> lock([01;31m[Kdxl_mutex_[m[K);
+      |                                              [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76: CMakeFiles/motor_node.dir/src/motor_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:389: CMakeFiles/motor_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

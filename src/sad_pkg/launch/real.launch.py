@@ -39,6 +39,13 @@ def generate_launch_description():
         output='screen'
     )
 
+    # path_test_node = Node(
+    #     package='sad_pkg',  # 실제 패키지 이름으로 변경
+    #     executable='path_test_node',
+    #     name='path_test_node',
+    #     output='screen'
+    # )
+
     # path_node 실행
     path_node = Node(
         package='sad_pkg',  # 실제 패키지 이름으로 변경
@@ -61,5 +68,6 @@ def generate_launch_description():
         obstacle_node,
         map_node,
         path_node,
+        # path_test_node,
         inverse_node,
     ])

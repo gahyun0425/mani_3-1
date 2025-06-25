@@ -21,19 +21,19 @@ using Eigen::Vector3d;
 using Eigen::VectorXd;
 
 // DH 파라미터 정의
-double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.1435;
-double alpha0 = 0.0, alpha1 = M_PI / 2, alpha2 = -M_PI / 2, alpha3 = M_PI / 2, alpha4 = -M_PI / 2, alpha5 = M_PI / 2, alpha6 = -M_PI / 2;
-double d1 = 0.402, d2 = 0.0, d3 = 0.278, d4 = 0.0, d5 = 0.2505, d6 = 0.0, d7 = 0.0455;
+double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.14;
+double alpha0 = 0.0, alpha1 = - M_PI / 2, alpha2 = M_PI / 2, alpha3 = - M_PI / 2, alpha4 = M_PI / 2, alpha5 = - M_PI / 2, alpha6 = M_PI / 2;
+double d1 = 0.445, d2 = 0.0, d3 = 0.27, d4 = 0.0, d5 = 0.24, d6 = 0.0, d7 = 0.05;
 bool moved_once_ = false;
 
 // 각 관절의 제한 범위 (단위: 라디안)
 const double joint_limits[6][2] = {
-    {-M_PI, M_PI},           
-    {-1.745, 1.745},       
-    {-M_PI, M_PI},         
-    {-2.09, 2.09},  
-    {-M_PI, M_PI},          
-    {-1.0472, M_PI/2}     
+    {-2*M_PI, 2*M_PI},           
+    {-2*M_PI, 2*M_PI},       
+    {-2*M_PI, 2*M_PI},         
+    {-2*M_PI, 2*M_PI},  
+    {-2*M_PI, 2*M_PI},          
+    {-2*M_PI, 2*M_PI}     
 };
 
 // Quaternion 구조체
@@ -152,6 +152,12 @@ public:
       current_index_(0),
       have_joint_state_(false)
     {
+        // 👇 elbow-up 시드 설정
+        if (!have_joint_state_) {
+            current_joint_angles_ = VectorXd::Zero(6);
+            current_joint_angles_(1) = -1.0;  // elbow-up 초기값
+        }
+
         // 1) path_node에서 보내온 Float64MultiArray 구독
         path_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/path_to_inverse_kinematics", 10,
@@ -162,24 +168,36 @@ public:
         joint_state_sub_ = this->create_subscription<sensor_msgs::msg::JointState>(
         "/joint_states", 10,
         [this](const sensor_msgs::msg::JointState::SharedPtr js) {
-            std::map<std::string, double> name_to_pos;
+            if (js->name.size() != js->position.size()) {
+                RCLCPP_WARN(this->get_logger(), 
+                    "JointState message has mismatched name and position sizes");
+                return;
+            }
+
+            std::unordered_map<std::string, double> name_to_pos;
             for (size_t i = 0; i < js->name.size(); ++i) {
                 name_to_pos[js->name[i]] = js->position[i];
             }
 
-            for (int i = 0; i < 6; ++i) {
-                std::string expected_name = "joint" + std::to_string(i + 1);
-                if (name_to_pos.find(expected_name) != name_to_pos.end()) {
-                    current_joint_angles_(i) = name_to_pos[expected_name];
+            const std::vector<std::string> ordered_joint_names = {
+                "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"
+            };
+
+            for (size_t i = 0; i < ordered_joint_names.size(); ++i) {
+                const auto &joint_name = ordered_joint_names[i];
+                auto it = name_to_pos.find(joint_name);
+                if (it != name_to_pos.end()) {
+                    current_joint_angles_(i) = it->second;
                 } else {
-                    RCLCPP_WARN(this->get_logger(),
-                        "Joint '%s' not found in /joint_states", expected_name.c_str());
+                    RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000,
+                        "Joint '%s' not found in /joint_states", joint_name.c_str());
                 }
             }
 
             have_joint_state_ = true;
         }
     );
+
 
 
         // 3) JointTrajectory 퍼블리셔 생성
@@ -212,11 +230,13 @@ private:
     std::vector<rclcpp::Time> target_times_;
     VectorXd current_joint_angles_{6};  // 현재 joint angles
     size_t current_index_;
+    int cnt = 0;
     bool have_joint_state_;
     bool moved_once_ = false;
     bool reached_current_{false};
     rclcpp::Time reached_time_;  // “도달 판정이 처음 나왔던 ROS 시간”을 저장
 
+    bool initialized_ = false;
     
     // 들어온 경로 샘플을 저장할 벡터:
     // 각 샘플은 (t, position, orientation) 형태
@@ -334,7 +354,7 @@ private:
                                 target_orientation_.y(),
                                 target_orientation_.z()
                             );
-        Quaternion q_error   = q_target * q_current.inverse();
+        Quaternion q_error = q_current.inverse() * q_target;  // body 기준
         Eigen::Vector3d axis;
         double angle_rad;
         quaternionToAngleAxis(q_error, axis, angle_rad);
@@ -361,50 +381,35 @@ private:
             "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
             pos_err_norm, ori_err_deg);
 
-        // --- (E) Deadband 검사: 이미 목표점 근처라면 제어 없이 패스 ---
-        double position_deadband    = 0.05;   // 5cm
-        double orientation_deadband;
-            if (current_index_ == targets_.size() - 1) {
-                orientation_deadband = 10.0 * M_PI / 180.0;  // 10도
-            } else {
-                orientation_deadband = 0.05;  // 약 0.57도
-            }
-
-            if (pos_err_norm < position_deadband &&
-                angle_rad < orientation_deadband) 
-            {
-                return;  // Deadband 안에 있으면 제어 생략
-            }
-
-            if (pos_err_norm < position_deadband &&
-                angle_rad < orientation_deadband) 
-            {
-                // deadband 안에 있으면 IK 제어 없이 리턴
-                return;
-            }
-
-        double dt = 0.01;
+        double dt = 0.001;
 
         // --- (F) desired_velocity 계산 ---
         // 목표 속도 계산 (위치 및 회전 속도)
         Eigen::Vector3d desired_velocity_position = position_error / dt;
-        // Eigen::Vector3d desired_velocity_orientation = axis * angle_rad / dt;
+        Eigen::Vector3d desired_velocity_orientation = axis * angle_rad / dt;
+
 
         // --- (G) CLIK 제어 수행 (dt = 0.001) ---
-        VectorXd q_dot = computeFeedbackVelocity(position_error, axis * angle_rad, desired_velocity_position);
+        VectorXd q_dot = computeFeedbackVelocity(position_error, axis * angle_rad, desired_velocity_position, desired_velocity_orientation);
         
         VectorXd next_q = current_joint_angles_ + q_dot * dt;
 
         for (int i = 0; i < 6; ++i) {
-            double min_limit = joint_limits[i][0];  // 최소 제한
-            double max_limit = joint_limits[i][1];  // 최대 제한
+            double min_angle = joint_limits[i][0];
+            double max_angle = joint_limits[i][1];
 
-            // 속도가 제한 범위를 벗어나지 않도록 클램핑
-            q_dot(i) = std::max(min_limit, std::min(max_limit, q_dot(i)));
+            // next_q가 범위 밖이면 클램핑
+            if (next_q(i) < min_angle) next_q(i) = min_angle;
+            if (next_q(i) > max_angle) next_q(i) = max_angle;
         }
+
 
         // 1) JointTrajectory 퍼블리시
         sendJointTrajectory(next_q, current_joint_angles_, dt);
+
+        RCLCPP_INFO(this->get_logger(),
+            "현재 q = [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f]", current_joint_angles_(0), current_joint_angles_(1), current_joint_angles_(2), current_joint_angles_(3), current_joint_angles_(4), current_joint_angles_(5));
+
         // 2) 내부 상태 업데이트
         current_joint_angles_ = next_q;
     }
@@ -447,24 +452,37 @@ private:
     }
 
     // 4) computeFeedbackVelocity: position_error, orientation_error로부터 q_dot 계산
-    VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity)
+    VectorXd computeFeedbackVelocity(const Vector3d &position_error,
+                                 const Vector3d &orientation_error,
+                                 const Vector3d &desired_linear_velocity,
+                                 const Vector3d &desired_angular_velocity)
     {
-        // (1) Kp와 Kd 설정
-        double Kp_pos = 2.0;
-        double Kp_ori = 0.5;
+        // double Kp_pos = 350.0;
+        Vector3d Kp_pos;
+        Kp_pos << 100, 100, 1000;
+        double Kp_ori = 1.5;
 
-        // (2) 목표 속도 벡터 구성
         VectorXd u_d_with_error(6);
-        u_d_with_error.head<3>() = desired_linear_velocity + Kp_pos * position_error;
-        u_d_with_error.tail<3>() = Kp_ori * orientation_error;
+        // u_d_with_error.head<3>() = desired_linear_velocity + Kp_pos * position_error;
+        u_d_with_error.head<3>() = desired_linear_velocity + Kp_pos.cwiseProduct(position_error);
+        u_d_with_error.tail<3>() = desired_angular_velocity + Kp_ori * orientation_error;
 
-        // (3) 자코비안 기반 관절 속도 계산
         MatrixXd J = computeJacobian(current_joint_angles_);
+        MatrixXd I = MatrixXd::Identity(6, 6);
         MatrixXd J_pinv = dampedPseudoInverse(J);
-        VectorXd q_dot = J_pinv * u_d_with_error;
 
+        // null-space 보조 목적함수: q₂를 ref로 유지하고 싶다
+        VectorXd z = VectorXd::Zero(6);
+        double q2_ref = -1.0;  // elbow-up 방향이면 음수
+        double gain_z = 5.0;
+        z(1) = gain_z * (q2_ref - current_joint_angles_(1));
+
+        // CLIK 공식 적용
+        VectorXd q_dot = J_pinv * u_d_with_error + (I - J_pinv * J) * z;
         return q_dot;
+
     }
+
 
 
 
@@ -490,34 +508,34 @@ private:
     // ================================================
 // 수정된 sendJointTrajectory 함수
 // ================================================
-void sendJointTrajectory(
-    const VectorXd &target_q,
-    const VectorXd &current_q,
-    double dt)
-{
-    trajectory_msgs::msg::JointTrajectory msg;
-    // 헤더 스탬프는 “지금 시각”으로
-    msg.header.stamp = this->now();
+    void sendJointTrajectory(
+        const VectorXd &target_q,
+        const VectorXd &current_q,
+        double dt)
+    {
+        trajectory_msgs::msg::JointTrajectory msg;
 
-    // 관절 이름들
-    msg.joint_names = {"joint1","joint2","joint3","joint4","joint5","joint6"};
+        rclcpp::Duration margin = rclcpp::Duration::from_seconds(0.05);  // 여유 시간 확보
+        rclcpp::Time now_future = this->now() + margin;
+        msg.header.stamp = now_future;
 
-    // 1) 첫 번째 포인트: 현재 관절각, time_from_start = 0
-    trajectory_msgs::msg::JointTrajectoryPoint p0;
-    p0.positions = std::vector<double>(current_q.data(),
-                                       current_q.data() + current_q.size());
-    p0.time_from_start = rclcpp::Duration::from_seconds(0.0);
-    msg.points.push_back(p0);
+        msg.joint_names = {"joint1","joint2","joint3","joint4","joint5","joint6"};
 
-    // 2) 두 번째 포인트: 목표 관절각, time_from_start = dt(예: 0.01s)
-    trajectory_msgs::msg::JointTrajectoryPoint p1;
-    p1.positions = std::vector<double>(target_q.data(),
-                                       target_q.data() + target_q.size());
-    p1.time_from_start = rclcpp::Duration::from_seconds(dt);
-    msg.points.push_back(p1);
+        // 현재 상태
+        trajectory_msgs::msg::JointTrajectoryPoint p0;
+        p0.positions = std::vector<double>(current_q.data(), current_q.data() + current_q.size());
+        p0.time_from_start = rclcpp::Duration::from_seconds(0.0);
+        msg.points.push_back(p0);
 
-    joint_trajectory_pub_->publish(msg);
-}
+        // 목표 상태
+        trajectory_msgs::msg::JointTrajectoryPoint p1;
+        p1.positions = std::vector<double>(target_q.data(), target_q.data() + target_q.size());
+        p1.time_from_start = rclcpp::Duration::from_seconds(dt);
+        msg.points.push_back(p1);
+
+        joint_trajectory_pub_->publish(msg);
+    }
+
 
 };
 

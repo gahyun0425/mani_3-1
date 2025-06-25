@@ -27,7 +27,6 @@ _colcon_prefix_chain_powershell_source_script "/home/gaga/sad_ws/src/sad_pkg/ins
 _colcon_prefix_chain_powershell_source_script "/home/gaga/robotprograming_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/gaga/sad_ws/src/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/gaga/ssibal_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/gaga/turtlebot3_ws/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

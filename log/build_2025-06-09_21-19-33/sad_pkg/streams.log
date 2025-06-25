@@ -1,0 +1,43 @@
+[0.011s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/q_visualizer:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/serial:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.066s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.082s] [ 10%] Built target forward_node
+[0.083s] [ 55%] Built target rrt_node
+[0.084s] [ 55%] Built target Inverse_node
+[0.084s] [ 55%] Built target obstacle_node
+[0.084s] [ 65%] Built target path_test_node
+[0.084s] [ 65%] Built target map_node
+[0.084s] [ 70%] Built target spline_node
+[0.084s] [ 80%] Built target path_node
+[0.090s] [ 90%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[0.090s] [ 90%] [32mBuilding CXX object CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o[0m
+[2.670s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[2.670s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:469:30:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeControl[m[K’ was not declared in this scope
+[2.670s]   469 |         ControlOutput ctrl = [01;31m[KcomputeControl[m[K(estimated_q_, position_error, axis * angle_rad, dt);
+[2.670s]       |                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.673s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:506:42:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd_msgs::msg::Float64MultiArray dq_msg[m[K’
+[2.673s]   506 |         std_msgs::msg::Float64MultiArray [01;31m[Kdq_msg[m[K;
+[2.673s]       |                                          [01;31m[K^~~~~~[m[K
+[2.673s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:496:42:[m[K [01;36m[Knote: [m[K‘[01m[Kstd_msgs::msg::Float64MultiArray dq_msg[m[K’ previously declared here
+[2.673s]   496 |         std_msgs::msg::Float64MultiArray [01;36m[Kdq_msg[m[K;
+[2.673s]       |                                          [01;36m[K^~~~~~[m[K
+[2.674s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K At global scope:
+[2.674s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:537:19:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KcomputeControl[m[K’
+[2.674s]   537 |     ControlOutput [01;31m[KcomputeControl[m[K(const VectorXd& current_q, const Vector3d& position_error, const Vector3d& orientation_axis_angle, double dt)
+[2.674s]       |                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.755s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In function ‘[01m[KEigen::VectorXd computeFeedbackVelocity(const Vector3d&, const Vector3d&, const Vector3d&)[m[K’:
+[2.755s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:608:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kestimated_q_[m[K’ was not declared in this scope
+[2.755s]   608 |         MatrixXd J = computeJacobian([01;31m[Kestimated_q_[m[K);
+[2.755s]       |                                      [01;31m[K^~~~~~~~~~~~[m[K
+[2.760s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:615:27:[m[K [01;31m[Kerror: [m[K‘[01m[KdampedPseudoInverse[m[K’ was not declared in this scope
+[2.760s]   615 |         MatrixXd J_pinv = [01;31m[KdampedPseudoInverse[m[K(J, lambda2);
+[2.760s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.811s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K At global scope:
+[2.811s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:640:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.811s]   640 | [01;31m[K}[m[K;
+[2.811s]       | [01;31m[K^[m[K
+[5.849s] [ 95%] [32m[1mLinking CXX executable motor_node[0m
+[6.115s] [ 95%] Built target motor_node
+[7.023s] gmake[2]: *** [CMakeFiles/real_inverse_node.dir/build.make:76: CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o] Error 1
+[7.023s] gmake[1]: *** [CMakeFiles/Makefile2:363: CMakeFiles/real_inverse_node.dir/all] Error 2
+[7.024s] gmake: *** [Makefile:146: all] Error 2
+[7.026s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/q_visualizer:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/serial:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

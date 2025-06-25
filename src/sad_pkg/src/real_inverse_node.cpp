@@ -22,10 +22,12 @@ using Eigen::VectorXd;
 
 // DH 파라미터 정의
 double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.14;
-double alpha0 = 0.0, alpha1 = M_PI / 2, alpha2 = -M_PI / 2, alpha3 = M_PI / 2, alpha4 = -M_PI / 2, alpha5 = M_PI / 2, alpha6 = -M_PI / 2;
+double alpha0 = 0.0, alpha1 = - M_PI / 2, alpha2 = M_PI / 2, alpha3 = -M_PI / 2, alpha4 = M_PI / 2, alpha5 = - M_PI / 2, alpha6 = -M_PI / 2;
 double d1 = 0.445, d2 = 0.0, d3 = 0.27, d4 = 0.0, d5 = 0.24, d6 = 0.0, d7 = 0.05;
 bool moved_once_ = false;
 bool have_joint_state_ = false;  // 선언과 동시에 false로 초기화
+bool reached_current_ = false;  // 선언부 확인
+
 
 // 각 관절의 제한 범위 (단위: 라디안)
 const double joint_limits[6][2] = {
@@ -34,7 +36,7 @@ const double joint_limits[6][2] = {
     {-M_PI, M_PI},               // 관절 3: -180° ~ +180°
     {-2.09, 2.09},               // 관절 4: ±360°
     {-M_PI, M_PI},               // 관절 5: ±360°
-    {-0.5236, M_PI/2}                // 관절 6: ±360°
+    {-0.2, M_PI}                // 관절 6: ±360°
 };
 
 struct ControlOutput {
@@ -149,7 +151,7 @@ class ManipulatorNode : public rclcpp::Node {
 public:
     ManipulatorNode()
     : Node("manipulator_node"),
-    current_joint_angles_(VectorXd::Zero(6))
+    estimated_q_(VectorXd::Zero(6))
     {
         // 1) path_node에서 보내온 Float64MultiArray 구독
         path_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
@@ -175,14 +177,25 @@ public:
                 last_qdot_time_ = now;
 
                 for (int i = 0; i < 6; ++i) {
-                    last_qdot_(i) = msg->data[i];
-                    estimated_q_(i) += last_qdot_(i) * dt;
+                    double raw_qdot = msg->data[i];
+                    if (i == 3) {  // joint4 부호 반전
+                        raw_qdot *= -1.0;
+                    }
+                    last_qdot_(i) = raw_qdot;
+                    estimated_q_(i) += raw_qdot * dt;
                 }
+
+
 
                 have_joint_state_ = true; 
             }
         );
 
+        joint_state_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+        "/current_q", 10);
+
+        target_joint_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+        "/target_q", 10);
 
         // 4) 주기적으로 IK 계산할 타이머(100ms)
         timer_ = this->create_wall_timer(
@@ -197,6 +210,8 @@ private:
     rclcpp::TimerBase::SharedPtr                                          timer_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr joint_vel_pub_;
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr qdot_sub_;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr joint_state_pub_;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr target_joint_pub_;
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -207,13 +222,13 @@ private:
 
     // 각 targets_[i] 를 실행해야 할 절대 ROS 시간(내부적으로 rclcpp::Time으로 저장)
     std::vector<rclcpp::Time> target_times_;
-    VectorXd current_joint_angles_ = estimated_q_;
     size_t current_index_;
     bool have_joint_state_;
     bool moved_once_ = false;
     bool reached_current_{false};
     rclcpp::Time reached_time_;  // “도달 판정이 처음 나왔던 ROS 시간”을 저장
 
+    double joint6_integrated_angle_ = 0.0;  // 누적 joint6 회전량
     
     // 들어온 경로 샘플을 저장할 벡터:
     // 각 샘플은 (t, position, orientation) 형태
@@ -284,6 +299,11 @@ private:
     // 2) 타이머 콜백: 100ms마다 실행 → current_index_번째 목표로 IK 수행
     // ─────────────────────────────────────────────────────────────────────────
     void timerCallback() {
+
+        if (reached_current_) {
+            return;
+        }
+
         if (!have_joint_state_ || targets_.empty()) {
             return;
         }
@@ -291,6 +311,15 @@ private:
         // 1) “경과 시간” 계산
         double elapsed = (this->now() - trajectory_start_time_).seconds();
         double sample_interval = TOTAL_TIME / static_cast<double>(targets_.size());
+
+        if (elapsed >= TOTAL_TIME) {
+            RCLCPP_INFO(this->get_logger(), "✅ 총 시간이 경과했으므로 제어 종료 (elapsed=%.2f)", elapsed);
+
+            std_msgs::msg::Float64MultiArray dq_msg;
+            dq_msg.data = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+            joint_vel_pub_->publish(dq_msg);
+            return;  // 타이머 콜백 조기 종료
+        }
 
         // 2) index 계산 (예: elapsed=6.4, sample_interval=0.25 → index= floor(6.4/0.25)=25)
         size_t idx = static_cast<size_t>(std::floor(elapsed / sample_interval));
@@ -306,7 +335,15 @@ private:
 
         // --- (A) 현재 EE 위치·방위 계산 ---
         // 1) FK → 현재 EE 위치
-        Eigen::Matrix4d T6          = forwardKinematics(current_joint_angles_);
+
+        std_msgs::msg::Float64MultiArray q_msg;
+        q_msg.data.resize(6);
+        for (int i = 0; i < 6; ++i) {
+            q_msg.data[i] = estimated_q_(i);
+        }
+        joint_state_pub_->publish(q_msg);
+
+        Eigen::Matrix4d T6          = forwardKinematics(estimated_q_);
         Eigen::Vector3d current_pos = T6.block<3,1>(0,3);
 
         // 2) 회전 행렬 → 현재 EE 방위 (roll, pitch, yaw)
@@ -337,12 +374,11 @@ private:
                                 target_orientation_.y(),
                                 target_orientation_.z()
                             );
-        Quaternion q_error   = q_target * q_current.inverse();
+        Quaternion q_error   = q_current.inverse() * q_target;
         Eigen::Vector3d axis;
         double angle_rad;
         quaternionToAngleAxis(q_error, axis, angle_rad);
         double ori_err_deg = angle_rad * (180.0 / M_PI);  // 방위 오차 (°)
-
 
         // --- (D) 콘솔로 출력 ---
         RCLCPP_INFO(this->get_logger(),
@@ -364,75 +400,54 @@ private:
             "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
             pos_err_norm, ori_err_deg);
 
-        // --- (E) Deadband 검사: 이미 목표점 근처라면 제어 없이 패스 ---
-        double position_deadband    = 0.05;   // 5cm
-        double orientation_deadband;
-        // if (current_index_ == targets_.size() - 1) {
-        //     orientation_deadband = 10.0 * M_PI / 180.0;  // 10도
-        // } else {
-        //     orientation_deadband = 0.05;  // 약 0.57도
-        // }
-
-        if (elapsed > TOTAL_TIME - 0.5) {
-            // 마지막에 충분히 가까워졌을 때만 deadband 확대
-            orientation_deadband = 10.0 * M_PI / 180.0;
-        } else {
-            orientation_deadband = 0.05;
-        }
-
-
-        if (pos_err_norm < position_deadband &&
-            angle_rad < orientation_deadband) 
-        {
-            return;  // Deadband 안에 있으면 제어 생략
-        }
-
-        if (pos_err_norm < position_deadband &&
-            angle_rad < orientation_deadband) 
-        {
-            // deadband 안에 있으면 IK 제어 없이 리턴
-            return;
-        }
-
         double dt = 0.01;
 
-        ControlOutput ctrl = computeControl(current_joint_angles_, position_error, axis * angle_rad, dt);
+        ControlOutput ctrl = computeControl(estimated_q_, position_error, axis * angle_rad, dt);
 
         if (ctrl.q_dot.size() != 6 || ctrl.next_q.size() != 6) {
             RCLCPP_ERROR(this->get_logger(), "q_dot or next_q size is invalid!");
             return;
         }
 
-
         VectorXd q_dot = ctrl.q_dot;
         VectorXd next_q = ctrl.next_q;
 
         for (int i = 0; i < 6; ++i) {
+            double max_vel = (i == 4 || i == 5) ? 0.3 : 1.0;
 
-            // 속도가 제한 범위를 벗어나지 않도록 클램핑
-            double max_vel = 1.0; // rad/s, 필요 시 조정
-            q_dot(i) = std::clamp(q_dot(i), -max_vel, max_vel);
-
+            // ✅ 아주 작은 속도면 아예 0으로 클리핑 (모터 떨림 방지)
+            if (std::abs(q_dot(i)) < 0.01) {
+                q_dot(i) = 0.0;
+            } else {
+                q_dot(i) = std::clamp(q_dot(i), -max_vel, max_vel);
+            }
         }
-
-        //q_dot(3) = -q_dot(3);
 
         // q_dot를 Float64MultiArray로 publish
         std_msgs::msg::Float64MultiArray dq_msg;
         dq_msg.data.resize(6);
         for (int i = 0; i < 6; ++i) {
-            dq_msg.data[i] = q_dot(i);
+            double qd_val = q_dot(i);
+            if (i == 3) {  // joint1, joint4 부호 반전
+                qd_val *= -1.0;
+            }
+            dq_msg.data[i] = qd_val;
         }
 
         RCLCPP_INFO(this->get_logger(), "[Timer] 퍼블리시되는 q_dot: %.3f %.3f %.3f %.3f %.3f %.3f",
         q_dot(0), q_dot(1), q_dot(2), q_dot(3), q_dot(4), q_dot(5));
 
-
         joint_vel_pub_->publish(dq_msg);
 
-        // 2) 내부 상태 업데이트
-        current_joint_angles_ = next_q;
+            std_msgs::msg::Float64MultiArray target_q_msg;
+            target_q_msg.data.resize(6);
+            for (int i = 0; i < 6; ++i) {
+                target_q_msg.data[i] = next_q(i);
+            }
+            target_joint_pub_->publish(target_q_msg);
+
     }
+
 
     ControlOutput computeControl(const VectorXd& current_q, const Vector3d& position_error, const Vector3d& orientation_axis_angle, double dt)
     {
@@ -491,8 +506,8 @@ private:
     VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity)
     {
         // (1) Kp와 Kd 설정
-        double Kp_pos = 150.0;
-        double Kp_ori = 0.0;
+        double Kp_pos = 120.0;
+        double Kp_ori = 80.0;
 
         // (2) 목표 속도 벡터 구성
         VectorXd u_d_with_error(6);
@@ -500,7 +515,7 @@ private:
         u_d_with_error.tail<3>() = Kp_ori * orientation_error;
 
         // (3) 자코비안 기반 관절 속도 계산
-        MatrixXd J = computeJacobian(current_joint_angles_);
+        MatrixXd J = computeJacobian(estimated_q_);
         MatrixXd J_pinv = dampedPseudoInverse(J);
         VectorXd q_dot(6);  
         q_dot = J_pinv * u_d_with_error;
@@ -517,7 +532,7 @@ private:
         MatrixXd U = svd.matrixU();
         MatrixXd V = svd.matrixV();
 
-        double lambda2 = 0.1;
+        double lambda2 = 0.03;
         for (long i = 0; i < s.size(); ++i) {
             if (s(i) < std::numeric_limits<double>::epsilon()) {
                 s(i) = 0.0;

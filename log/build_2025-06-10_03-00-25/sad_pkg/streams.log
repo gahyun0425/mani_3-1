@@ -1,0 +1,123 @@
+[0.033s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/q_visualizer:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/serial:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.142s] [35m[1mConsolidate compiler generated dependencies of target motor_node[0m
+[0.176s] [ 85%] Built target path_test_node
+[0.176s] [ 85%] Built target forward_node
+[0.176s] [ 85%] Built target obstacle_node
+[0.176s] [ 85%] Built target Inverse_node
+[0.176s] [ 85%] Built target rrt_node
+[0.176s] [ 90%] Built target path_node
+[0.176s] [ 90%] Built target real_inverse_node
+[0.176s] [ 90%] Built target spline_node
+[0.177s] [ 90%] Built target map_node
+[0.188s] [ 95%] [32mBuilding CXX object CMakeFiles/motor_node.dir/src/motor_node.cpp.o[0m
+[4.554s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In constructor ‘[01m[KMotorControlNode::MotorControlNode()[m[K’:
+[4.555s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:42:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*&, int, int, int, uint8_t*)[m[K’
+[4.555s]    42 |         [01;31m[KpacketHandler_->write1ByteTxOnly(portHandler_, DXL_ID_1, ADDR_TORQUE_ENABLE, 1, &dxl_error)[m[K;
+[4.555s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.555s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.555s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.555s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.555s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint8_t)[m[K’
+[4.555s]   463 |   virtual int [01;36m[Kwrite1ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint8_t data) = 0;
+[4.555s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.555s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.555s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:43:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*&, int, int, int, uint8_t*)[m[K’
+[4.555s]    43 |         [01;31m[KpacketHandler_->write1ByteTxOnly(portHandler_, DXL_ID_2, ADDR_TORQUE_ENABLE, 1, &dxl_error)[m[K;
+[4.555s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.555s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.555s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.555s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.555s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint8_t)[m[K’
+[4.555s]   463 |   virtual int [01;36m[Kwrite1ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint8_t data) = 0;
+[4.555s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.555s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.555s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:48:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*&, int, int, uint32_t&, uint8_t*)[m[K’
+[4.555s]    48 |         [01;31m[KpacketHandler_->write4ByteTxOnly(portHandler_, DXL_ID_1,[m[K
+[4.555s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.555s]    49 | [01;31m[K            ADDR_PROFILE_ACCELERATION, profile_acc, &dxl_error)[m[K;
+[4.555s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.555s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.555s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.555s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.555s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t)[m[K’
+[4.555s]   511 |   virtual int [01;36m[Kwrite4ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint32_t data) = 0;
+[4.555s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.555s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.555s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:50:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*&, int, int, uint32_t&, uint8_t*)[m[K’
+[4.555s]    50 |         [01;31m[KpacketHandler_->write4ByteTxOnly(portHandler_, DXL_ID_1,[m[K
+[4.556s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.556s]    51 | [01;31m[K            ADDR_PROFILE_VELOCITY,     profile_vel, &dxl_error)[m[K;
+[4.556s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.556s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.556s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.556s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.556s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t)[m[K’
+[4.556s]   511 |   virtual int [01;36m[Kwrite4ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint32_t data) = 0;
+[4.556s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.556s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.556s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:52:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*&, int, int, uint32_t&, uint8_t*)[m[K’
+[4.556s]    52 |         [01;31m[KpacketHandler_->write4ByteTxOnly(portHandler_, DXL_ID_2,[m[K
+[4.556s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.556s]    53 | [01;31m[K            ADDR_PROFILE_ACCELERATION, profile_acc, &dxl_error)[m[K;
+[4.556s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.556s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.556s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.556s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.556s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t)[m[K’
+[4.556s]   511 |   virtual int [01;36m[Kwrite4ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint32_t data) = 0;
+[4.556s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.556s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.556s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:54:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*&, int, int, uint32_t&, uint8_t*)[m[K’
+[4.556s]    54 |         [01;31m[KpacketHandler_->write4ByteTxOnly(portHandler_, DXL_ID_2,[m[K
+[4.556s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.556s]    55 | [01;31m[K            ADDR_PROFILE_VELOCITY,     profile_vel, &dxl_error)[m[K;
+[4.556s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.556s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.556s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.556s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.556s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t)[m[K’
+[4.556s]   511 |   virtual int [01;36m[Kwrite4ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint32_t data) = 0;
+[4.556s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.556s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.576s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In destructor ‘[01m[Kvirtual MotorControlNode::~MotorControlNode()[m[K’:
+[4.576s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:92:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*&, int, int, int, uint8_t*)[m[K’
+[4.576s]    92 |         [01;31m[KpacketHandler_->write1ByteTxOnly(portHandler_, DXL_ID_1, ADDR_TORQUE_ENABLE, 0, &dxl_error)[m[K;
+[4.576s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.576s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.576s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.576s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.576s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint8_t)[m[K’
+[4.576s]   463 |   virtual int [01;36m[Kwrite1ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint8_t data) = 0;
+[4.576s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.576s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.576s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:93:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*&, int, int, int, uint8_t*)[m[K’
+[4.576s]    93 |         [01;31m[KpacketHandler_->write1ByteTxOnly(portHandler_, DXL_ID_2, ADDR_TORQUE_ENABLE, 0, &dxl_error)[m[K;
+[4.576s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.576s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.576s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.576s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.576s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write1ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint8_t)[m[K’
+[4.576s]   463 |   virtual int [01;36m[Kwrite1ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint8_t data) = 0;
+[4.576s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.576s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:463:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[4.585s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::setDynamixelPosition(uint8_t, int32_t)[m[K’:
+[4.585s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:155:54:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*&, uint8_t&, int, uint32_t, uint8_t*)[m[K’
+[4.585s]   155 |         int result = [01;31m[KpacketHandler_->write4ByteTxOnly([m[K
+[4.585s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[4.585s]   156 | [01;31m[K            portHandler_, id, ADDR_GOAL_POSITION,[m[K
+[4.585s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K     
+[4.585s]   157 | [01;31m[K            static_cast<uint32_t>(position), &err[m[K
+[4.585s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K     
+[4.586s]   158 | [01;31m[K        )[m[K;
+[4.586s]       |         [01;31m[K~[m[K                                             
+[4.586s] In file included from [01m[K/opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:27[m[K,
+[4.586s]                  from [01m[K/opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[4.586s]                  from [01m[K/home/gaga/sad_ws/src/sad_pkg/src/motor_node.cpp:4[m[K:
+[4.586s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual int dynamixel::PacketHandler::write4ByteTxOnly(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t)[m[K’
+[4.586s]   511 |   virtual int [01;36m[Kwrite4ByteTxOnly[m[K(PortHandler *port, uint8_t id, uint16_t address, uint32_t data) = 0;
+[4.586s]       |               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.586s] [01m[K/opt/ros/humble/include/dynamixel_sdk/packet_handler.h:511:15:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 5 provided
+[9.968s] gmake[2]: *** [CMakeFiles/motor_node.dir/build.make:76: CMakeFiles/motor_node.dir/src/motor_node.cpp.o] Error 1
+[9.969s] gmake[1]: *** [CMakeFiles/Makefile2:389: CMakeFiles/motor_node.dir/all] Error 2
+[9.969s] gmake: *** [Makefile:146: all] Error 2
+[9.977s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/q_visualizer:/home/gaga/turtlebot3_ws/install/turtlebot3_teleop:/home/gaga/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/my_vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/turtlebot3_ws/install/turtlebot3:/home/gaga/turtlebot3_ws/install/turtlebot3_simulations:/home/gaga/turtlebot3_ws/install/turtlebot3_bringup:/home/gaga/turtlebot3_ws/install/turtlebot3_node:/home/gaga/turtlebot3_ws/install/turtlebot3_navigation2:/home/gaga/turtlebot3_ws/install/turtlebot3_fake_node:/home/gaga/turtlebot3_ws/install/robot_master:/home/gaga/turtlebot3_ws/install/turtlebot3_msgs:/home/gaga/turtlebot3_ws/install/turtlebot3_gazebo:/home/gaga/turtlebot3_ws/install/turtlebot3_description:/home/gaga/turtlebot3_ws/install/turtlebot3_cartographer:/home/gaga/turtlebot3_ws/install/robot_vision:/home/gaga/turtlebot3_ws/install/robot_navigation:/home/gaga/turtlebot3_ws/install/robot_msgs:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gaga/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gaga/turtlebot3_ws/install/dynamixel_sdk:/home/gaga/ssibal_ws/install/robot_msgs:/home/gaga/sad_ws/src/install/vision_msgs:/home/gaga/sad_ws/src/install/sad_pkg:/home/gaga/sad_ws/src/install/serial:/home/gaga/sad_ws/src/install/my_vision_msgs:/home/gaga/sad_ws/src/install/mani_urdf:/home/gaga/robotprograming_ws/install/rp_pkg:/home/gaga/sad_ws/src/sad_pkg/install/sad_pkg /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

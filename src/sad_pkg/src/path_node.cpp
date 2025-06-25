@@ -37,11 +37,6 @@ public:
             std::bind(&RSNode::obstacleCallback, this, std::placeholders::_1)
         );
 
-        // 다른 노드에서 시작점과 목표점 받기 위한 구독자 생성
-        start_goal_sub_ = this->create_subscription<geometry_msgs::msg::Point>(
-            "start_goal", 10, std::bind(&RSNode::startGoalCallback, this, std::placeholders::_1)
-        );
-
         // 2) RViz 시각화를 위한 MarkerArray 퍼블리셔 생성
         marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>(
             "/rrt_spline/markers", 10
@@ -55,7 +50,7 @@ public:
 
         // 시작점과 목표점 설정 (예시)
         start_ = makePoint(0.14, 0.0, 1.005);
-        goal_  = makePoint(0.6,  0.0, 0.57);
+        goal_  = makePoint(0.5,    0.0, 0.7);
 
         // 4) 위치·방위 퍼블리셔 생성
         orientation_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
@@ -64,20 +59,6 @@ public:
     }
 
 private:
-
-    // start_goal 토픽 구독 콜백
-    void startGoalCallback(const geometry_msgs::msg::Point::SharedPtr msg) {
-        // 시작점이 비어있다면 시작점으로 설정, 목표점으로 설정
-        if (!start_received_) {
-            start_ = *msg;  // 처음 받는 점은 start_
-            start_received_ = true;
-            RCLCPP_INFO(this->get_logger(), "Start Point: x=%.2f, y=%.2f, z=%.2f", start_.x, start_.y, start_.z);
-        } else {
-            goal_ = *msg;   // 그 다음 받는 점은 goal_
-            RCLCPP_INFO(this->get_logger(), "Goal Point: x=%.2f, y=%.2f, z=%.2f", goal_.x, goal_.y, goal_.z);
-        }
-    }
-
     // ───────────────────────────────────────────────────────────────────────
     // 1) /harvest_order 메시지 수신 콜백
     void obstacleCallback(const my_vision_msgs::msg::HarvestOrdering::SharedPtr msg) {
@@ -99,7 +80,6 @@ private:
         if (!first_plan_done_) {
             RCLCPP_INFO(get_logger(), "RRT* 플래닝 시작...");
             planRRTstar();
-            buildKnots();
             first_plan_done_ = true;
         } else {
             RCLCPP_INFO(get_logger(), "이미 플래닝 완료, 재실행 생략");
@@ -301,6 +281,7 @@ private:
         }
 
         splineDegree_ = 3;
+        buildKnots();
     }
 
     // ───────────────────────────────────────────────────────────────────────
@@ -464,7 +445,6 @@ private:
         for (int i = k + 1; i <= n - 1; ++i)   knots_[i] = i - k;
         for (int i = n; i <= n + k; ++i)       knots_[i] = n - k;
     }
-
     // B-Spline 위치 보간
     Eigen::Vector3d interpolate(double t) {
         Eigen::Vector3d p(0,0,0);
@@ -499,7 +479,6 @@ private:
     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr orientation_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Subscription<geometry_msgs::msg::Point>::SharedPtr start_goal_sub_;
     geometry_msgs::msg::Point start_, goal_;
     std::vector<std::tuple<geometry_msgs::msg::Point,double,double,double>> obstacles_;
     std::vector<TreeNode> nodes_;
@@ -510,7 +489,6 @@ private:
     int splineDegree_;
     std::mt19937 gen_;
     bool first_plan_done_;
-    bool start_received_ = false;
 };
 
 int main(int argc, char **argv) {
