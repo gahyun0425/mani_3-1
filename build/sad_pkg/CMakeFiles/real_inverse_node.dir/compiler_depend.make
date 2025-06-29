@@ -1035,6 +1035,11 @@ CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o: /home/gaga/sad_ws/
   /opt/ros/humble/include/tf2/tf2/LinearMath/Vector3.hpp \
   /opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h \
   /opt/ros/humble/include/tf2_ros/tf2_ros/visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
   /usr/include/c++/11/fstream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -1044,6 +1049,12 @@ CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o: /home/gaga/sad_ws/
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
 /usr/include/c++/11/fstream:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp:
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/visibility_control.h:
 
@@ -1230,6 +1241,8 @@ CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o: /home/gaga/sad_ws/
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface_traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__type_support.hpp:
 
@@ -1716,6 +1729,8 @@ CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o: /home/gaga/sad_ws/
 /usr/include/c++/11/bits/sstream.tcc:
 
 /usr/include/c++/11/array:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
 

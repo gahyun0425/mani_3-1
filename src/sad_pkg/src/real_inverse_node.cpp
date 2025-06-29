@@ -13,6 +13,7 @@
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include "std_msgs/msg/bool.hpp"
 #include <fstream>
 
 using Eigen::Matrix4d;
@@ -222,6 +223,8 @@ public:
         target_joint_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "/target_q", 10);
 
+        movement_done_pub_ = this->create_publisher<std_msgs::msg::Bool>("/movement_complete", 10);
+
         // 4) 주기적으로 IK 계산할 타이머(100ms)
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(10),
@@ -247,6 +250,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr qdot_sub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr joint_state_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr target_joint_pub_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr movement_done_pub_;
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -291,6 +295,8 @@ private:
                 "[ManipulatorNode] 잘못된 메시지 크기: %zu (10의 배수가 아닙니다.)", arr.size());
             return;
         }
+
+        reached_current_ = false;
 
         // 1) targets_ 를 채우기 전에, 경로 시작 시각을 기록
         trajectory_start_time_ = this->now();
@@ -350,7 +356,14 @@ private:
         double sample_interval = TOTAL_TIME / static_cast<double>(targets_.size());
 
         if (elapsed >= TOTAL_TIME) {
-            RCLCPP_INFO(this->get_logger(), "✅ 총 시간이 경과했으므로 마지막 목표로 정지 피드백 수행 중 (elapsed=%.2f)", elapsed);
+            if (!reached_current_) {
+                RCLCPP_INFO(this->get_logger(), "✅ 총 시간이 경과했으므로 완료 신호 전송 (elapsed=%.2f)", elapsed);
+                std_msgs::msg::Bool done_msg;
+                done_msg.data = true;
+                movement_done_pub_->publish(done_msg);
+                reached_current_ = true;  // 다시 전송하지 않도록 설정
+            }
+
             current_index_ = targets_.size() - 1;  // 마지막 목표 유지
         } else {
             // index 계산

@@ -638,6 +638,11 @@ CMakeFiles/path_node.dir/src/path_node.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64_multi_array__type_support.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \
