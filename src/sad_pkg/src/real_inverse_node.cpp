@@ -13,6 +13,7 @@
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include <fstream>
 
 using Eigen::Matrix4d;
 using Eigen::MatrixXd;
@@ -226,7 +227,17 @@ public:
             std::chrono::milliseconds(10),
             std::bind(&ManipulatorNode::timerCallback, this)
         );
+
+        log_file_.open("ee_tracking_log.csv");
+        log_file_ << "TimeSec,CurX,CurY,CurZ,TgtX,TgtY,TgtZ\n";
+
     }
+    ~ManipulatorNode() {
+        if (log_file_.is_open()) {
+            log_file_.close();
+        }
+    }
+
 
 private:
     // --- 멤버 변수 ---
@@ -267,6 +278,8 @@ private:
     rclcpp::Time last_qdot_time_;
     bool qdot_initialized_ = false;
     VectorXd q_dot = VectorXd::Zero(6);  // 반드시 크기 명시
+
+    std::ofstream log_file_;
 
     // --- 함수 정의 ---
 
@@ -455,7 +468,7 @@ private:
         VectorXd next_q = ctrl.next_q;
 
         for (int i = 0; i < 6; ++i) {
-            double max_vel = (i == 4 || i == 5) ? 0.3 : 1.0;
+            double max_vel = (i == 4 || i == 5) ? 0.5 : 1.0;
 
             // ✅ 아주 작은 속도면 아예 0으로 클리핑 (모터 떨림 방지)
             if (std::abs(q_dot(i)) < 0.01) {
@@ -481,12 +494,20 @@ private:
 
         joint_vel_pub_->publish(dq_msg);
 
-            std_msgs::msg::Float64MultiArray target_q_msg;
-            target_q_msg.data.resize(6);
-            for (int i = 0; i < 6; ++i) {
-                target_q_msg.data[i] = next_q(i);
-            }
-            target_joint_pub_->publish(target_q_msg);
+        std_msgs::msg::Float64MultiArray target_q_msg;
+        target_q_msg.data.resize(6);
+        for (int i = 0; i < 6; ++i) {
+            target_q_msg.data[i] = next_q(i);
+        }
+        target_joint_pub_->publish(target_q_msg);
+
+        double time_now = this->now().seconds();
+
+        log_file_ << time_now << ","
+                << current_pos.x() << "," << current_pos.y() << "," << current_pos.z() << ","
+                << target_position_.x() << "," << target_position_.y() << "," << target_position_.z()
+                << "\n";
+
 
     }
 

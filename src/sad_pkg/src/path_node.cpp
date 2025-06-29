@@ -48,9 +48,12 @@ public:
             1000ms, std::bind(&RSNode::publishMarkers, this)
         );
 
-        // 시작점과 목표점 설정 (예시)
-        start_ = makePoint(0.14, 0.0, 1.005);
-        goal_  = makePoint(0.5,    0.0, 0.7);
+        // RSNode 생성자 내부에 추가
+        trigger_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+            "/trigger_flags", 10,
+            std::bind(&RSNode::triggerCallback, this, std::placeholders::_1)
+        );
+
 
         // 4) 위치·방위 퍼블리셔 생성
         orientation_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
@@ -59,6 +62,99 @@ public:
     }
 
 private:
+
+    void triggerCallback(const std_msgs::msg::Float64MultiArray::SharedPtr msg) {
+        if (msg->data.size() != 3) {
+            RCLCPP_WARN(this->get_logger(), "[RSNode] trigger 메시지의 크기가 잘못됨 (필요한 크기: 3)");
+            return;
+        }
+
+        start_triggered_ = static_cast<bool>(msg->data[0]);
+        home_triggered_  = static_cast<bool>(msg->data[1]);
+        goal_triggered_  = static_cast<bool>(msg->data[2]);
+
+        RCLCPP_INFO(this->get_logger(),
+            "[RSNode] Trigger 수신: start=%s, home=%s, goal=%s",
+            start_triggered_ ? "true" : "false",
+            home_triggered_  ? "true" : "false",
+            goal_triggered_  ? "true" : "false");
+
+        // ⛔️ goal과 home이 동시에 true이면 무시
+        if (goal_triggered_ && home_triggered_) {
+            RCLCPP_WARN(this->get_logger(), "[RSNode] goal과 home 트리거가 동시에 활성화됨. 무시됩니다.");
+            goal_triggered_ = false;
+            home_triggered_ = false;
+            return;
+        }
+        // 🟢 goal 처리
+        if (goal_triggered_) {
+            geometry_msgs::msg::Point goal1 = makePoint(0.5, 0.0, 0.7);
+            geometry_msgs::msg::Point goal2 = makePoint(0.3, 0.2, 0.5);
+
+            if (goal_call_count_ == 0) {
+                start_ = makePoint(0.14, 0.0, 1.005);  // ← 항상 명시적으로 초기 위치 사용
+                goal_  = goal1;
+                prev_goal_point_ = goal1;
+                has_goal_been_set_ = true;
+                RCLCPP_INFO(this->get_logger(), "[RSNode] Goal 1 실행: start=(%.3f, %.3f, %.3f), goal=(%.3f, %.3f, %.3f)",
+                    start_.x, start_.y, start_.z, goal_.x, goal_.y, goal_.z);
+            }
+            else if (goal_call_count_ == 1) {
+                start_ = prev_goal_point_;  // 이전 goal이 새 출발점
+                goal_  = goal2;
+                prev_goal_point_ = goal2;
+                has_goal_been_set_ = true;
+                RCLCPP_INFO(this->get_logger(), "[RSNode] Goal 2 실행: start=(%.3f, %.3f, %.3f), goal=(%.3f, %.3f, %.3f)",
+                    start_.x, start_.y, start_.z, goal_.x, goal_.y, goal_.z);
+            }
+
+
+            planRRTstar();
+            goal_call_count_++;
+            goal_triggered_ = false;
+        }
+
+        // 🟢 home 처리
+        if (home_triggered_) {
+            if (!has_goal_been_set_) {
+                RCLCPP_WARN(this->get_logger(), "[RSNode] goal 좌표가 없으므로 home 동작을 수행할 수 없습니다.");
+                home_triggered_ = false;
+                return;
+            }
+
+            RCLCPP_INFO(this->get_logger(), "[RSNode] Home 트리거 감지됨 → 홈 위치로 이동 시작");
+
+            start_ = prev_goal_point_;                         // 마지막 goal이 현재 위치
+            goal_  = makePoint(0.14, 0.0, 1.005);                // 홈 위치 직접 지정
+            has_goal_been_set_ = true;
+
+            planRRTstar();
+            home_triggered_ = false;
+        }
+
+        // 🟢 start 처리
+        if (start_triggered_) {
+            if (!has_goal_been_set_) {
+                RCLCPP_WARN(this->get_logger(), "[RSNode] goal/home 좌표가 없어서 start 동작을 실행할 수 없습니다.");
+                start_triggered_ = false;
+                return;
+            }
+
+            RCLCPP_INFO(this->get_logger(), "[RSNode] Start 트리거 감지됨 → 저장된 start_/goal_로 경로 실행");
+            planRRTstar();
+            publishPoseAndOrientation();
+            start_triggered_ = false;
+        }
+
+        if (start_.x == 0.0 && start_.y == 0.0 && start_.z == 0.0) {
+            RCLCPP_ERROR(this->get_logger(), "[RSNode] start_가 유효하지 않습니다. 경로 생성을 중단합니다.");
+            return;
+        }
+
+    }
+
+
+
     // ───────────────────────────────────────────────────────────────────────
     // 1) /harvest_order 메시지 수신 콜백
     void obstacleCallback(const my_vision_msgs::msg::HarvestOrdering::SharedPtr msg) {
@@ -479,7 +575,7 @@ private:
     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr orientation_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
-    geometry_msgs::msg::Point start_, goal_;
+    rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr trigger_sub_;
     std::vector<std::tuple<geometry_msgs::msg::Point,double,double,double>> obstacles_;
     std::vector<TreeNode> nodes_;
     std::vector<geometry_msgs::msg::Point> best_path_;
@@ -489,6 +585,16 @@ private:
     int splineDegree_;
     std::mt19937 gen_;
     bool first_plan_done_;
+    geometry_msgs::msg::Point start_, goal_;
+    bool start_triggered_ = false;
+    bool home_triggered_  = false;
+    bool goal_triggered_  = false;
+    int goal_call_count_ = 0;
+    geometry_msgs::msg::Point prev_goal_point_;
+    bool has_goal_been_set_ = false;
+    
+
+
 };
 
 int main(int argc, char **argv) {

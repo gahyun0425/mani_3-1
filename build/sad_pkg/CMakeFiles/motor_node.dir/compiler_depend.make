@@ -694,11 +694,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64_multi_array__type_support.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
   /home/gaga/sad_ws/src/install/serial/include/serial/serial.h \
   /home/gaga/sad_ws/src/install/serial/include/serial/v8stdint.h \
   /opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h \
@@ -710,20 +705,8 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
   /opt/ros/humble/include/dynamixel_sdk/group_sync_read.h \
   /opt/ros/humble/include/dynamixel_sdk/group_sync_write.h \
   /opt/ros/humble/include/dynamixel_sdk/group_fast_sync_read.h \
-  /opt/ros/humble/include/dynamixel_sdk/group_fast_bulk_read.h \
-  /opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp \
-  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
-  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
-  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp \
-  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp \
-  /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/dynamixel_sdk/group_fast_bulk_read.h
 
-
-/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp:
-
-/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp:
-
-/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp:
 
 /opt/ros/humble/include/dynamixel_sdk/group_fast_sync_read.h:
 
@@ -732,10 +715,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:
 
 /home/gaga/sad_ws/src/install/serial/include/serial/v8stdint.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -762,8 +741,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
@@ -806,8 +783,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_client.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/executable_list.hpp:
-
-/opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/static_executor_entities_collector.hpp:
 
@@ -1044,8 +1019,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /usr/include/x86_64-linux-gnu/bits/signum-arch.h:
 
 /opt/ros/humble/include/rmw/rmw/security_options.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp:
 
 /usr/include/c++/11/cerrno:
 
@@ -1421,8 +1394,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 
 /usr/include/c++/11/bits/concept_check.h:
 
-/opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp:
-
 /usr/include/c++/11/atomic:
 
 /usr/include/pthread.h:
@@ -1432,8 +1403,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
-
-/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp:
 
 /opt/ros/humble/include/rcl/rcl/types.h:
 
@@ -1892,8 +1861,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /opt/ros/humble/include/rcl/rcl/event_callback.h:
 
 /opt/ros/humble/include/tracetools/tracetools/tracetools.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
 
