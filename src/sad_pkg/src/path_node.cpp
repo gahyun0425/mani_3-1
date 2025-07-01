@@ -1,7 +1,7 @@
 // src/path_node.cpp
 
 #include <rclcpp/rclcpp.hpp>
-#include "my_vision_msgs/msg/harvest_ordering.hpp"  // 커스텀 메시지 타입
+#include "vision_msgs/msg/harvest_ordering.hpp"  // 커스텀 메시지 타입
 #include "std_msgs/msg/float64_multi_array.hpp"    // 위치·방위 전송용 메시지
 #include "std_msgs/msg/bool.hpp"
 #include <geometry_msgs/msg/point.hpp>
@@ -33,8 +33,8 @@ public:
         // 1) HarvestOrdering 메시지 구독자 생성 (latched)
         rclcpp::QoS qos(1);
         qos.transient_local();
-        obstacle_sub_ = this->create_subscription<my_vision_msgs::msg::HarvestOrdering>(
-            "/harvest_order", qos,
+        obstacle_sub_ = this->create_subscription<vision_msgs::msg::HarvestOrdering>(
+            "/transformed_obstacles", qos,
             std::bind(&RSNode::obstacleCallback, this, std::placeholders::_1)
         );
 
@@ -55,7 +55,7 @@ public:
         );
 
         goal_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
-            "/goal_command", 10,
+            "/transformed_goal", 10,
             std::bind(&RSNode::goalCallback, this, std::placeholders::_1)
         );
 
@@ -75,7 +75,6 @@ private:
         }
         if (msg->data) {
             RCLCPP_INFO(this->get_logger(), "[RSNode] Start 명령 수신 → 경로 실행");
-            planRRTstar();
             publishPoseAndOrientation();
         }
     }
@@ -103,13 +102,15 @@ private:
             start_.x, start_.y, start_.z,
             goal_.x, goal_.y, goal_.z
         );
+
+        planRRTstar();
     }
 
 
 
     // ───────────────────────────────────────────────────────────────────────
     // 1) /harvest_order 메시지 수신 콜백
-    void obstacleCallback(const my_vision_msgs::msg::HarvestOrdering::SharedPtr msg) {
+    void obstacleCallback(const vision_msgs::msg::HarvestOrdering::SharedPtr msg) {
         RCLCPP_INFO(get_logger(), "[RSNode] HarvestOrdering 메시지 수신");
 
         // (기존) 우선순위, 장애물 처리
@@ -523,7 +524,7 @@ private:
 
     // ───────────────────────────────────────────────────────────────────────
     // 멤버 변수들
-    rclcpp::Subscription<my_vision_msgs::msg::HarvestOrdering>::SharedPtr obstacle_sub_;
+    rclcpp::Subscription<vision_msgs::msg::HarvestOrdering>::SharedPtr obstacle_sub_;
     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr orientation_pub_;
     rclcpp::TimerBase::SharedPtr timer_;

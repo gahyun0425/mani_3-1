@@ -699,8 +699,8 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
-  /home/gaga/sad_ws/src/install/serial/include/serial/serial.h \
-  /home/gaga/sad_ws/src/install/serial/include/serial/v8stdint.h \
+  /home/gaga/sad_ws/install/serial/include/serial/serial.h \
+  /home/gaga/sad_ws/install/serial/include/serial/v8stdint.h \
   /opt/ros/humble/include/dynamixel_sdk/dynamixel_sdk.h \
   /opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h \
   /opt/ros/humble/include/dynamixel_sdk/port_handler.h \
@@ -731,7 +731,9 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 
 /opt/ros/humble/include/dynamixel_sdk/group_bulk_read.h:
 
-/home/gaga/sad_ws/src/install/serial/include/serial/v8stdint.h:
+/home/gaga/sad_ws/install/serial/include/serial/v8stdint.h:
+
+/home/gaga/sad_ws/install/serial/include/serial/serial.h:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp:
 
@@ -774,8 +776,6 @@ CMakeFiles/motor_node.dir/src/motor_node.cpp.o: /home/gaga/sad_ws/src/sad_pkg/sr
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__type_support.hpp:
-
-/home/gaga/sad_ws/src/install/serial/include/serial/serial.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
 

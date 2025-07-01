@@ -13,6 +13,7 @@
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include "std_msgs/msg/bool.hpp"
 
 using Eigen::Matrix4d;
 using Eigen::MatrixXd;
@@ -194,6 +195,8 @@ public:
                 }
             }
 
+            movement_done_pub_ = this->create_publisher<std_msgs::msg::Bool>("/movement_complete", 10);
+
             have_joint_state_ = true;
         }
     );
@@ -218,6 +221,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr     path_sub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr         joint_state_sub_;
     rclcpp::TimerBase::SharedPtr                                          timer_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr movement_done_pub_;
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -241,6 +245,7 @@ private:
     // 들어온 경로 샘플을 저장할 벡터:
     // 각 샘플은 (t, position, orientation) 형태
     std::vector<std::tuple<double, Vector3d, Vector3d>> targets_;
+    size_t prev_index_ = static_cast<size_t>(-1);  // 처음엔 어떤 인덱스도 아님
 
     // (타이머 안에서 사용하는) 목표 EE 위치/회전
     Vector3d target_position_;
@@ -309,12 +314,36 @@ private:
         double elapsed = (this->now() - trajectory_start_time_).seconds();
         double sample_interval = TOTAL_TIME / static_cast<double>(targets_.size());
 
-        // 2) index 계산 (예: elapsed=6.4, sample_interval=0.25 → index= floor(6.4/0.25)=25)
-        size_t idx = static_cast<size_t>(std::floor(elapsed / sample_interval));
-        if (idx >= targets_.size()) {
-            idx = targets_.size() - 1;
+        if (elapsed >= TOTAL_TIME) {
+            if (!reached_current_) {
+                RCLCPP_INFO(this->get_logger(), "✅ 총 시간이 경과했으므로 완료 신호 전송 (elapsed=%.2f)", elapsed);
+                std_msgs::msg::Bool done_msg;
+                done_msg.data = true;
+                movement_done_pub_->publish(done_msg);
+                reached_current_ = true;  // 다시 전송하지 않도록 설정
+            }
+
+            current_index_ = targets_.size() - 1;  // 마지막 목표 유지
+        } else {
+            // index 계산
+            size_t idx = static_cast<size_t>(std::floor(elapsed / sample_interval));
+            if (idx >= targets_.size()) {
+                idx = targets_.size() - 1;
+            }
+            current_index_ = idx;
+
+            // 인덱스가 새로 바뀌었을 경우 완료 메시지 전송
+            if (current_index_ != prev_index_) {
+                RCLCPP_INFO(this->get_logger(),
+                    "📍 목표 인덱스 변경됨 → 완료 신호 전송: index = %zu", current_index_);
+                
+                std_msgs::msg::Bool done_msg;
+                done_msg.data = true;
+                movement_done_pub_->publish(done_msg);
+
+                prev_index_ = current_index_;  
+            }
         }
-        current_index_ = idx;
 
         // 4) 현재 인덱스 목표 꺼내서 IK 제어 준비
         auto &entry = targets_[current_index_];
@@ -328,6 +357,21 @@ private:
 
         // 2) 회전 행렬 → 현재 EE 방위 (roll, pitch, yaw)
         Eigen::Matrix3d R_mat = T6.block<3,3>(0,0);
+
+        RCLCPP_INFO(this->get_logger(),
+        "[Timer] 현재 EE 변환 행렬 T_06:\n"
+        "[ %.4f %.4f %.4f %.4f ]\n"
+        "[ %.4f %.4f %.4f %.4f ]\n"
+        "[ %.4f %.4f %.4f %.4f ]\n"
+        "[ %.4f %.4f %.4f %.4f ]",
+        T6(0,0), T6(0,1), T6(0,2), T6(0,3),
+        T6(1,0), T6(1,1), T6(1,2), T6(1,3),
+        T6(2,0), T6(2,1), T6(2,2), T6(2,3),
+        T6(3,0), T6(3,1), T6(3,2), T6(3,3));
+
+
+
+
         double roll_cur, pitch_cur, yaw_cur;
         {
             double sy = std::sqrt(R_mat(0,0)*R_mat(0,0) + R_mat(1,0)*R_mat(1,0));
@@ -360,6 +404,8 @@ private:
         quaternionToAngleAxis(q_error, axis, angle_rad);
         double ori_err_deg = angle_rad * (180.0 / M_PI);  // 방위 오차 (°)
 
+        Eigen::Vector3d euler_current;
+        euler_current << roll_cur, pitch_cur, yaw_cur;
 
         // --- (D) 콘솔로 출력 ---
         RCLCPP_INFO(this->get_logger(),
@@ -459,7 +505,7 @@ private:
     {
         // double Kp_pos = 350.0;
         Vector3d Kp_pos;
-        Kp_pos << 100, 100, 1000;
+        Kp_pos << 50, 50, 50;
         double Kp_ori = 1.5;
 
         VectorXd u_d_with_error(6);

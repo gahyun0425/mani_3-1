@@ -105,7 +105,7 @@ motor_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_cpp.so
 motor_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_introspection_cpp.so
 motor_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_cpp.so
 motor_node: /opt/ros/humble/lib/libstd_srvs__rosidl_generator_py.so
-motor_node: /home/gaga/sad_ws/src/install/serial/lib/libserial.so
+motor_node: /home/gaga/sad_ws/install/serial/lib/libserial.so
 motor_node: /opt/ros/humble/lib/libdynamixel_sdk.so
 motor_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 motor_node: /opt/ros/humble/lib/librcl.so

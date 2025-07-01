@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target calibration_node[0m
+[ 36%] Built target Inverse_node
+[ 81%] Built target motor_node
+[ 81%] Built target path_node
+[ 90%] Built target path_test_node
+[ 90%] Built target spline_node
+[ 90%] Built target map_node
+[ 90%] Built target obstacle_node
+[ 90%] Built target real_inverse_node
+[ 90%] Built target forward_node
+[ 90%] Built target rrt_node
+[ 95%] [32mBuilding CXX object CMakeFiles/calibration_node.dir/src/calibration_node.cpp.o[0m
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::jointCallback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:120:33:[m[K [01;31m[Kerror: [m[K‘[01m[KT_60[m[K’ was not declared in this scope; did you mean ‘[01m[KT_60_[m[K’?
+  120 |         Vector4d goal_in_base = [01;31m[KT_60[m[K * goal_in_world;
+      |                                 [01;31m[K^~~~[m[K
+      |                                 [32m[KT_60_[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::obstacleCallback(vision_msgs::msg::HarvestOrdering_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:215:33:[m[K [01;31m[Kerror: [m[K‘[01m[KT_60[m[K’ was not declared in this scope; did you mean ‘[01m[KT_60_[m[K’?
+  215 |             Vector4d obs_base = [01;31m[KT_60[m[K * obs_world;
+      |                                 [01;31m[K^~~~[m[K
+      |                                 [32m[KT_60_[m[K
+gmake[2]: *** [CMakeFiles/calibration_node.dir/build.make:76: CMakeFiles/calibration_node.dir/src/calibration_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:417: CMakeFiles/calibration_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

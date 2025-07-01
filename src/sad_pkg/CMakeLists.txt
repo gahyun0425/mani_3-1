@@ -19,7 +19,7 @@ find_package(std_msgs REQUIRED)
 find_package(xacro REQUIRED)
 find_package(ros2_control REQUIRED)
 find_package(gazebo_ros2_control REQUIRED)
-find_package(my_vision_msgs REQUIRED) 
+find_package(vision_msgs REQUIRED) 
 find_package(rosidl_typesupport_cpp REQUIRED)   
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
@@ -37,7 +37,7 @@ include_directories(${EIGEN3_INCLUDE_DIRS}
     ${sensor_msgs_INCLUDE_DIRS}
     ${geometry_msgs_INCLUDE_DIRS}
     ${trajectory_msgs_INCLUDE_DIRS}
-    ${my_vision_msgs_INCLUDE_DIRS}
+    ${vision_msgs_INCLUDE_DIRS}
     /opt/ros/humble/include
     )
 
@@ -51,17 +51,20 @@ add_executable(path_test_node src/path_test_node.cpp)
 add_executable(Inverse_node src/Inverse_node.cpp)
 add_executable(real_inverse_node src/real_inverse_node.cpp)
 add_executable(motor_node src/motor_node.cpp)
+add_executable(calibration_node src/calibration_node.cpp)
 
 ament_target_dependencies(forward_node rclcpp trajectory_msgs Eigen3 sensor_msgs)
 ament_target_dependencies(rrt_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs)
 ament_target_dependencies(spline_node rclcpp geometry_msgs visualization_msgs Eigen3 sensor_msgs)
-ament_target_dependencies(obstacle_node rclcpp std_msgs rosidl_typesupport_cpp my_vision_msgs)
-ament_target_dependencies(map_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs my_vision_msgs)
-ament_target_dependencies(path_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs my_vision_msgs tf2 tf2_geometry_msgs)
-ament_target_dependencies(path_test_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs my_vision_msgs tf2 tf2_geometry_msgs)
-ament_target_dependencies(Inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs my_vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
-ament_target_dependencies(real_inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs my_vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
+ament_target_dependencies(obstacle_node rclcpp std_msgs rosidl_typesupport_cpp vision_msgs)
+ament_target_dependencies(map_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs)
+ament_target_dependencies(path_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs tf2 tf2_geometry_msgs)
+ament_target_dependencies(path_test_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs tf2 tf2_geometry_msgs)
+ament_target_dependencies(Inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
+ament_target_dependencies(real_inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
 ament_target_dependencies(motor_node rclcpp std_msgs serial dynamixel_sdk std_srvs)
+ament_target_dependencies(calibration_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -104,6 +107,7 @@ install(TARGETS
   Inverse_node
   real_inverse_node
   motor_node
+  calibration_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

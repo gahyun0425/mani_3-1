@@ -1,8 +1,8 @@
 // src/harvest_order_publisher.cpp
 
 #include <rclcpp/rclcpp.hpp>
-#include "my_vision_msgs/msg/harvest_ordering.hpp"
-#include "my_vision_msgs/msg/detected_crop.hpp"
+#include "vision_msgs/msg/harvest_ordering.hpp"
+#include "vision_msgs/msg/detected_crop.hpp"
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -16,7 +16,7 @@ public:
     // 1) transient_local QoS 로 latched 퍼블리셔 생성
     rclcpp::QoS qos(1);
     qos.transient_local();
-    pub_ = this->create_publisher<my_vision_msgs::msg::HarvestOrdering>(
+    pub_ = this->create_publisher<vision_msgs::msg::HarvestOrdering>(
       "/harvest_order", qos);
 
     // 2) 예시 우선순위 및 장애물(작물) 좌표 초기화
@@ -40,7 +40,7 @@ public:
 private:
   void on_timer()
   {
-    auto msg = my_vision_msgs::msg::HarvestOrdering();
+    auto msg = vision_msgs::msg::HarvestOrdering();
 
     // Header timestamp
     msg.header.stamp = this->now();
@@ -53,7 +53,7 @@ private:
     size_t n = positions_.size() / 3;
     msg.objects.reserve(n);
     for (size_t i = 0; i < n; ++i) {
-      my_vision_msgs::msg::DetectedCrop obj;
+      vision_msgs::msg::DetectedCrop obj;
       obj.x = positions_[3*i + 0];
       obj.y = positions_[3*i + 1];
       obj.z = positions_[3*i + 2];
@@ -72,7 +72,7 @@ private:
     timer_->cancel();
   }
 
-  rclcpp::Publisher<my_vision_msgs::msg::HarvestOrdering>::SharedPtr pub_;
+  rclcpp::Publisher<vision_msgs::msg::HarvestOrdering>::SharedPtr pub_;
   rclcpp::TimerBase::SharedPtr timer_;
   std::vector<uint32_t> crop_ids_;
   std::vector<double> positions_;

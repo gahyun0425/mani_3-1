@@ -56,7 +56,9 @@ int main() {
         cout << "Enter joint angle (in degrees) for joint " << i + 1 << ": ";
         double angle_deg;
         cin >> angle_deg;
-        dh_params[i].theta = angle_deg * M_PI / 180.0; // degrees to radians
+        dh_params[i].theta = angle_deg;
+
+        // dh_params[i].theta = angle_deg * M_PI / 180.0; // degrees to radians
     }
 
     // Forward Kinematics 계산
@@ -70,6 +72,8 @@ int main() {
     // 결과 출력
     cout << "Position and Orientation:\n";
     cout << "Position (X, Y, Z) in cm: " << x << " " << y << " " << z << " " << endl;
+    cout << "Transformation Matrix T_06:\n" << T_06 << endl;
+
 
     return 0;
 }

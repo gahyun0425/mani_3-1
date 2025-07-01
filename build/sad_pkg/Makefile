@@ -327,6 +327,19 @@ motor_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_node.dir/build.make CMakeFiles/motor_node.dir/build
 .PHONY : motor_node/fast
 
+#=============================================================================
+# Target rules for targets named calibration_node
+
+# Build rule for target.
+calibration_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration_node
+.PHONY : calibration_node
+
+# fast build rule for target.
+calibration_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration_node.dir/build.make CMakeFiles/calibration_node.dir/build
+.PHONY : calibration_node/fast
+
 src/Inverse_node.o: src/Inverse_node.cpp.o
 .PHONY : src/Inverse_node.o
 
@@ -350,6 +363,30 @@ src/Inverse_node.s: src/Inverse_node.cpp.s
 src/Inverse_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Inverse_node.dir/build.make CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.s
 .PHONY : src/Inverse_node.cpp.s
+
+src/calibration_node.o: src/calibration_node.cpp.o
+.PHONY : src/calibration_node.o
+
+# target to build an object file
+src/calibration_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration_node.dir/build.make CMakeFiles/calibration_node.dir/src/calibration_node.cpp.o
+.PHONY : src/calibration_node.cpp.o
+
+src/calibration_node.i: src/calibration_node.cpp.i
+.PHONY : src/calibration_node.i
+
+# target to preprocess a source file
+src/calibration_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration_node.dir/build.make CMakeFiles/calibration_node.dir/src/calibration_node.cpp.i
+.PHONY : src/calibration_node.cpp.i
+
+src/calibration_node.s: src/calibration_node.cpp.s
+.PHONY : src/calibration_node.s
+
+# target to generate assembly for a file
+src/calibration_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration_node.dir/build.make CMakeFiles/calibration_node.dir/src/calibration_node.cpp.s
+.PHONY : src/calibration_node.cpp.s
 
 src/forward_node.o: src/forward_node.cpp.o
 .PHONY : src/forward_node.o
@@ -583,6 +620,7 @@ help:
 	@echo "... sad_pkg_uninstall"
 	@echo "... uninstall"
 	@echo "... Inverse_node"
+	@echo "... calibration_node"
 	@echo "... forward_node"
 	@echo "... map_node"
 	@echo "... motor_node"
@@ -595,6 +633,9 @@ help:
 	@echo "... src/Inverse_node.o"
 	@echo "... src/Inverse_node.i"
 	@echo "... src/Inverse_node.s"
+	@echo "... src/calibration_node.o"
+	@echo "... src/calibration_node.i"
+	@echo "... src/calibration_node.s"
 	@echo "... src/forward_node.o"
 	@echo "... src/forward_node.i"
 	@echo "... src/forward_node.s"

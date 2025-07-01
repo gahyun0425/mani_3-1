@@ -1,8 +1,8 @@
 // map_node.cpp
 
 #include <rclcpp/rclcpp.hpp>
-#include "my_vision_msgs/msg/harvest_ordering.hpp"
-#include "my_vision_msgs/msg/detected_crop.hpp"
+#include "vision_msgs/msg/harvest_ordering.hpp"
+#include "vision_msgs/msg/detected_crop.hpp"
 #include <visualization_msgs/msg/marker_array.hpp>
 #include <geometry_msgs/msg/point.hpp>
 #include <sstream>
@@ -24,8 +24,8 @@ public:
     // 1) HarvestOrder 토픽 구독 (latched: transient_local)
     rclcpp::QoS qos(1);
     qos.transient_local();
-    order_sub_ = this->create_subscription<my_vision_msgs::msg::HarvestOrdering>(
-      "/harvest_order", qos,
+    order_sub_ = this->create_subscription<vision_msgs::msg::HarvestOrdering>(
+      "/transformed_obstacles", qos,
       std::bind(&MapNode::orderCallback, this, std::placeholders::_1)
     );
 
@@ -42,7 +42,7 @@ public:
 
 private:
   // 콜백: HarvestOrder 수신
-  void orderCallback(const my_vision_msgs::msg::HarvestOrdering::SharedPtr msg)
+  void orderCallback(const vision_msgs::msg::HarvestOrdering::SharedPtr msg)
   {
     // 1) 우선순위 출력
     std::ostringstream oss;
@@ -99,7 +99,7 @@ private:
     marker_pub_->publish(marker_array);
   }
 
-  rclcpp::Subscription<my_vision_msgs::msg::HarvestOrdering>::SharedPtr order_sub_;
+  rclcpp::Subscription<vision_msgs::msg::HarvestOrdering>::SharedPtr order_sub_;
   rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
   std::vector<Obstacle> obstacles_;

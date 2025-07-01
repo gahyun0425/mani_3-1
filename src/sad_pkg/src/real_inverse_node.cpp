@@ -251,6 +251,10 @@ private:
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr joint_state_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr target_joint_pub_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr movement_done_pub_;
+    Eigen::Vector3d integral_position_error = Eigen::Vector3d::Zero();
+    Eigen::Vector3d integral_orientation_error = Eigen::Vector3d::Zero();
+    Eigen::Vector3d prev_position_error = Eigen::Vector3d::Zero();
+    Eigen::Vector3d prev_orientation_error = Eigen::Vector3d::Zero();
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -528,13 +532,17 @@ private:
     ControlOutput computeControl(const VectorXd& current_q, const Vector3d& position_error, const Vector3d& orientation_axis_angle, double dt)
     {
         ControlOutput out;
+        double position_scale = 2.0;
         
-        // 원하는 선속도는 position_error / dt (이미 위에서 계산됨)
-        Vector3d desired_velocity = position_error / dt;
-        Eigen::Vector3d desired_velocity_orientation = orientation_axis_angle / dt;
+        Vector3d desired_velocity = position_error * position_scale;
+        // Vector3d desired_velocity = position_error / dt;
+        
+        double orientation_scale = 1.0;
+        Eigen::Vector3d desired_velocity_orientation = orientation_axis_angle * orientation_scale;
+        // Eigen::Vector3d desired_velocity_orientation = orientation_axis_angle / dt;
 
         // q_dot 계산
-        out.q_dot = computeFeedbackVelocity(position_error, orientation_axis_angle, desired_velocity, desired_velocity_orientation);
+        out.q_dot = computeFeedbackVelocity(position_error, orientation_axis_angle, desired_velocity, desired_velocity_orientation, dt);
 
         // next_q 계산
         out.next_q = current_q + out.q_dot * dt;
@@ -580,22 +588,68 @@ private:
     }
 
     // 4) computeFeedbackVelocity: position_error, orientation_error로부터 q_dot 계산
-    VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity, const Vector3d &desired_angular_velocity)
+    VectorXd computeFeedbackVelocity(const Vector3d &position_error,const Vector3d &orientation_error,const Vector3d &desired_linear_velocity, const Vector3d &desired_angular_velocity, double dt)
     {
         // (1) Kp와 Kd 설정
         double Kp_pos = 120.0;
+        double Kd_pos = 10.0;
+
         double Kp_ori = 80.0;
+        double Kd_ori = 8.0;
+
+        // 5,6번 관절용 pid 게인
+        double Kp_pos_56 = 1.0;
+        double Ki_pos_56 = 1.0;
+        double Kd_pos_56 = 1.0;
+
+        double Kp_ori_56 = 1.0;
+        double Ki_ori_56 = 1.0;
+        double Kd_ori_56 = 1.0;
 
         // (2) 목표 속도 벡터 구성
         VectorXd u_d_with_error(6);
-        u_d_with_error.head<3>() = desired_linear_velocity + Kp_pos * position_error;
-        u_d_with_error.tail<3>() = desired_angular_velocity + Kp_ori * orientation_error;
+        u_d_with_error.head<3>() = desired_linear_velocity;
+        u_d_with_error.tail<3>() = desired_angular_velocity;
 
-        // (3) 자코비안 기반 관절 속도 계산
+        // 미분 오차 계산
+        Vector3d d_position_error = (position_error - prev_position_error) / dt;
+        Vector3d d_orientation_error = (orientation_error - prev_orientation_error) / dt;
+
+        // P + D 제어 반영
+        u_d_with_error.head<3>() += Kp_pos * position_error + Kd_pos * d_position_error;
+        u_d_with_error.tail<3>() += Kp_ori * orientation_error + Kd_ori * d_orientation_error;
+            
+        // (4) 자코비안 계산 및 관절 속도 변환
         MatrixXd J = computeJacobian(estimated_q_);
         MatrixXd J_pinv = dampedPseudoInverse(J);
-        VectorXd q_dot(6);  
-        q_dot = J_pinv * u_d_with_error;
+        VectorXd q_dot = J_pinv * u_d_with_error;
+
+        // (5) PID 연산 위한 오차 계산
+        integral_position_error += position_error * dt;
+        integral_orientation_error += orientation_error * dt;
+
+        prev_position_error = position_error;
+        prev_orientation_error = orientation_error;
+
+        // (6) PID용 end-effector 속도 계산
+        VectorXd u_pid(6);
+        u_pid.head<3>() =
+            desired_linear_velocity
+            + Kp_pos_56 * position_error
+            + Ki_pos_56 * integral_position_error
+            + Kd_pos_56 * d_position_error;
+
+        u_pid.tail<3>() =
+            desired_angular_velocity
+            + Kp_ori_56 * orientation_error
+            + Ki_ori_56 * integral_orientation_error
+            + Kd_ori_56 * d_orientation_error;
+
+        VectorXd q_dot_pid = J_pinv * u_pid;
+
+        // (7) 5번, 6번 관절만 PID 값으로 덮어쓰기
+        q_dot(4) = q_dot_pid(4); // 5번
+        q_dot(5) = q_dot_pid(5); // 6번
 
         return q_dot;
     }
