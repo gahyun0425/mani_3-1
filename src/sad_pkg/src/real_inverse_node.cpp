@@ -4,17 +4,17 @@
 #include <Eigen/Dense>
 #include <cmath>
 #include <limits>
-#include <stdexcept> // 표준 예외 클래스
+#include <stdexcept>
 #include "rclcpp/rclcpp.hpp"
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
-#include "std_msgs/msg/float64_multi_array.hpp"  // <-- 여기로 바뀌었습니다.
+#include "std_msgs/msg/float64_multi_array.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include "std_msgs/msg/bool.hpp"
-#include <fstream>
+#include <fstream> // csv
 
 using Eigen::Matrix4d;
 using Eigen::MatrixXd;
@@ -26,19 +26,19 @@ using Eigen::VectorXd;
 double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.14;
 double alpha0 = 0.0, alpha1 = - M_PI / 2, alpha2 = M_PI / 2, alpha3 = -M_PI / 2, alpha4 = M_PI / 2, alpha5 = - M_PI / 2, alpha6 = M_PI / 2;
 double d1 = 0.445, d2 = 0.0, d3 = 0.27, d4 = 0.0, d5 = 0.24, d6 = 0.0, d7 = 0.05;
-bool moved_once_ = false;
-bool have_joint_state_ = false;  // 선언과 동시에 false로 초기화
-bool reached_current_ = false;  // 선언부 확인
+
+bool have_joint_state_ = false;  // joint state가 한 번이라도 들어온 적 있는지 여부 판단
+bool reached_current_ = false;  // 목표에 도달했는지 확인하는 상태 플래그
 
 
 // 각 관절의 제한 범위 (단위: 라디안)
 const double joint_limits[6][2] = {
     {-2*M_PI, 2*M_PI},               // 관절 1: ±360°
-    {-2*M_PI, 2*M_PI},            // 관절 2: 0 ~ +180°
-    {-2*M_PI, 2*M_PI},               // 관절 3: -180° ~ +180°
-    {-2*M_PI, 2*M_PI},               // 관절 4: ±360°
+    {-1.571  , 1.571},               // 관절 2: ±90°         
+    {-2*M_PI, 2*M_PI},               // 관절 3: ±360°
+    {-2.094 ,  2.094},               // 관절 4: ±120°
     {-2*M_PI, 2*M_PI},               // 관절 5: ±360°
-    {-2*M_PI, 2*M_PI}                // 관절 6: ±360°
+    {-M_PI, 0.524}                // 관절 6: ±360°
 };
 
 struct ControlOutput {
@@ -351,6 +351,7 @@ private:
             return;
         }
 
+        // joint state가 없다면 return -> 보호 로직
         if (!have_joint_state_ || targets_.empty()) {
             return;
         }
@@ -534,7 +535,7 @@ private:
         ControlOutput out;
         double position_scale = 2.0;
         
-        Vector3d desired_velocity = position_error * position_scale;
+        Vector3d desired_velocity = target_velocities_[current_index_];
         // Vector3d desired_velocity = position_error / dt;
         
         double orientation_scale = 1.0;

@@ -14,12 +14,16 @@
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include "std_msgs/msg/bool.hpp"
+#include "std_srvs/srv/trigger.hpp"
 
 using Eigen::Matrix4d;
 using Eigen::MatrixXd;
 using Eigen::Matrix3d;
 using Eigen::Vector3d;
 using Eigen::VectorXd;
+
+using std::placeholders::_1;
+using std::placeholders::_2;
 
 // DH 파라미터 정의
 double a0 = 0.0, a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0, a6 = 0.14;
@@ -165,6 +169,15 @@ public:
             std::bind(&ManipulatorNode::pathCallback, this, std::placeholders::_1)
         );
 
+        gripper_open_service_ = this->create_service<std_srvs::srv::Trigger>(
+        "gripper_open_command",
+        std::bind(&ManipulatorNode::handle_gripper_open, this, _1, _2));
+
+        gripper_close_service_ = this->create_service<std_srvs::srv::Trigger>(
+        "gripper_close_command",
+        std::bind(&ManipulatorNode::handle_gripper_close, this, _1, _2));
+
+
         // 2) joint_states 구독
         joint_state_sub_ = this->create_subscription<sensor_msgs::msg::JointState>(
         "/joint_states", 10,
@@ -199,6 +212,8 @@ public:
 
             have_joint_state_ = true;
         }
+
+        
     );
 
 
@@ -222,6 +237,8 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr         joint_state_sub_;
     rclcpp::TimerBase::SharedPtr                                          timer_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr movement_done_pub_;
+    rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr gripper_open_service_;
+    rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr gripper_close_service_;
 
     std::vector<Eigen::Vector3d> target_velocities_; 
     // 총 경로를 따라가는 데 걸릴 총 시간을 결정 (초 단위)
@@ -250,6 +267,10 @@ private:
     // (타이머 안에서 사용하는) 목표 EE 위치/회전
     Vector3d target_position_;
     Vector3d target_orientation_;
+    bool gripper_open = false;
+    bool gripper_command_sent = false;
+    rclcpp::Time last_trajectory_time_ = this->now();  // 생성자에서
+
 
     // --- 함수 정의 ---
 
@@ -310,6 +331,13 @@ private:
             return;
         }
 
+        // 🔁 경로가 새로 설정된 경우 완료 플래그 리셋
+        if (trajectory_start_time_ != last_trajectory_time_) {
+            RCLCPP_INFO(this->get_logger(), "🔄 새로운 경로 감지 → 완료 플래그 리셋");
+            reached_current_ = false;
+            last_trajectory_time_ = trajectory_start_time_;
+        }
+
         // 1) “경과 시간” 계산
         double elapsed = (this->now() - trajectory_start_time_).seconds();
         double sample_interval = TOTAL_TIME / static_cast<double>(targets_.size());
@@ -336,10 +364,6 @@ private:
             if (current_index_ != prev_index_) {
                 RCLCPP_INFO(this->get_logger(),
                     "📍 목표 인덱스 변경됨 → 완료 신호 전송: index = %zu", current_index_);
-                
-                std_msgs::msg::Bool done_msg;
-                done_msg.data = true;
-                movement_done_pub_->publish(done_msg);
 
                 prev_index_ = current_index_;  
             }
@@ -358,16 +382,16 @@ private:
         // 2) 회전 행렬 → 현재 EE 방위 (roll, pitch, yaw)
         Eigen::Matrix3d R_mat = T6.block<3,3>(0,0);
 
-        RCLCPP_INFO(this->get_logger(),
-        "[Timer] 현재 EE 변환 행렬 T_06:\n"
-        "[ %.4f %.4f %.4f %.4f ]\n"
-        "[ %.4f %.4f %.4f %.4f ]\n"
-        "[ %.4f %.4f %.4f %.4f ]\n"
-        "[ %.4f %.4f %.4f %.4f ]",
-        T6(0,0), T6(0,1), T6(0,2), T6(0,3),
-        T6(1,0), T6(1,1), T6(1,2), T6(1,3),
-        T6(2,0), T6(2,1), T6(2,2), T6(2,3),
-        T6(3,0), T6(3,1), T6(3,2), T6(3,3));
+        // RCLCPP_INFO(this->get_logger(),
+        // "[Timer] 현재 EE 변환 행렬 T_06:\n"
+        // "[ %.4f %.4f %.4f %.4f ]\n"
+        // "[ %.4f %.4f %.4f %.4f ]\n"
+        // "[ %.4f %.4f %.4f %.4f ]\n"
+        // "[ %.4f %.4f %.4f %.4f ]",
+        // T6(0,0), T6(0,1), T6(0,2), T6(0,3),
+        // T6(1,0), T6(1,1), T6(1,2), T6(1,3),
+        // T6(2,0), T6(2,1), T6(2,2), T6(2,3),
+        // T6(3,0), T6(3,1), T6(3,2), T6(3,3));
 
 
 
@@ -407,25 +431,25 @@ private:
         Eigen::Vector3d euler_current;
         euler_current << roll_cur, pitch_cur, yaw_cur;
 
-        // --- (D) 콘솔로 출력 ---
-        RCLCPP_INFO(this->get_logger(),
-            "[Timer] 현재 목표 인덱스 = %zu", current_index_);
+        // // --- (D) 콘솔로 출력 ---
+        // RCLCPP_INFO(this->get_logger(),
+        //     "[Timer] 현재 목표 인덱스 = %zu", current_index_);
 
-        RCLCPP_INFO(this->get_logger(),
-            "[Timer] 현재 EE 위치 = (%.3f, %.3f, %.3f)  → 목표 위치 = (%.3f, %.3f, %.3f)",
-            current_pos.x(), current_pos.y(), current_pos.z(),
-            target_position_.x(), target_position_.y(), target_position_.z());
+        // RCLCPP_INFO(this->get_logger(),
+        //     "[Timer] 현재 EE 위치 = (%.3f, %.3f, %.3f)  → 목표 위치 = (%.3f, %.3f, %.3f)",
+        //     current_pos.x(), current_pos.y(), current_pos.z(),
+        //     target_position_.x(), target_position_.y(), target_position_.z());
 
-        RCLCPP_INFO(this->get_logger(),
-            "[Timer] 현재 EE 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)  → 목표 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)",
-            roll_cur * 180.0/M_PI, pitch_cur * 180.0/M_PI, yaw_cur * 180.0/M_PI,
-            target_orientation_.x() * 180.0/M_PI,
-            target_orientation_.y() * 180.0/M_PI,
-            target_orientation_.z() * 180.0/M_PI);
+        // RCLCPP_INFO(this->get_logger(),
+        //     "[Timer] 현재 EE 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)  → 목표 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)",
+        //     roll_cur * 180.0/M_PI, pitch_cur * 180.0/M_PI, yaw_cur * 180.0/M_PI,
+        //     target_orientation_.x() * 180.0/M_PI,
+        //     target_orientation_.y() * 180.0/M_PI,
+        //     target_orientation_.z() * 180.0/M_PI);
 
-        RCLCPP_INFO(this->get_logger(),
-            "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
-            pos_err_norm, ori_err_deg);
+        // RCLCPP_INFO(this->get_logger(),
+        //     "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
+        //     pos_err_norm, ori_err_deg);
 
         double dt = 0.01;
 
@@ -453,8 +477,16 @@ private:
         // 1) JointTrajectory 퍼블리시
         sendJointTrajectory(next_q, current_joint_angles_, dt);
 
-        RCLCPP_INFO(this->get_logger(),
-            "현재 q = [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f]", current_joint_angles_(0), current_joint_angles_(1), current_joint_angles_(2), current_joint_angles_(3), current_joint_angles_(4), current_joint_angles_(5));
+        // RCLCPP_INFO(this->get_logger(),
+        //     "현재 q = [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f]", current_joint_angles_(0), current_joint_angles_(1), current_joint_angles_(2), current_joint_angles_(3), current_joint_angles_(4), current_joint_angles_(5));
+
+        // RCLCPP_INFO(this->get_logger(), 
+        //     "🕒 now = %.3f, start = %.3f, elapsed = %.3f",
+        //     this->now().seconds(),
+        //     trajectory_start_time_.seconds(),
+        //     (this->now() - trajectory_start_time_).seconds()
+        // );
+
 
         // 2) 내부 상태 업데이트
         current_joint_angles_ = next_q;
@@ -565,24 +597,47 @@ private:
         rclcpp::Time now_future = this->now() + margin;
         msg.header.stamp = now_future;
 
-        msg.joint_names = {"joint1","joint2","joint3","joint4","joint5","joint6"};
-
+        msg.joint_names = {"joint1","joint2","joint3","joint4","joint5","joint6", "joint7"};
         // 현재 상태
         trajectory_msgs::msg::JointTrajectoryPoint p0;
         p0.positions = std::vector<double>(current_q.data(), current_q.data() + current_q.size());
+        p0.positions.push_back(gripper_open ? 0.7854 : 0.0);  
         p0.time_from_start = rclcpp::Duration::from_seconds(0.0);
         msg.points.push_back(p0);
 
         // 목표 상태
         trajectory_msgs::msg::JointTrajectoryPoint p1;
         p1.positions = std::vector<double>(target_q.data(), target_q.data() + target_q.size());
+        p1.positions.push_back(gripper_open ? 0.7854 : 0.0);
         p1.time_from_start = rclcpp::Duration::from_seconds(dt);
         msg.points.push_back(p1);
 
         joint_trajectory_pub_->publish(msg);
     }
 
+    void handle_gripper_open(
+        const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+        std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+    {
+        (void)request;
+        RCLCPP_INFO(this->get_logger(), "Received gripper OPEN command");
+        gripper_open = true;
+        response->success = true;
+        response->message = "Gripper opened (joint7 = +45도)";
+        RCLCPP_INFO(this->get_logger(), "%s", response->message.c_str());
 
+    }
+
+    void handle_gripper_close(
+        const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+        std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+    {
+        (void)request;
+        RCLCPP_INFO(this->get_logger(), "Received gripper CLOSE command");
+        gripper_open = false;
+        response->success = true;
+        response->message = "Gripper closed (joint7 = -45도)";
+  }
 };
 
 int main(int argc, char** argv) {

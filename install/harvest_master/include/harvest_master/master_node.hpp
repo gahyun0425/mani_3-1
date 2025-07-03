@@ -12,38 +12,36 @@
 #include <std_msgs/msg/int32_multi_array.hpp>
 #include <std_msgs/msg/string.hpp>
 #include <vector>
-#include <thread>
+
 #include "std_srvs/srv/trigger.hpp"
 #include "vision_msgs/msg/crop_pose.hpp"
 #include "vision_msgs/msg/harvest_ordering.hpp"
 
 using namespace std::chrono_literals;
 
-enum class MasterState
-{
-  INIT,                  // 1. 모든 노드 준비 대기
-  INITIAL_MOVE,          // 2. 초기 위치로 이동
-  FRUIT_RECOGNITION,     // 3. 과일 인식 수행
-  TSP_PROCESSING,        // 4. 최적 경로 계산
-  HARVEST_LOOP,          // 5. 과일별 수확 루프 시작
-  FOUNDATION_PROCESSING, // 6. 6D 포즈 추정
-  GRIPPER_OPEN,          // 7. 그리퍼 열기
-  MOVE_TO_CUTTING,       // 8. 절단점으로 이동
-  GRIPPER_CLOSE,         // 9. 그리퍼 닫기(수확)
-  MOVE_BACK,             // 10. 과일 위치로 복귀
-  MOVE_TO_NEXT,          // 11. 다음 과일로 이동
-  RETURN_HOME,           // 12. 시작점으로 복귀
-  ERROR_STATE,           // 13. 에러 상태
-  SHUTDOWN               // 14. 시스템 종료
+enum class MasterState {
+  INIT,                   // 1. 모든 노드 준비 대기
+  INITIAL_MOVE,           // 2. 초기 위치로 이동
+  FRUIT_RECOGNITION,      // 3. 과일 인식 수행
+  TSP_PROCESSING,         // 4. 최적 경로 계산
+  HARVEST_LOOP,           // 5. 과일별 수확 루프 시작
+  FOUNDATION_PROCESSING,  // 6. 6D 포즈 추정
+  GRIPPER_OPEN,           // 7. 그리퍼 열기
+  MOVE_TO_CUTTING,        // 8. 절단점으로 이동
+  GRIPPER_CLOSE,          // 9. 그리퍼 닫기(수확)
+  MOVE_BACK,              // 10. 과일 위치로 복귀
+  MOVE_TO_NEXT,           // 11. 다음 과일로 이동
+  RETURN_HOME,            // 12. 시작점으로 복귀
+  ERROR_STATE,            // 13. 에러 상태
+  SHUTDOWN                // 14. 시스템 종료
 };
 
-class MasterNode : public rclcpp::Node
-{
-public:
+class MasterNode : public rclcpp::Node {
+ public:
   MasterNode();
   ~MasterNode();
 
-private:
+ private:
   // ===== 상태 및 변수 =====
   std::atomic<MasterState> current_state_;
   std::atomic<int> current_fruit_index_;
@@ -136,20 +134,26 @@ private:
   void changeState(MasterState new_state);
   void resetStateFlags();
 
+  // ===== 선택적 플래그 리셋 함수들 =====
+  void resetMovementFlag();
+  void resetTspFlag();
+  void resetFoundationFlag();
+  void resetGripperFlags();
+
   // 로봇 명령 전송 (용도별 구분)
   void sendInitialCommand();
   void sendTspCommand();
   void sendFoundationCommand();
   void sendReturnHomeCommand();
   void sendGripperCommand(bool open);
-  void activateYolo(bool activate = true);       // 🔹 매개변수 추가
-  void activateFoundation(bool activate = true); // 🔹 매개변수 추가
+  void activateYolo(bool activate = true);
+  void activateFoundation(bool activate = true);
   void sendShutdownSignal();
 
   // ===== 개별 전송 함수들 =====
   void sendStartCommand(bool start_signal);
-  void sendGoalCommand(const std::vector<double> &goal_array);
-  void sendPathCommand(const vision_msgs::msg::HarvestOrdering &harvest_order);
+  void sendGoalCommand(const std::vector<double>& goal_array);
+  void sendPathCommand(const vision_msgs::msg::HarvestOrdering& harvest_order);
 
   // ===== 콜백 함수들 =====
   void movementCallback(const std_msgs::msg::Bool::SharedPtr msg);
@@ -157,4 +161,4 @@ private:
   void foundationCallback(const vision_msgs::msg::CropPose::SharedPtr msg);
 };
 
-#endif // MASTER_NODE_HPP
+#endif  // MASTER_NODE_HPP

@@ -119,7 +119,7 @@ private:
 
         Vector4d goal_in_base = T_60_ * goal_in_world;
 
-        goal_in_base(0) -= 0.25;
+        // goal_in_base(0) -= 0.25;
 
         std_msgs::msg::Float64MultiArray transformed_msg;
         transformed_msg.data = {goal_in_base(0), goal_in_base(1), goal_in_base(2)};

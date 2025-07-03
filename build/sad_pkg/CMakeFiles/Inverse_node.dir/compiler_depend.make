@@ -1039,8 +1039,18 @@ CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o: /home/gaga/sad_ws/src/sad_pk
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp
 
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp:
 
@@ -1225,6 +1235,8 @@ CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o: /home/gaga/sad_ws/src/sad_pk
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_client.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/executable_list.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/static_executor_entities_collector.hpp:
 
@@ -2360,6 +2372,8 @@ CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o: /home/gaga/sad_ws/src/sad_pk
 
 /usr/include/c++/11/bits/stl_pair.h:
 
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp:
+
 /opt/ros/humble/include/rcl/rcl/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
@@ -2419,6 +2433,8 @@ CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o: /home/gaga/sad_ws/src/sad_pk
 /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
 /usr/include/c++/11/backward/binders.h:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp:
 
 /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
 
@@ -2663,6 +2679,8 @@ CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o: /home/gaga/sad_ws/src/sad_pk
 /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__struct.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp:
 
 /usr/include/c++/11/atomic:
 
