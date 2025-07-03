@@ -1,0 +1,30 @@
+[0.015s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.072s] [35m[1mConsolidate compiler generated dependencies of target calibration_node[0m
+[0.093s] [ 63%] Built target map_node
+[0.093s] [ 63%] Built target path_test_node
+[0.093s] [ 63%] Built target obstacle_node
+[0.093s] [ 63%] Built target spline_node
+[0.093s] [ 63%] Built target rrt_node
+[0.093s] [ 63%] Built target Inverse_node
+[0.093s] [ 63%] Built target motor_node
+[0.093s] [ 72%] Built target forward_node
+[0.094s] [ 81%] Built target path_node
+[0.099s] [ 90%] Built target real_inverse_node
+[0.102s] [ 95%] [32mBuilding CXX object CMakeFiles/calibration_node.dir/src/calibration_node.cpp.o[0m
+[3.094s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:[m[K In member function ‘[01m[Kvoid RSNode::jointCallback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.094s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:95:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_joint_map[m[K’ was not declared in this scope
+[3.095s]    95 |             initial_joint_map_ = [01;31m[Kcurrent_joint_map[m[K;
+[3.095s]       |                                  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[3.099s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:112:9:[m[K [01;31m[Kerror: [m[K‘[01m[Konst[m[K’ was not declared in this scope
+[3.099s]   112 |         [01;31m[Konst[m[K auto& selected_joint_map = use_initial_joint ? initial_joint_map_ : current_joint_map;
+[3.099s]       |         [01;31m[K^~~~[m[K
+[3.108s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:114:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kselected_joint_map[m[K’ was not declared in this scope
+[3.108s]   114 |         double theta1 = [01;31m[Kselected_joint_map[m[K.at("joint1");
+[3.109s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.132s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/calibration_node.cpp:156:9:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kgoal_processed_[m[K’
+[3.132s]   156 |         [01;31m[Kgoal_processed_[m[K = true;
+[3.132s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.286s] gmake[2]: *** [CMakeFiles/calibration_node.dir/build.make:76: CMakeFiles/calibration_node.dir/src/calibration_node.cpp.o] Error 1
+[8.287s] gmake[1]: *** [CMakeFiles/Makefile2:417: CMakeFiles/calibration_node.dir/all] Error 2
+[8.287s] gmake: *** [Makefile:146: all] Error 2
+[8.291s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

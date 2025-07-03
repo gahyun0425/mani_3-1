@@ -90,15 +90,39 @@ private:
                         msg->name[i].c_str(), msg->position[i]);
         }
 
-        // 원하는 순서로 안전하게 추출
-        double theta1 = joint_map["joint1"];
-        double theta2 = joint_map["joint2"];
-        double theta3 = joint_map["joint3"];
-        double theta4 = joint_map["joint4"];
-        double theta5 = joint_map["joint5"];
-        double theta6 = joint_map["joint6"];
+        // 🟡 초기 관절 각도 저장 (최초 한 번만)
+        if (!initial_joint_saved_) {
+            initial_joint_map_ = joint_map;
+            initial_joint_saved_ = true;
+            RCLCPP_INFO(this->get_logger(), "✅ Initial joint angles saved.");
+        }
 
-    RCLCPP_INFO(this->get_logger(), "Ordered joints: %.3f, %.3f, %.3f, %.3f, %.3f, %.3f",
+        // goal_count 기준으로 초기 joint angle을 사용할지 결정
+        bool use_initial_joint = (
+            goal_count_ == 4 || goal_count_ == 5 ||
+            goal_count_ == 7 || goal_count_ == 8 ||
+            goal_count_ == 10 || goal_count_ == 11 ||
+            goal_count_ == 13 || goal_count_ == 14 ||
+            goal_count_ == 16 || goal_count_ == 17 ||
+            goal_count_ == 19 || goal_count_ == 20 ||
+            goal_count_ == 22 || goal_count_ == 23 ||
+            goal_count_ == 25
+        );
+
+        const auto& selected_joint_map = use_initial_joint ? initial_joint_map_ : joint_map;
+
+        double theta1 = selected_joint_map.at("joint1");
+        double theta2 = selected_joint_map.at("joint2");
+        double theta3 = selected_joint_map.at("joint3");
+        double theta4 = selected_joint_map.at("joint4");
+        double theta5 = selected_joint_map.at("joint5");
+        double theta6 = selected_joint_map.at("joint6");
+
+        RCLCPP_INFO(this->get_logger(), "Used %s joint values for FK: %.3f, %.3f, %.3f, %.3f, %.3f, %.3f",
+                    use_initial_joint ? "initial" : "current",
+                    theta1, theta2, theta3, theta4, theta5, theta6);
+
+        RCLCPP_INFO(this->get_logger(), "Ordered joints: %.3f, %.3f, %.3f, %.3f, %.3f, %.3f",
                 theta1, theta2, theta3, theta4, theta5, theta6);
 
         vector<DHParam> dh_params = {
@@ -124,17 +148,24 @@ private:
         std_msgs::msg::Float64MultiArray transformed_msg;
         transformed_msg.data = {goal_in_base(0), goal_in_base(1), goal_in_base(2)};
         goal_pub_->publish(transformed_msg);
+        RCLCPP_INFO(this->get_logger(), "✅ Published transformed goal #%d", goal_count_);
+
+        RCLCPP_INFO(this->get_logger(), "🧭 Calibrated Goal Position: x=%.3f, y=%.3f, z=%.3f",
+            goal_in_base(0), goal_in_base(1), goal_in_base(2));
 
         goal_processed_ = true;
-
-        RCLCPP_INFO(this->get_logger(), "Processed and published goal #%d: x=%.3f, y=%.3f, z=%.3f",
-                    goal_count_, goal_in_base(0), goal_in_base(1), goal_in_base(2));
 
         // 🔽 FK 준비됐으면 보류했던 obstacle 처리
         if (pending_obstacle_msg_) {
             RCLCPP_INFO(this->get_logger(), "🟢 FK ready. Processing pending obstacle.");
             obstacleCallback(pending_obstacle_msg_);
             pending_obstacle_msg_.reset();  // clear
+        }
+
+        // ✅ obstacle도 함께 퍼블리시
+        if (obstacle_cached_) {
+            obstacle_pub_->publish(cached_transformed_obstacle_);
+            RCLCPP_INFO(this->get_logger(), "📤 Published cached obstacle with goal.");
         }
 
     }
@@ -161,6 +192,19 @@ private:
                 RCLCPP_INFO(this->get_logger(), "Adjusted goal for FK: x=%.3f, y=%.3f, z=%.3f",
                             goal_position_(0), goal_position_(1), goal_position_(2));
             }
+
+            // ✅ goal_count_ == 26일 때는 FK 없이 바로 퍼블리시
+            if (goal_count_ == 26) {
+                std_msgs::msg::Float64MultiArray direct_msg;
+                direct_msg.data = {goal_position_(0), goal_position_(1), goal_position_(2)};
+                goal_pub_->publish(direct_msg);
+
+                RCLCPP_INFO(this->get_logger(), "🚫 No calibration for goal #26. Published directly: x=%.3f, y=%.3f, z=%.3f",
+                            goal_position_(0), goal_position_(1), goal_position_(2));
+                // goal 처리 완료로 표시
+                goal_processed_ = true;
+                return;
+            }
         }
     }
 
@@ -168,24 +212,11 @@ private:
     void obstacleCallback(const vision_msgs::msg::HarvestOrdering::SharedPtr msg) {
         RCLCPP_INFO(this->get_logger(), "✅ obstacleCallback triggered!");
 
-        // 상태 디버그 로그
-        RCLCPP_INFO(this->get_logger(), "🟡 Status - goal_count_: %d, obstacle_count_: %d, goal_processed_: %s",
-                    goal_count_, obstacle_count_, goal_processed_ ? "true" : "false");
-
-        // 수신한 원본 obstacle 좌표 출력
-        for (size_t i = 0; i < msg->objects.size(); ++i) {
-            const auto& obj = msg->objects[i];
-            RCLCPP_INFO(this->get_logger(), "Object #%zu: id=%d, x=%.3f, y=%.3f, z=%.3f",
-                        i, obj.id, obj.x, obj.y, obj.z);
-        }
-
-        // obstacle 메시지가 비어있을 경우
         if (msg->objects.empty() || msg->crop_ids.empty()) {
-            RCLCPP_WARN(this->get_logger(), "⚠️ HarvestOrdering message is empty.");
+            RCLCPP_WARN(this->get_logger(), "⚠️ Empty obstacle message.");
             return;
         }
 
-        // 처음 한 번은 변환 없이 그대로 퍼블리시
         if (obstacle_count_ == 0) {
             obstacle_pub_->publish(*msg);
             RCLCPP_INFO(this->get_logger(), "🔁 First obstacle published as-is.");
@@ -193,44 +224,44 @@ private:
             return;
         }
 
-
-        // FK가 아직 준비 안 됨
-        if (!goal_processed_) {
-            RCLCPP_WARN(this->get_logger(), "⚠️ FK not ready. Holding obstacle temporarily.");
+        // 2번째 메시지는 FK 준비 시 변환 후 캐싱만
+        if (!goal_processed_ && obstacle_count_ == 1) {
             pending_obstacle_msg_ = msg;
+            RCLCPP_INFO(this->get_logger(), "⏳ FK not ready. Holding obstacle.");
             return;
         }
 
-        // 변환된 메시지 생성
-        vision_msgs::msg::HarvestOrdering transformed_msg;
-        transformed_msg.header.stamp = this->get_clock()->now();
-        transformed_msg.crop_ids = msg->crop_ids;
-        transformed_msg.total_objects = msg->objects.size();
+        if (obstacle_count_ == 1 && goal_processed_) {
+            vision_msgs::msg::HarvestOrdering transformed_msg;
+            transformed_msg.header.stamp = this->get_clock()->now();
+            transformed_msg.crop_ids = msg->crop_ids;
+            transformed_msg.total_objects = msg->objects.size();
 
-        RCLCPP_INFO(this->get_logger(), "🔧 Converting obstacle positions with FK...");
+            for (const auto& obj : msg->objects) {
+                Vector4d obs_world(obj.x, obj.y, obj.z, 1.0);
+                Vector4d obs_base = T_60_ * obs_world;
 
-        for (size_t i = 0; i < msg->objects.size(); ++i) {
-            const auto& obj = msg->objects[i];
-            Vector4d obs_world(obj.x, obj.y, obj.z, 1.0);
-            Vector4d obs_base = T_60_ * obs_world;
+                vision_msgs::msg::DetectedCrop crop;
+                crop.id = obj.id;
+                crop.x = obs_base(0);
+                crop.y = obs_base(1);
+                crop.z = obs_base(2);
 
-            vision_msgs::msg::DetectedCrop transformed_crop;
-            transformed_crop.id = obj.id;
-            transformed_crop.x = obs_base(0);
-            transformed_crop.y = obs_base(1);
-            transformed_crop.z = obs_base(2);
+                transformed_msg.objects.push_back(crop);
+            }
 
-            transformed_msg.objects.push_back(transformed_crop);
+            cached_transformed_obstacle_ = transformed_msg;
+            obstacle_cached_ = true;
+            obstacle_count_++;
 
-            // 변환 결과 출력
-            RCLCPP_INFO(this->get_logger(), "🔹 Transformed Obstacle #%zu (id=%d): x=%.3f, y=%.3f, z=%.3f",
-                        i, transformed_crop.id, transformed_crop.x, transformed_crop.y, transformed_crop.z);
+            RCLCPP_INFO(this->get_logger(), "📦 Transformed and cached obstacle.");
+            return;
         }
 
-        obstacle_pub_->publish(transformed_msg);
-        RCLCPP_INFO(this->get_logger(), "✅ Published transformed obstacle positions.");
-        obstacle_count_++;
+        // 3번째 이후는 무시
+        RCLCPP_INFO(this->get_logger(), "⛔ Ignoring additional obstacle input.");
     }
+
 
 
 
@@ -244,6 +275,8 @@ private:
     rclcpp::Subscription<vision_msgs::msg::HarvestOrdering>::SharedPtr obstacle_sub_;
     rclcpp::Publisher<vision_msgs::msg::HarvestOrdering>::SharedPtr obstacle_pub_;
     vision_msgs::msg::HarvestOrdering::SharedPtr pending_obstacle_msg_;  // 🔹 FK 준비 전 obstacle 저장
+    vision_msgs::msg::HarvestOrdering cached_transformed_obstacle_;
+    std::map<std::string, double> initial_joint_map_;
 
 
     // 상태 변수
@@ -251,6 +284,9 @@ private:
     bool goal_received_;         // goal이 수신되었는가
     bool goal_processed_;        // FK 기반 변환이 완료되었는가
     bool initial_goal_sent_;     // 최초 goal을 즉시 보냈는가
+    bool obstacle_cached_ = false;
+    bool initial_joint_saved_ = false; // 초기 관절 각도 저장 변수
+
     Matrix4d T_60_;
     int goal_count_ = 0;
     int obstacle_count_ = 0;

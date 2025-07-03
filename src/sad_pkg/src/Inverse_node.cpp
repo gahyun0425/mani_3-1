@@ -382,20 +382,6 @@ private:
         // 2) 회전 행렬 → 현재 EE 방위 (roll, pitch, yaw)
         Eigen::Matrix3d R_mat = T6.block<3,3>(0,0);
 
-        // RCLCPP_INFO(this->get_logger(),
-        // "[Timer] 현재 EE 변환 행렬 T_06:\n"
-        // "[ %.4f %.4f %.4f %.4f ]\n"
-        // "[ %.4f %.4f %.4f %.4f ]\n"
-        // "[ %.4f %.4f %.4f %.4f ]\n"
-        // "[ %.4f %.4f %.4f %.4f ]",
-        // T6(0,0), T6(0,1), T6(0,2), T6(0,3),
-        // T6(1,0), T6(1,1), T6(1,2), T6(1,3),
-        // T6(2,0), T6(2,1), T6(2,2), T6(2,3),
-        // T6(3,0), T6(3,1), T6(3,2), T6(3,3));
-
-
-
-
         double roll_cur, pitch_cur, yaw_cur;
         {
             double sy = std::sqrt(R_mat(0,0)*R_mat(0,0) + R_mat(1,0)*R_mat(1,0));
@@ -477,17 +463,6 @@ private:
         // 1) JointTrajectory 퍼블리시
         sendJointTrajectory(next_q, current_joint_angles_, dt);
 
-        // RCLCPP_INFO(this->get_logger(),
-        //     "현재 q = [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f]", current_joint_angles_(0), current_joint_angles_(1), current_joint_angles_(2), current_joint_angles_(3), current_joint_angles_(4), current_joint_angles_(5));
-
-        // RCLCPP_INFO(this->get_logger(), 
-        //     "🕒 now = %.3f, start = %.3f, elapsed = %.3f",
-        //     this->now().seconds(),
-        //     trajectory_start_time_.seconds(),
-        //     (this->now() - trajectory_start_time_).seconds()
-        // );
-
-
         // 2) 내부 상태 업데이트
         current_joint_angles_ = next_q;
     }
@@ -537,7 +512,7 @@ private:
     {
         // double Kp_pos = 350.0;
         Vector3d Kp_pos;
-        Kp_pos << 50, 50, 50;
+        Kp_pos << 10, 10, 10;
         double Kp_ori = 1.5;
 
         VectorXd u_d_with_error(6);

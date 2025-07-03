@@ -257,8 +257,8 @@ private:
         const double xmin = -0.5, xmax = 1.0;
         const double ymin = -0.5, ymax = 1.0;
         const double zmin =  0.0, zmax = 1.0;
-        const double step      = 0.05;
-        const double radius    = 0.3;
+        const double step      = 0.01;
+        const double radius    = 0.2;
         const double goal_bias = 0.05;
         const int    max_iter  = 1000;
 
@@ -330,6 +330,10 @@ private:
         }
 
         splineDegree_ = 3;
+
+        ensureMinControlPoints(splineCP_, splineDegree_);
+        ensureMinControlPoints(orientationCP_, splineDegree_);
+
         buildKnots();
     }
 
@@ -395,6 +399,25 @@ private:
         }
         marker_pub_->publish(ma);
     }
+
+    void ensureMinControlPoints(std::vector<Eigen::Vector3d>& cp, int degree) {
+        int needed = degree + 1;
+        int current = static_cast<int>(cp.size());
+        if (current >= needed) return;
+
+        RCLCPP_WARN(this->get_logger(),
+            "[RSNode] 제어점 부족 (%d개), 선형 보간으로 %d개 추가합니다.",
+            current, needed - current);
+
+        // 선형 보간으로 필요한 수만큼 추가
+        while (static_cast<int>(cp.size()) < needed) {
+            Eigen::Vector3d last = cp.back();
+            Eigen::Vector3d second_last = cp.size() >= 2 ? cp[cp.size() - 2] : last;
+            Eigen::Vector3d direction = last - second_last;
+            cp.push_back(last + direction);
+        }
+    }
+
 
     // ───────────────────────────────────────────────────────────────────────
     // 유틸리티 함수들
