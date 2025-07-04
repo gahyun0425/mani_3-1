@@ -417,32 +417,32 @@ private:
         Eigen::Vector3d euler_current;
         euler_current << roll_cur, pitch_cur, yaw_cur;
 
-        // // --- (D) 콘솔로 출력 ---
-        // RCLCPP_INFO(this->get_logger(),
-        //     "[Timer] 현재 목표 인덱스 = %zu", current_index_);
+        // --- (D) 콘솔로 출력 ---
+        RCLCPP_INFO(this->get_logger(),
+            "[Timer] 현재 목표 인덱스 = %zu", current_index_);
 
-        // RCLCPP_INFO(this->get_logger(),
-        //     "[Timer] 현재 EE 위치 = (%.3f, %.3f, %.3f)  → 목표 위치 = (%.3f, %.3f, %.3f)",
-        //     current_pos.x(), current_pos.y(), current_pos.z(),
-        //     target_position_.x(), target_position_.y(), target_position_.z());
+        RCLCPP_INFO(this->get_logger(),
+            "[Timer] 현재 EE 위치 = (%.3f, %.3f, %.3f)  → 목표 위치 = (%.3f, %.3f, %.3f)",
+            current_pos.x(), current_pos.y(), current_pos.z(),
+            target_position_.x(), target_position_.y(), target_position_.z());
 
-        // RCLCPP_INFO(this->get_logger(),
-        //     "[Timer] 현재 EE 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)  → 목표 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)",
-        //     roll_cur * 180.0/M_PI, pitch_cur * 180.0/M_PI, yaw_cur * 180.0/M_PI,
-        //     target_orientation_.x() * 180.0/M_PI,
-        //     target_orientation_.y() * 180.0/M_PI,
-        //     target_orientation_.z() * 180.0/M_PI);
+        RCLCPP_INFO(this->get_logger(),
+            "[Timer] 현재 EE 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)  → 목표 방위 = (roll=%.3f°, pitch=%.3f°, yaw=%.3f°)",
+            roll_cur * 180.0/M_PI, pitch_cur * 180.0/M_PI, yaw_cur * 180.0/M_PI,
+            target_orientation_.x() * 180.0/M_PI,
+            target_orientation_.y() * 180.0/M_PI,
+            target_orientation_.z() * 180.0/M_PI);
 
-        // RCLCPP_INFO(this->get_logger(),
-        //     "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
-        //     pos_err_norm, ori_err_deg);
+        RCLCPP_INFO(this->get_logger(),
+            "[Timer] 위치 오차 크기 = %.3f m, 방위 오차 크기 = %.3f°",
+            pos_err_norm, ori_err_deg);
 
         double dt = 0.01;
 
         // --- (F) desired_velocity 계산 ---
         // 목표 속도 계산 (위치 및 회전 속도)
-        Eigen::Vector3d desired_velocity_position = position_error / dt;
-        Eigen::Vector3d desired_velocity_orientation = axis * angle_rad / dt;
+        Eigen::Vector3d desired_velocity_position = target_velocities_[current_index_];
+        Eigen::Vector3d desired_velocity_orientation = axis * angle_rad;
 
 
         // --- (G) CLIK 제어 수행 (dt = 0.001) ---
@@ -512,8 +512,8 @@ private:
     {
         // double Kp_pos = 350.0;
         Vector3d Kp_pos;
-        Kp_pos << 10, 10, 10;
-        double Kp_ori = 1.5;
+        Kp_pos << 100, 100, 100;
+        double Kp_ori = 5;
 
         VectorXd u_d_with_error(6);
         // u_d_with_error.head<3>() = desired_linear_velocity + Kp_pos * position_error;

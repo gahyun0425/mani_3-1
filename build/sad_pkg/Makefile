@@ -276,6 +276,19 @@ path_node/fast:
 .PHONY : path_node/fast
 
 #=============================================================================
+# Target rules for targets named real_path_node
+
+# Build rule for target.
+real_path_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 real_path_node
+.PHONY : real_path_node
+
+# fast build rule for target.
+real_path_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/real_path_node.dir/build.make CMakeFiles/real_path_node.dir/build
+.PHONY : real_path_node/fast
+
+#=============================================================================
 # Target rules for targets named path_test_node
 
 # Build rule for target.
@@ -339,6 +352,19 @@ calibration_node: cmake_check_build_system
 calibration_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration_node.dir/build.make CMakeFiles/calibration_node.dir/build
 .PHONY : calibration_node/fast
+
+#=============================================================================
+# Target rules for targets named dynamixel_bringup
+
+# Build rule for target.
+dynamixel_bringup: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dynamixel_bringup
+.PHONY : dynamixel_bringup
+
+# fast build rule for target.
+dynamixel_bringup/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixel_bringup.dir/build.make CMakeFiles/dynamixel_bringup.dir/build
+.PHONY : dynamixel_bringup/fast
 
 src/Inverse_node.o: src/Inverse_node.cpp.o
 .PHONY : src/Inverse_node.o
@@ -484,12 +510,37 @@ src/obstacle_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_node.dir/build.make CMakeFiles/obstacle_node.dir/src/obstacle_node.cpp.s
 .PHONY : src/obstacle_node.cpp.s
 
+src/only_dynamixel_node.o: src/only_dynamixel_node.cpp.o
+.PHONY : src/only_dynamixel_node.o
+
+# target to build an object file
+src/only_dynamixel_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixel_bringup.dir/build.make CMakeFiles/dynamixel_bringup.dir/src/only_dynamixel_node.cpp.o
+.PHONY : src/only_dynamixel_node.cpp.o
+
+src/only_dynamixel_node.i: src/only_dynamixel_node.cpp.i
+.PHONY : src/only_dynamixel_node.i
+
+# target to preprocess a source file
+src/only_dynamixel_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixel_bringup.dir/build.make CMakeFiles/dynamixel_bringup.dir/src/only_dynamixel_node.cpp.i
+.PHONY : src/only_dynamixel_node.cpp.i
+
+src/only_dynamixel_node.s: src/only_dynamixel_node.cpp.s
+.PHONY : src/only_dynamixel_node.s
+
+# target to generate assembly for a file
+src/only_dynamixel_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixel_bringup.dir/build.make CMakeFiles/dynamixel_bringup.dir/src/only_dynamixel_node.cpp.s
+.PHONY : src/only_dynamixel_node.cpp.s
+
 src/path_node.o: src/path_node.cpp.o
 .PHONY : src/path_node.o
 
 # target to build an object file
 src/path_node.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/real_path_node.dir/build.make CMakeFiles/real_path_node.dir/src/path_node.cpp.o
 .PHONY : src/path_node.cpp.o
 
 src/path_node.i: src/path_node.cpp.i
@@ -498,6 +549,7 @@ src/path_node.i: src/path_node.cpp.i
 # target to preprocess a source file
 src/path_node.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/real_path_node.dir/build.make CMakeFiles/real_path_node.dir/src/path_node.cpp.i
 .PHONY : src/path_node.cpp.i
 
 src/path_node.s: src/path_node.cpp.s
@@ -506,6 +558,7 @@ src/path_node.s: src/path_node.cpp.s
 # target to generate assembly for a file
 src/path_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/path_node.dir/build.make CMakeFiles/path_node.dir/src/path_node.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/real_path_node.dir/build.make CMakeFiles/real_path_node.dir/src/path_node.cpp.s
 .PHONY : src/path_node.cpp.s
 
 src/path_test_node.o: src/path_test_node.cpp.o
@@ -621,6 +674,7 @@ help:
 	@echo "... uninstall"
 	@echo "... Inverse_node"
 	@echo "... calibration_node"
+	@echo "... dynamixel_bringup"
 	@echo "... forward_node"
 	@echo "... map_node"
 	@echo "... motor_node"
@@ -628,6 +682,7 @@ help:
 	@echo "... path_node"
 	@echo "... path_test_node"
 	@echo "... real_inverse_node"
+	@echo "... real_path_node"
 	@echo "... rrt_node"
 	@echo "... spline_node"
 	@echo "... src/Inverse_node.o"
@@ -648,6 +703,9 @@ help:
 	@echo "... src/obstacle_node.o"
 	@echo "... src/obstacle_node.i"
 	@echo "... src/obstacle_node.s"
+	@echo "... src/only_dynamixel_node.o"
+	@echo "... src/only_dynamixel_node.i"
+	@echo "... src/only_dynamixel_node.s"
 	@echo "... src/path_node.o"
 	@echo "... src/path_node.i"
 	@echo "... src/path_node.s"

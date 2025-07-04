@@ -102,11 +102,11 @@ private:
             goal_count_ == 4 || goal_count_ == 5 ||
             goal_count_ == 7 || goal_count_ == 8 ||
             goal_count_ == 10 || goal_count_ == 11 ||
-            goal_count_ == 13 || goal_count_ == 14 ||
-            goal_count_ == 16 || goal_count_ == 17 ||
-            goal_count_ == 19 || goal_count_ == 20 ||
-            goal_count_ == 22 || goal_count_ == 23 ||
-            goal_count_ == 25
+            goal_count_ == 13 
+            // goal_count_ == 16 || goal_count_ == 17 ||
+            // goal_count_ == 19 || goal_count_ == 20 ||
+            // goal_count_ == 22 || goal_count_ == 23 ||
+            // goal_count_ == 25
         );
 
         const auto& selected_joint_map = use_initial_joint ? initial_joint_map_ : joint_map;
@@ -194,7 +194,7 @@ private:
             }
 
             // ✅ goal_count_ == 26일 때는 FK 없이 바로 퍼블리시
-            if (goal_count_ == 26) {
+            if (goal_count_ == 14) {
                 std_msgs::msg::Float64MultiArray direct_msg;
                 direct_msg.data = {goal_position_(0), goal_position_(1), goal_position_(2)};
                 goal_pub_->publish(direct_msg);

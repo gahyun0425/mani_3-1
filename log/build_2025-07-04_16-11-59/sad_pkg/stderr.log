@@ -1,0 +1,24 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[Kdouble ManipulatorNode::computeOrientationError(const Quaternion&, const Quaternion&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:396:41:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kvoid quaternionToAngleAxis(const Quaternion&, Eigen::Vector3d&, double&)[m[K’
+  396 |             return [01;31m[KquaternionToAngleAxis(q_target_inv * q_current)[m[K; // 회전 에러 계산
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:106:6:[m[K [01;36m[Knote: [m[Kdeclared here
+  106 | void [01;36m[KquaternionToAngleAxis[m[K(const Quaternion& q_raw, Vector3d& axis, double& angle) {
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:399:41:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kvoid quaternionToAngleAxis(const Quaternion&, Eigen::Vector3d&, double&)[m[K’
+  399 |             return [01;31m[KquaternionToAngleAxis(q_error)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:106:6:[m[K [01;36m[Knote: [m[Kdeclared here
+  106 | void [01;36m[KquaternionToAngleAxis[m[K(const Quaternion& q_raw, Vector3d& axis, double& angle) {
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[KControlOutput ManipulatorNode::computeControlOutput(const Vector3d&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:406:44:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KManipulatorNode::computeControl(Eigen::VectorXd&, const Vector3d&, double&)[m[K’
+  406 |         ControlOutput ctrl = [01;31m[KcomputeControl(estimated_q_, position_error, dt)[m[K;
+      |                              [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:458:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KControlOutput ManipulatorNode::computeControl(const VectorXd&, const Vector3d&, const Vector3d&, double)[m[K’
+  458 |     ControlOutput [01;36m[KcomputeControl[m[K(const VectorXd& current_q, const Vector3d& position_error, const Vector3d& orientation_axis_angle, double dt)
+      |                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:458:19:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+gmake[2]: *** [CMakeFiles/real_inverse_node.dir/build.make:76: CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:393: CMakeFiles/real_inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

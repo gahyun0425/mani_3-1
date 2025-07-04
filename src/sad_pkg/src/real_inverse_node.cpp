@@ -188,27 +188,24 @@ public:
         joint_vel_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/joint_velocity", 10);
 
         qdot_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
-            "/current_qdot", 10,
+            "/dynamixel_q", 10,
             [this](const std_msgs::msg::Float64MultiArray::SharedPtr msg) {
                 if (msg->data.size() < 6) return;
                 
-                rclcpp::Time now = this->now();
-                if (!qdot_initialized_) {
-                    last_qdot_time_ = now;
-                    qdot_initialized_ = true;
-                    return;
-                }
+                // rclcpp::Time now = this->now();
+                // if (!qdot_initialized_) {
+                //     last_qdot_time_ = now;
+                //     qdot_initialized_ = true;
+                //     return;
+                // }
 
-                double dt = (now - last_qdot_time_).seconds();
-                last_qdot_time_ = now;
+                // double dt = (now - last_qdot_time_).seconds();
+                // last_qdot_time_ = now;
 
                 for (int i = 0; i < 6; ++i) {
                     double raw_qdot = msg->data[i];
-                    if (i == 3) {  // joint4 부호 반전
-                        raw_qdot *= -1.0;
-                    }
                     last_qdot_(i) = raw_qdot;
-                    estimated_q_(i) += raw_qdot * dt;
+                    estimated_q_(i) += raw_qdot;
                 }
 
 
@@ -501,9 +498,6 @@ private:
         dq_msg.data.resize(6);
         for (int i = 0; i < 6; ++i) {
             double qd_val = q_dot(i);
-            if (i == 3) {  // joint1, joint4 부호 반전
-                qd_val *= -1.0;
-            }
             dq_msg.data[i] = qd_val;
         }
 

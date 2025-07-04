@@ -1,0 +1,782 @@
+[0.000000] (-) TimerEvent: {}
+[0.000638] (harvest_go) JobQueued: {'identifier': 'harvest_go', 'dependencies': OrderedDict()}
+[0.000756] (mani_urdf) JobQueued: {'identifier': 'mani_urdf', 'dependencies': OrderedDict()}
+[0.000829] (q_visualizer) JobQueued: {'identifier': 'q_visualizer', 'dependencies': OrderedDict()}
+[0.000851] (serial) JobQueued: {'identifier': 'serial', 'dependencies': OrderedDict()}
+[0.000868] (vision_msgs) JobQueued: {'identifier': 'vision_msgs', 'dependencies': OrderedDict()}
+[0.000895] (harvest_master) JobQueued: {'identifier': 'harvest_master', 'dependencies': OrderedDict([('vision_msgs', '/home/gaga/sad_ws/install/vision_msgs')])}
+[0.000916] (sad_pkg) JobQueued: {'identifier': 'sad_pkg', 'dependencies': OrderedDict([('serial', '/home/gaga/sad_ws/install/serial'), ('vision_msgs', '/home/gaga/sad_ws/install/vision_msgs')])}
+[0.000997] (vision_msgs) JobStarted: {'identifier': 'vision_msgs'}
+[0.011840] (serial) JobStarted: {'identifier': 'serial'}
+[0.017704] (harvest_go) JobStarted: {'identifier': 'harvest_go'}
+[0.023791] (mani_urdf) JobStarted: {'identifier': 'mani_urdf'}
+[0.034514] (q_visualizer) JobStarted: {'identifier': 'q_visualizer'}
+[0.045987] (vision_msgs) JobProgress: {'identifier': 'vision_msgs', 'progress': 'cmake'}
+[0.047538] (vision_msgs) JobProgress: {'identifier': 'vision_msgs', 'progress': 'build'}
+[0.048720] (vision_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/vision_msgs', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/vision_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/vision_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.053959] (serial) JobProgress: {'identifier': 'serial', 'progress': 'cmake'}
+[0.054625] (serial) JobProgress: {'identifier': 'serial', 'progress': 'build'}
+[0.055695] (serial) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/serial', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/serial', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/serial'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.057440] (harvest_go) JobProgress: {'identifier': 'harvest_go', 'progress': 'cmake'}
+[0.058038] (harvest_go) JobProgress: {'identifier': 'harvest_go', 'progress': 'build'}
+[0.058195] (harvest_go) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/harvest_go', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/harvest_go', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/harvest_go'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.060861] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'cmake'}
+[0.061322] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'build'}
+[0.061648] (mani_urdf) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/mani_urdf', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/mani_urdf', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/mani_urdf'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.098619] (-) TimerEvent: {}
+[0.146085] (harvest_go) StdoutLine: {'line': b'[100%] Built target harvest_go\n'}
+[0.146950] (serial) StdoutLine: {'line': b'[ 42%] Built target gtest_main\n'}
+[0.147114] (serial) StdoutLine: {'line': b'[ 42%] Built target gtest\n'}
+[0.147192] (serial) StdoutLine: {'line': b'[ 57%] Built target serial\n'}
+[0.147262] (vision_msgs) StdoutLine: {'line': b'[  5%] Built target vision_msgs__cpp\n'}
+[0.147385] (vision_msgs) StdoutLine: {'line': b'[ 12%] Built target vision_msgs__rosidl_generator_c\n'}
+[0.166959] (vision_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_vision_msgs\n'}
+[0.194244] (serial) StdoutLine: {'line': b'[100%] Built target serial_example\n'}
+[0.194989] (serial) StdoutLine: {'line': b'[100%] Built target serial-test\n'}
+[0.195055] (serial) StdoutLine: {'line': b'[100%] Built target serial-test-timer\n'}
+[0.195090] (vision_msgs) StdoutLine: {'line': b'[ 65%] Built target vision_msgs__rosidl_typesupport_introspection_c\n'}
+[0.195146] (vision_msgs) StdoutLine: {'line': b'[ 65%] Built target vision_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.195178] (vision_msgs) StdoutLine: {'line': b'[ 65%] Built target vision_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.195209] (vision_msgs) StdoutLine: {'line': b'[ 65%] Built target vision_msgs__rosidl_typesupport_c\n'}
+[0.195239] (vision_msgs) StdoutLine: {'line': b'[ 67%] Built target vision_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.198989] (-) TimerEvent: {}
+[0.217993] (vision_msgs) StdoutLine: {'line': b'[ 78%] Built target vision_msgs__rosidl_typesupport_cpp\n'}
+[0.270699] (vision_msgs) StdoutLine: {'line': b'[ 78%] Built target vision_msgs\n'}
+[0.299186] (-) TimerEvent: {}
+[0.321272] (vision_msgs) StdoutLine: {'line': b'[ 80%] Built target vision_msgs__py\n'}
+[0.380584] (vision_msgs) StdoutLine: {'line': b'[ 89%] Built target vision_msgs__rosidl_generator_py\n'}
+[0.399524] (-) TimerEvent: {}
+[0.434510] (vision_msgs) StdoutLine: {'line': b'[100%] Built target vision_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.435334] (vision_msgs) StdoutLine: {'line': b'[100%] Built target vision_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.435453] (vision_msgs) StdoutLine: {'line': b'[100%] Built target vision_msgs__rosidl_typesupport_c__pyext\n'}
+[0.499732] (-) TimerEvent: {}
+[0.506032] (vision_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.506642] (vision_msgs) StdoutLine: {'line': b'writing vision_msgs.egg-info/PKG-INFO\n'}
+[0.506837] (vision_msgs) StdoutLine: {'line': b'writing dependency_links to vision_msgs.egg-info/dependency_links.txt\n'}
+[0.506972] (vision_msgs) StdoutLine: {'line': b'writing top-level names to vision_msgs.egg-info/top_level.txt\n'}
+[0.519073] (vision_msgs) StdoutLine: {'line': b"reading manifest file 'vision_msgs.egg-info/SOURCES.txt'\n"}
+[0.519886] (vision_msgs) StdoutLine: {'line': b"writing manifest file 'vision_msgs.egg-info/SOURCES.txt'\n"}
+[0.566920] (harvest_go) CommandEnded: {'returncode': 0}
+[0.568220] (harvest_go) JobProgress: {'identifier': 'harvest_go', 'progress': 'install'}
+[0.594321] (harvest_go) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/harvest_go'], 'cwd': '/home/gaga/sad_ws/build/harvest_go', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/harvest_go'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.596507] (serial) CommandEnded: {'returncode': 0}
+[0.597355] (serial) JobProgress: {'identifier': 'serial', 'progress': 'install'}
+[0.597612] (serial) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/serial'], 'cwd': '/home/gaga/sad_ws/build/serial', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/serial'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.599228] (mani_urdf) CommandEnded: {'returncode': 0}
+[0.599720] (-) TimerEvent: {}
+[0.600528] (mani_urdf) JobProgress: {'identifier': 'mani_urdf', 'progress': 'install'}
+[0.600992] (mani_urdf) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/mani_urdf'], 'cwd': '/home/gaga/sad_ws/build/mani_urdf', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/mani_urdf'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.613902] (serial) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.614955] (harvest_go) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.615142] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/lib/harvest_go/harvest_go\n'}
+[0.615211] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/lib/libserial.so\n'}
+[0.615280] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include\n'}
+[0.615350] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/ament_index/resource_index/package_run_dependencies/harvest_go\n'}
+[0.615422] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include/serial\n'}
+[0.615481] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include/serial/serial.h\n'}
+[0.615540] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include/serial/impl\n'}
+[0.615602] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include/serial/impl/win.h\n'}
+[0.615660] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include/serial/impl/unix.h\n'}
+[0.615720] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/include/serial/v8stdint.h\n'}
+[0.615810] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/lib/serial/serial_example\n'}
+[0.615875] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/environment/library_path.sh\n'}
+[0.615935] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/environment/library_path.dsv\n'}
+[0.615998] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial\n'}
+[0.616073] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial\n'}
+[0.616145] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/environment/ament_prefix_path.sh\n'}
+[0.616228] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/environment/ament_prefix_path.dsv\n'}
+[0.616306] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/environment/path.sh\n'}
+[0.616384] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/environment/path.dsv\n'}
+[0.616471] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/local_setup.bash\n'}
+[0.616548] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/local_setup.sh\n'}
+[0.616632] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/local_setup.zsh\n'}
+[0.616772] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/ament_index/resource_index/parent_prefix_path/harvest_go\n'}
+[0.617130] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/environment/ament_prefix_path.sh\n'}
+[0.617180] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/environment/ament_prefix_path.dsv\n'}
+[0.617215] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/environment/path.sh\n'}
+[0.617247] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/environment/path.dsv\n'}
+[0.617276] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/local_setup.bash\n'}
+[0.617306] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/local_setup.dsv\n'}
+[0.617343] (serial) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/serial/share/serial/package.dsv\n'}
+[0.617419] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/local_setup.sh\n'}
+[0.617451] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/local_setup.zsh\n'}
+[0.617479] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/local_setup.dsv\n'}
+[0.617505] (harvest_go) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/package.dsv\n'}
+[0.617530] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/ament_index/resource_index/packages/harvest_go\n'}
+[0.617558] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/cmake/harvest_goConfig.cmake\n'}
+[0.617584] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/cmake/harvest_goConfig-version.cmake\n'}
+[0.617612] (harvest_go) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_go/share/harvest_go/package.xml\n'}
+[0.617639] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/ament_index/resource_index/packages/serial\n'}
+[0.617667] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.617716] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.617744] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/cmake/serialConfig.cmake\n'}
+[0.617771] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/cmake/serialConfig-version.cmake\n'}
+[0.617823] (serial) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/serial/share/serial/package.xml\n'}
+[0.617862] (mani_urdf) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.618686] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description\n'}
+[0.618810] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_robot.urdf.xacro\n'}
+[0.618999] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh\n'}
+[0.620697] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/before.zip\n'}
+[0.621109] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link3.stl\n'}
+[0.621188] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link1.stl\n'}
+[0.621257] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link5.stl\n'}
+[0.621322] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link6.stl\n'}
+[0.621386] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link7.stl\n'}
+[0.621464] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link2.stl\n'}
+[0.621599] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link4.stl\n'}
+[0.621715] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/endeffector.stl\n'}
+[0.621896] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/mesh/link5_1.stl\n'}
+[0.622084] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_gazebo.xacro\n'}
+[0.622134] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/description/example_include.xacro\n'}
+[0.622969] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch\n'}
+[0.624333] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch/rsp.launch.py\n'}
+[0.624398] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/launch/rsp_sim.launch.py\n'}
+[0.624435] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/worlds\n'}
+[0.624471] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/worlds/test_world.world\n'}
+[0.624513] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/config\n'}
+[0.624548] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/config/gazebo_controll.yaml\n'}
+[0.624856] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/package_run_dependencies/mani_urdf\n'}
+[0.624922] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/parent_prefix_path/mani_urdf\n'}
+[0.625171] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/ament_prefix_path.sh\n'}
+[0.625208] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/ament_prefix_path.dsv\n'}
+[0.625238] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/path.sh\n'}
+[0.625339] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/environment/path.dsv\n'}
+[0.625376] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.bash\n'}
+[0.625408] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.sh\n'}
+[0.625438] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.zsh\n'}
+[0.625469] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/local_setup.dsv\n'}
+[0.625499] (mani_urdf) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/package.dsv\n'}
+[0.625530] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/ament_index/resource_index/packages/mani_urdf\n'}
+[0.625563] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/cmake/mani_urdfConfig.cmake\n'}
+[0.625595] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/cmake/mani_urdfConfig-version.cmake\n'}
+[0.625627] (mani_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/mani_urdf/share/mani_urdf/package.xml\n'}
+[0.625659] (harvest_go) CommandEnded: {'returncode': 0}
+[0.643654] (harvest_go) JobEnded: {'identifier': 'harvest_go', 'rc': 0}
+[0.646974] (serial) CommandEnded: {'returncode': 0}
+[0.663331] (vision_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_vision_msgs_egg\n'}
+[0.664740] (serial) JobEnded: {'identifier': 'serial', 'rc': 0}
+[0.668088] (mani_urdf) CommandEnded: {'returncode': 0}
+[0.681442] (mani_urdf) JobEnded: {'identifier': 'mani_urdf', 'rc': 0}
+[0.698623] (vision_msgs) CommandEnded: {'returncode': 0}
+[0.700305] (vision_msgs) JobProgress: {'identifier': 'vision_msgs', 'progress': 'install'}
+[0.700803] (-) TimerEvent: {}
+[0.701131] (vision_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/vision_msgs'], 'cwd': '/home/gaga/sad_ws/build/vision_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/vision_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.718142] (vision_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.718619] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/ament_index/resource_index/rosidl_interfaces/vision_msgs\n'}
+[0.718726] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[0.718861] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[0.718909] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detected_crop.h\n'}
+[0.718958] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.719004] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/crop_pose.h\n'}
+[0.719055] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/harvest_ordering.h\n'}
+[0.719175] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[0.719205] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__functions.c\n'}
+[0.719235] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__struct.h\n'}
+[0.719262] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__functions.c\n'}
+[0.719310] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__struct.h\n'}
+[0.719335] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__functions.c\n'}
+[0.719361] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__struct.h\n'}
+[0.719406] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__struct.h\n'}
+[0.719432] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__functions.h\n'}
+[0.719457] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__type_support.h\n'}
+[0.719493] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__functions.h\n'}
+[0.719522] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__type_support.h\n'}
+[0.719558] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__functions.c\n'}
+[0.719597] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__type_support.h\n'}
+[0.719670] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__functions.h\n'}
+[0.719710] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__functions.h\n'}
+[0.719753] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__type_support.h\n'}
+[0.719805] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detected_crop_array.h\n'}
+[0.719899] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/library_path.sh\n'}
+[0.719936] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/library_path.dsv\n'}
+[0.719967] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_generator_c.so\n'}
+[0.720022] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[0.720055] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[0.720095] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.720136] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[0.720177] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.720219] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.720267] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_fastrtps_c.h\n'}
+[0.720354] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__rosidl_typesupport_fastrtps_c.h\n'}
+[0.720411] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.720493] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[0.720556] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[0.720625] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.720664] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detected_crop.hpp\n'}
+[0.720702] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/harvest_ordering.hpp\n'}
+[0.720740] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detected_crop_array.hpp\n'}
+[0.720775] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[0.720918] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__builder.hpp\n'}
+[0.720971] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__traits.hpp\n'}
+[0.721033] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__builder.hpp\n'}
+[0.721075] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__struct.hpp\n'}
+[0.721114] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__struct.hpp\n'}
+[0.721151] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__type_support.hpp\n'}
+[0.721192] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__builder.hpp\n'}
+[0.721261] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__type_support.hpp\n'}
+[0.721300] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__builder.hpp\n'}
+[0.721330] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__struct.hpp\n'}
+[0.721372] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__struct.hpp\n'}
+[0.721406] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__type_support.hpp\n'}
+[0.721436] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__traits.hpp\n'}
+[0.721469] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__traits.hpp\n'}
+[0.721505] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__type_support.hpp\n'}
+[0.721535] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__traits.hpp\n'}
+[0.721601] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/crop_pose.hpp\n'}
+[0.721635] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[0.721679] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[0.721734] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.721779] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[0.721890] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.721945] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/dds_fastrtps\n'}
+[0.722003] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.722033] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.722061] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.722092] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.722116] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[0.722142] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[0.722174] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.722229] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[0.722261] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__type_support.c\n'}
+[0.722289] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__type_support.c\n'}
+[0.722317] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__type_support.c\n'}
+[0.722343] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_introspection_c.h\n'}
+[0.722374] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__rosidl_typesupport_introspection_c.h\n'}
+[0.722403] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__type_support.c\n'}
+[0.722444] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.722498] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_introspection_c.h\n'}
+[0.722527] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.722553] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_c.so\n'}
+[0.722669] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs\n'}
+[0.722727] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg\n'}
+[0.722825] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail\n'}
+[0.722899] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__type_support.cpp\n'}
+[0.722962] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.723008] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.723097] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__type_support.cpp\n'}
+[0.723130] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/detected_crop__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.723177] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__type_support.cpp\n'}
+[0.723202] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/harvest_ordering__type_support.cpp\n'}
+[0.723226] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/include/vision_msgs/vision_msgs/msg/detail/crop_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.723292] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.723573] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_typesupport_cpp.so\n'}
+[0.723732] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/pythonpath.sh\n'}
+[0.723781] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/pythonpath.dsv\n'}
+[0.723854] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.1.0-py3.10.egg-info\n'}
+[0.723923] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.724422] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[0.724478] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[0.724588] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.724793] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs\n'}
+[0.724858] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.724944] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/__init__.py\n'}
+[0.725028] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg\n'}
+[0.725075] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_harvest_ordering_s.c\n'}
+[0.725110] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/__init__.py\n'}
+[0.725143] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_detected_crop_s.c\n'}
+[0.725176] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_crop_pose.py\n'}
+[0.725241] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_detected_crop_array_s.c\n'}
+[0.725272] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_detected_crop_array.py\n'}
+[0.725299] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_crop_pose_s.c\n'}
+[0.725328] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_harvest_ordering.py\n'}
+[0.725354] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg/_detected_crop.py\n'}
+[0.725377] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.725402] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.725427] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.725452] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/_vision_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.725477] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/libvision_msgs__rosidl_generator_py.so\n'}
+[0.725503] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.770472] (vision_msgs) StdoutLine: {'line': b"Listing '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs'...\n"}
+[0.771369] (vision_msgs) StdoutLine: {'line': b"Listing '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/msg'...\n"}
+[0.784342] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.784593] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.784635] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages/vision_msgs/vision_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.784756] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/lib/libvision_msgs__rosidl_generator_py.so\n'}
+[0.785082] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/CropPose.idl\n'}
+[0.785218] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/DetectedCrop.idl\n'}
+[0.785273] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/DetectedCropArray.idl\n'}
+[0.785319] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/HarvestOrdering.idl\n'}
+[0.785359] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/CropPose.msg\n'}
+[0.785429] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/DetectedCrop.msg\n'}
+[0.785480] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/DetectedCropArray.msg\n'}
+[0.785521] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/msg/HarvestOrdering.msg\n'}
+[0.785556] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/ament_index/resource_index/package_run_dependencies/vision_msgs\n'}
+[0.785613] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/ament_index/resource_index/parent_prefix_path/vision_msgs\n'}
+[0.785656] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/ament_prefix_path.sh\n'}
+[0.785697] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/ament_prefix_path.dsv\n'}
+[0.785757] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/path.sh\n'}
+[0.785830] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/environment/path.dsv\n'}
+[0.785865] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/local_setup.bash\n'}
+[0.785905] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/local_setup.sh\n'}
+[0.785945] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/local_setup.zsh\n'}
+[0.785998] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/local_setup.dsv\n'}
+[0.786052] (vision_msgs) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/package.dsv\n'}
+[0.786354] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/ament_index/resource_index/packages/vision_msgs\n'}
+[0.786563] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_cExport.cmake\n'}
+[0.786622] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.786738] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.786786] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.786999] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.787103] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.787141] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.787238] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.787282] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.787395] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.787443] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.787544] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.787589] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.787704] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.787760] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.787884] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.787932] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/export_vision_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.787975] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.788021] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.788064] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.788107] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.788166] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.788226] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.788490] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.788580] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgsConfig.cmake\n'}
+[0.788614] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/cmake/vision_msgsConfig-version.cmake\n'}
+[0.788645] (vision_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/vision_msgs/share/vision_msgs/package.xml\n'}
+[0.793684] (vision_msgs) CommandEnded: {'returncode': 0}
+[0.800950] (-) TimerEvent: {}
+[0.817818] (vision_msgs) JobEnded: {'identifier': 'vision_msgs', 'rc': 0}
+[0.820157] (harvest_master) JobStarted: {'identifier': 'harvest_master'}
+[0.825464] (sad_pkg) JobStarted: {'identifier': 'sad_pkg'}
+[0.835338] (harvest_master) JobProgress: {'identifier': 'harvest_master', 'progress': 'cmake'}
+[0.836677] (harvest_master) JobProgress: {'identifier': 'harvest_master', 'progress': 'build'}
+[0.837176] (harvest_master) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/harvest_master', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/harvest_master', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/harvest_master'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.842268] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'cmake'}
+[0.843650] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'build'}
+[0.844268] (sad_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gaga/sad_ws/build/sad_pkg', '--', '-j20', '-l20'], 'cwd': '/home/gaga/sad_ws/build/sad_pkg', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/sad_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[0.901219] (-) TimerEvent: {}
+[0.935901] (sad_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target path_node\x1b[0m\n'}
+[0.936298] (sad_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target real_path_node\x1b[0m\n'}
+[0.960094] (harvest_master) StdoutLine: {'line': b'[100%] Built target master_node\n'}
+[0.960572] (sad_pkg) StdoutLine: {'line': b'[ 58%] Built target obstacle_node\n'}
+[0.960690] (sad_pkg) StdoutLine: {'line': b'[ 58%] Built target map_node\n'}
+[0.960782] (sad_pkg) StdoutLine: {'line': b'[ 58%] Built target forward_node\n'}
+[0.960879] (sad_pkg) StdoutLine: {'line': b'[ 58%] Built target rrt_node\n'}
+[0.960955] (sad_pkg) StdoutLine: {'line': b'[ 58%] Built target motor_node\n'}
+[0.961030] (sad_pkg) StdoutLine: {'line': b'[ 66%] Built target spline_node\n'}
+[0.961101] (sad_pkg) StdoutLine: {'line': b'[ 58%] Built target real_inverse_node\n'}
+[0.961173] (sad_pkg) StdoutLine: {'line': b'[ 66%] Built target calibration_node\n'}
+[0.961609] (sad_pkg) StdoutLine: {'line': b'[ 75%] Built target path_test_node\n'}
+[0.962321] (sad_pkg) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o\x1b[0m\n'}
+[0.976381] (sad_pkg) StdoutLine: {'line': b'[ 95%] Built target path_node\n'}
+[0.977232] (sad_pkg) StdoutLine: {'line': b'[ 95%] Built target real_path_node\n'}
+[0.985824] (harvest_master) CommandEnded: {'returncode': 0}
+[0.986839] (harvest_master) JobProgress: {'identifier': 'harvest_master', 'progress': 'install'}
+[0.987118] (harvest_master) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/harvest_master'], 'cwd': '/home/gaga/sad_ws/build/harvest_master', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/harvest_master'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[1.001506] (-) TimerEvent: {}
+[1.008072] (harvest_master) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.008498] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/lib/harvest_master/master_node\n'}
+[1.008580] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/include/\n'}
+[1.008655] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/include//harvest_master\n'}
+[1.008725] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/include//harvest_master/master_node.hpp\n'}
+[1.008931] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/ament_index/resource_index/package_run_dependencies/harvest_master\n'}
+[1.009001] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/ament_index/resource_index/parent_prefix_path/harvest_master\n'}
+[1.009068] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/environment/ament_prefix_path.sh\n'}
+[1.009130] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/environment/ament_prefix_path.dsv\n'}
+[1.009192] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/environment/path.sh\n'}
+[1.009254] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/environment/path.dsv\n'}
+[1.009340] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/local_setup.bash\n'}
+[1.009402] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/local_setup.sh\n'}
+[1.009464] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/local_setup.zsh\n'}
+[1.009525] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/local_setup.dsv\n'}
+[1.009587] (harvest_master) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/package.dsv\n'}
+[1.009653] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/ament_index/resource_index/packages/harvest_master\n'}
+[1.009714] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/cmake/harvest_masterConfig.cmake\n'}
+[1.009783] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/cmake/harvest_masterConfig-version.cmake\n'}
+[1.009928] (harvest_master) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/harvest_master/share/harvest_master/package.xml\n'}
+[1.014523] (harvest_master) CommandEnded: {'returncode': 0}
+[1.035042] (harvest_master) JobEnded: {'identifier': 'harvest_master', 'rc': 0}
+[1.102195] (-) TimerEvent: {}
+[1.185501] (q_visualizer) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/q_visualizer', 'build', '--build-base', '/home/gaga/sad_ws/build/q_visualizer/build', 'install', '--record', '/home/gaga/sad_ws/build/q_visualizer/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gaga/sad_ws/src/q_visualizer', 'env': {'GZ_SIM_SYSTEM_PLUGIN_PATH': '/home/gaga/gz_ws/install/ros_gz_sim/lib', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gaga', 'LC_TIME': 'ko_KR.UTF-8', 'ROS_PACKAGE_PATH': '/home/gaga/sad_ws/install/serial/share', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin', 'HOME': '/home/gaga', 'OLDPWD': '/home/gaga', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ko_KR.UTF-8', 'MANAGERPID': '1355', 'SYSTEMD_EXEC_PID': '2103', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2749', 'COLCON_PREFIX_PATH': '/home/gaga/sad_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'gaga', 'JOURNAL_STREAM': '8:24392', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'MUJOCO_HOME': '/home/gaga/.mujoco/mujoco', 'USERNAME': 'gaga', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin', 'SESSION_MANAGER': 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805', 'INVOCATION_ID': '9eaa7195894a4037858c7a35c03579f0', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GAZEBO_PATH': '/usr/share/gazebo-11', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '22', 'AMENT_PREFIX_PATH': '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GAZEBO_RESOURCE_PATH': '/usr/share/gazebo-11', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'GZ_VERSION': 'fortress', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/gaga/sad_ws/build/q_visualizer', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GAZEBO_PLUGIN_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'LDS_MODEL': 'LDS-01', 'PYTHONPATH': '/home/gaga/sad_ws/build/q_visualizer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go'}, 'shell': False}
+[1.202566] (-) TimerEvent: {}
+[1.303395] (-) TimerEvent: {}
+[1.405144] (-) TimerEvent: {}
+[1.440002] (q_visualizer) StdoutLine: {'line': b'running egg_info\n'}
+[1.442188] (q_visualizer) StdoutLine: {'line': b'writing ../../build/q_visualizer/q_visualizer.egg-info/PKG-INFO\n'}
+[1.442613] (q_visualizer) StdoutLine: {'line': b'writing dependency_links to ../../build/q_visualizer/q_visualizer.egg-info/dependency_links.txt\n'}
+[1.442827] (q_visualizer) StdoutLine: {'line': b'writing entry points to ../../build/q_visualizer/q_visualizer.egg-info/entry_points.txt\n'}
+[1.442958] (q_visualizer) StdoutLine: {'line': b'writing requirements to ../../build/q_visualizer/q_visualizer.egg-info/requires.txt\n'}
+[1.443026] (q_visualizer) StdoutLine: {'line': b'writing top-level names to ../../build/q_visualizer/q_visualizer.egg-info/top_level.txt\n'}
+[1.447693] (q_visualizer) StdoutLine: {'line': b"reading manifest file '../../build/q_visualizer/q_visualizer.egg-info/SOURCES.txt'\n"}
+[1.448609] (q_visualizer) StdoutLine: {'line': b"writing manifest file '../../build/q_visualizer/q_visualizer.egg-info/SOURCES.txt'\n"}
+[1.448757] (q_visualizer) StdoutLine: {'line': b'running build\n'}
+[1.448851] (q_visualizer) StdoutLine: {'line': b'running build_py\n'}
+[1.449212] (q_visualizer) StdoutLine: {'line': b'running install\n'}
+[1.449879] (q_visualizer) StdoutLine: {'line': b'running install_lib\n'}
+[1.451607] (q_visualizer) StdoutLine: {'line': b'running install_data\n'}
+[1.451918] (q_visualizer) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.454270] (q_visualizer) StdoutLine: {'line': b"removing '/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages/q_visualizer-0.1.0-py3.10.egg-info' (and everything under it)\n"}
+[1.454539] (q_visualizer) StdoutLine: {'line': b'Copying ../../build/q_visualizer/q_visualizer.egg-info to /home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages/q_visualizer-0.1.0-py3.10.egg-info\n'}
+[1.455345] (q_visualizer) StdoutLine: {'line': b'running install_scripts\n'}
+[1.489271] (q_visualizer) StdoutLine: {'line': b'Installing q_visualizer_node script to /home/gaga/sad_ws/install/q_visualizer/lib/q_visualizer\n'}
+[1.490416] (q_visualizer) StdoutLine: {'line': b"writing list of installed files to '/home/gaga/sad_ws/build/q_visualizer/install.log'\n"}
+[1.505588] (-) TimerEvent: {}
+[1.606867] (q_visualizer) CommandEnded: {'returncode': 0}
+[1.608249] (-) TimerEvent: {}
+[1.616700] (q_visualizer) JobEnded: {'identifier': 'q_visualizer', 'rc': 0}
+[1.708695] (-) TimerEvent: {}
+[1.809771] (-) TimerEvent: {}
+[1.911166] (-) TimerEvent: {}
+[2.013027] (-) TimerEvent: {}
+[2.114630] (-) TimerEvent: {}
+[2.215185] (-) TimerEvent: {}
+[2.316947] (-) TimerEvent: {}
+[2.418149] (-) TimerEvent: {}
+[2.519168] (-) TimerEvent: {}
+[2.619929] (-) TimerEvent: {}
+[2.721741] (-) TimerEvent: {}
+[2.822984] (-) TimerEvent: {}
+[2.924015] (-) TimerEvent: {}
+[3.025066] (-) TimerEvent: {}
+[3.125927] (-) TimerEvent: {}
+[3.227112] (-) TimerEvent: {}
+[3.328178] (-) TimerEvent: {}
+[3.429500] (-) TimerEvent: {}
+[3.530769] (-) TimerEvent: {}
+[3.632532] (-) TimerEvent: {}
+[3.734001] (-) TimerEvent: {}
+[3.835695] (-) TimerEvent: {}
+[3.937173] (-) TimerEvent: {}
+[4.038571] (-) TimerEvent: {}
+[4.140006] (-) TimerEvent: {}
+[4.240889] (-) TimerEvent: {}
+[4.341353] (-) TimerEvent: {}
+[4.442471] (-) TimerEvent: {}
+[4.543822] (-) TimerEvent: {}
+[4.644666] (-) TimerEvent: {}
+[4.746149] (-) TimerEvent: {}
+[4.847455] (-) TimerEvent: {}
+[4.948563] (-) TimerEvent: {}
+[5.049519] (-) TimerEvent: {}
+[5.150860] (-) TimerEvent: {}
+[5.252450] (-) TimerEvent: {}
+[5.353756] (-) TimerEvent: {}
+[5.455465] (-) TimerEvent: {}
+[5.556124] (-) TimerEvent: {}
+[5.657129] (-) TimerEvent: {}
+[5.758269] (-) TimerEvent: {}
+[5.859733] (-) TimerEvent: {}
+[5.961006] (-) TimerEvent: {}
+[6.062417] (-) TimerEvent: {}
+[6.163917] (-) TimerEvent: {}
+[6.265281] (-) TimerEvent: {}
+[6.366744] (-) TimerEvent: {}
+[6.467741] (-) TimerEvent: {}
+[6.569721] (-) TimerEvent: {}
+[6.671220] (-) TimerEvent: {}
+[6.772419] (-) TimerEvent: {}
+[6.873746] (-) TimerEvent: {}
+[6.975940] (-) TimerEvent: {}
+[7.077187] (-) TimerEvent: {}
+[7.178755] (-) TimerEvent: {}
+[7.280569] (-) TimerEvent: {}
+[7.381346] (-) TimerEvent: {}
+[7.482191] (-) TimerEvent: {}
+[7.583415] (-) TimerEvent: {}
+[7.684421] (-) TimerEvent: {}
+[7.786100] (-) TimerEvent: {}
+[7.887614] (-) TimerEvent: {}
+[7.989365] (-) TimerEvent: {}
+[8.091002] (-) TimerEvent: {}
+[8.192608] (-) TimerEvent: {}
+[8.293814] (-) TimerEvent: {}
+[8.395181] (-) TimerEvent: {}
+[8.496400] (-) TimerEvent: {}
+[8.597241] (-) TimerEvent: {}
+[8.698338] (-) TimerEvent: {}
+[8.799110] (-) TimerEvent: {}
+[8.900199] (-) TimerEvent: {}
+[9.001695] (-) TimerEvent: {}
+[9.103183] (-) TimerEvent: {}
+[9.204154] (-) TimerEvent: {}
+[9.305716] (-) TimerEvent: {}
+[9.407496] (-) TimerEvent: {}
+[9.509349] (-) TimerEvent: {}
+[9.610482] (-) TimerEvent: {}
+[9.711694] (-) TimerEvent: {}
+[9.812820] (-) TimerEvent: {}
+[9.913766] (-) TimerEvent: {}
+[10.014854] (-) TimerEvent: {}
+[10.116264] (-) TimerEvent: {}
+[10.217667] (-) TimerEvent: {}
+[10.319002] (-) TimerEvent: {}
+[10.419972] (-) TimerEvent: {}
+[10.521338] (-) TimerEvent: {}
+[10.622585] (-) TimerEvent: {}
+[10.723351] (-) TimerEvent: {}
+[10.824333] (-) TimerEvent: {}
+[10.925442] (-) TimerEvent: {}
+[11.026260] (-) TimerEvent: {}
+[11.127110] (-) TimerEvent: {}
+[11.228364] (-) TimerEvent: {}
+[11.329695] (-) TimerEvent: {}
+[11.431173] (-) TimerEvent: {}
+[11.532485] (-) TimerEvent: {}
+[11.633389] (-) TimerEvent: {}
+[11.734395] (-) TimerEvent: {}
+[11.835920] (-) TimerEvent: {}
+[11.936983] (-) TimerEvent: {}
+[12.038323] (-) TimerEvent: {}
+[12.139246] (-) TimerEvent: {}
+[12.240722] (-) TimerEvent: {}
+[12.341883] (-) TimerEvent: {}
+[12.443203] (-) TimerEvent: {}
+[12.544313] (-) TimerEvent: {}
+[12.645534] (-) TimerEvent: {}
+[12.747017] (-) TimerEvent: {}
+[12.848431] (-) TimerEvent: {}
+[12.949544] (-) TimerEvent: {}
+[13.050515] (-) TimerEvent: {}
+[13.151823] (-) TimerEvent: {}
+[13.253229] (-) TimerEvent: {}
+[13.354611] (-) TimerEvent: {}
+[13.455309] (-) TimerEvent: {}
+[13.556220] (-) TimerEvent: {}
+[13.656923] (-) TimerEvent: {}
+[13.757832] (-) TimerEvent: {}
+[13.859026] (-) TimerEvent: {}
+[13.960878] (-) TimerEvent: {}
+[14.062569] (-) TimerEvent: {}
+[14.163398] (-) TimerEvent: {}
+[14.264758] (-) TimerEvent: {}
+[14.366224] (-) TimerEvent: {}
+[14.467050] (-) TimerEvent: {}
+[14.567442] (-) TimerEvent: {}
+[14.668209] (-) TimerEvent: {}
+[14.769204] (-) TimerEvent: {}
+[14.870121] (-) TimerEvent: {}
+[14.970967] (-) TimerEvent: {}
+[15.072153] (-) TimerEvent: {}
+[15.173148] (-) TimerEvent: {}
+[15.274531] (-) TimerEvent: {}
+[15.376082] (-) TimerEvent: {}
+[15.477383] (-) TimerEvent: {}
+[15.578912] (-) TimerEvent: {}
+[15.680282] (-) TimerEvent: {}
+[15.780781] (-) TimerEvent: {}
+[15.882356] (-) TimerEvent: {}
+[15.983482] (-) TimerEvent: {}
+[16.085039] (-) TimerEvent: {}
+[16.185534] (-) TimerEvent: {}
+[16.286394] (-) TimerEvent: {}
+[16.387586] (-) TimerEvent: {}
+[16.488250] (-) TimerEvent: {}
+[16.589001] (-) TimerEvent: {}
+[16.689966] (-) TimerEvent: {}
+[16.790341] (-) TimerEvent: {}
+[16.890820] (-) TimerEvent: {}
+[16.991090] (-) TimerEvent: {}
+[17.091951] (-) TimerEvent: {}
+[17.193238] (-) TimerEvent: {}
+[17.293635] (-) TimerEvent: {}
+[17.393965] (-) TimerEvent: {}
+[17.494222] (-) TimerEvent: {}
+[17.594487] (-) TimerEvent: {}
+[17.694812] (-) TimerEvent: {}
+[17.795199] (-) TimerEvent: {}
+[17.895680] (-) TimerEvent: {}
+[17.996116] (-) TimerEvent: {}
+[18.096481] (-) TimerEvent: {}
+[18.197223] (-) TimerEvent: {}
+[18.297664] (-) TimerEvent: {}
+[18.397970] (-) TimerEvent: {}
+[18.498304] (-) TimerEvent: {}
+[18.599001] (-) TimerEvent: {}
+[18.700400] (-) TimerEvent: {}
+[18.800819] (-) TimerEvent: {}
+[18.901440] (-) TimerEvent: {}
+[19.001835] (-) TimerEvent: {}
+[19.102127] (-) TimerEvent: {}
+[19.202417] (-) TimerEvent: {}
+[19.302871] (-) TimerEvent: {}
+[19.403148] (-) TimerEvent: {}
+[19.503619] (-) TimerEvent: {}
+[19.603887] (-) TimerEvent: {}
+[19.704287] (-) TimerEvent: {}
+[19.804817] (-) TimerEvent: {}
+[19.905741] (-) TimerEvent: {}
+[20.006201] (-) TimerEvent: {}
+[20.106957] (-) TimerEvent: {}
+[20.207559] (-) TimerEvent: {}
+[20.308626] (-) TimerEvent: {}
+[20.409224] (-) TimerEvent: {}
+[20.509519] (-) TimerEvent: {}
+[20.609795] (-) TimerEvent: {}
+[20.710282] (-) TimerEvent: {}
+[20.811206] (-) TimerEvent: {}
+[20.911607] (-) TimerEvent: {}
+[21.012016] (-) TimerEvent: {}
+[21.112350] (-) TimerEvent: {}
+[21.212759] (-) TimerEvent: {}
+[21.313211] (-) TimerEvent: {}
+[21.413624] (-) TimerEvent: {}
+[21.514682] (-) TimerEvent: {}
+[21.615077] (-) TimerEvent: {}
+[21.715414] (-) TimerEvent: {}
+[21.815762] (-) TimerEvent: {}
+[21.916137] (-) TimerEvent: {}
+[22.016638] (-) TimerEvent: {}
+[22.117531] (-) TimerEvent: {}
+[22.217901] (-) TimerEvent: {}
+[22.318650] (-) TimerEvent: {}
+[22.419057] (-) TimerEvent: {}
+[22.519330] (-) TimerEvent: {}
+[22.619657] (-) TimerEvent: {}
+[22.720049] (-) TimerEvent: {}
+[22.820310] (-) TimerEvent: {}
+[22.920741] (-) TimerEvent: {}
+[23.021120] (-) TimerEvent: {}
+[23.121901] (-) TimerEvent: {}
+[23.222354] (-) TimerEvent: {}
+[23.322614] (-) TimerEvent: {}
+[23.422844] (-) TimerEvent: {}
+[23.523084] (-) TimerEvent: {}
+[23.623580] (-) TimerEvent: {}
+[23.724672] (-) TimerEvent: {}
+[23.825826] (-) TimerEvent: {}
+[23.926437] (-) TimerEvent: {}
+[24.026698] (-) TimerEvent: {}
+[24.126976] (-) TimerEvent: {}
+[24.227253] (-) TimerEvent: {}
+[24.327601] (-) TimerEvent: {}
+[24.427948] (-) TimerEvent: {}
+[24.528503] (-) TimerEvent: {}
+[24.628819] (-) TimerEvent: {}
+[24.729172] (-) TimerEvent: {}
+[24.829504] (-) TimerEvent: {}
+[24.929779] (-) TimerEvent: {}
+[25.030393] (-) TimerEvent: {}
+[25.130936] (-) TimerEvent: {}
+[25.231265] (-) TimerEvent: {}
+[25.331537] (-) TimerEvent: {}
+[25.431801] (-) TimerEvent: {}
+[25.532054] (-) TimerEvent: {}
+[25.632392] (-) TimerEvent: {}
+[25.732649] (-) TimerEvent: {}
+[25.833153] (-) TimerEvent: {}
+[25.933503] (-) TimerEvent: {}
+[26.033785] (-) TimerEvent: {}
+[26.134068] (-) TimerEvent: {}
+[26.234358] (-) TimerEvent: {}
+[26.334628] (-) TimerEvent: {}
+[26.434876] (-) TimerEvent: {}
+[26.535253] (-) TimerEvent: {}
+[26.635725] (-) TimerEvent: {}
+[26.736102] (-) TimerEvent: {}
+[26.836527] (-) TimerEvent: {}
+[26.936958] (-) TimerEvent: {}
+[26.969634] (sad_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable Inverse_node\x1b[0m\n'}
+[27.037163] (-) TimerEvent: {}
+[27.137748] (-) TimerEvent: {}
+[27.238977] (-) TimerEvent: {}
+[27.340214] (-) TimerEvent: {}
+[27.441970] (-) TimerEvent: {}
+[27.543053] (-) TimerEvent: {}
+[27.644528] (-) TimerEvent: {}
+[27.746337] (-) TimerEvent: {}
+[27.848175] (-) TimerEvent: {}
+[27.949671] (-) TimerEvent: {}
+[28.051399] (-) TimerEvent: {}
+[28.152707] (-) TimerEvent: {}
+[28.253423] (-) TimerEvent: {}
+[28.354908] (-) TimerEvent: {}
+[28.455918] (-) TimerEvent: {}
+[28.556634] (-) TimerEvent: {}
+[28.658212] (-) TimerEvent: {}
+[28.759435] (-) TimerEvent: {}
+[28.860770] (-) TimerEvent: {}
+[28.961824] (-) TimerEvent: {}
+[29.063084] (-) TimerEvent: {}
+[29.164334] (-) TimerEvent: {}
+[29.265562] (-) TimerEvent: {}
+[29.366564] (-) TimerEvent: {}
+[29.467747] (-) TimerEvent: {}
+[29.568811] (-) TimerEvent: {}
+[29.569622] (sad_pkg) StdoutLine: {'line': b'[100%] Built target Inverse_node\n'}
+[29.594131] (sad_pkg) CommandEnded: {'returncode': 0}
+[29.596138] (sad_pkg) JobProgress: {'identifier': 'sad_pkg', 'progress': 'install'}
+[29.596648] (sad_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gaga/sad_ws/build/sad_pkg'], 'cwd': '/home/gaga/sad_ws/build/sad_pkg', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gaga/gz_ws/install/ros_gz_sim/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gaga'), ('LC_TIME', 'ko_KR.UTF-8'), ('ROS_PACKAGE_PATH', '/home/gaga/sad_ws/install/serial/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gaga/sad_ws/install/vision_msgs/lib:/home/gaga/sad_ws/install/serial/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/gaga/.mujoco/mujoco/bin'), ('HOME', '/home/gaga'), ('OLDPWD', '/home/gaga'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1355'), ('SYSTEMD_EXEC_PID', '2103'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2749'), ('COLCON_PREFIX_PATH', '/home/gaga/sad_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gaga'), ('JOURNAL_STREAM', '8:24392'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/gaga/sad_ws/install/serial/lib/x86_64-linux-gnu/pkgconfig:/home/gaga/sad_ws/install/serial/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('MUJOCO_HOME', '/home/gaga/.mujoco/mujoco'), ('USERNAME', 'gaga'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/gaga/sad_ws/src/sad_pkg/models:/usr/share/gazebo-11/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/gaga/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/st/stm32cubeide_1.17.0/:/home/gaga/.mujoco/mujoco/bin'), ('SESSION_MANAGER', 'local/gaga:@/tmp/.ICE-unix/1805,unix/gaga:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '9eaa7195894a4037858c7a35c03579f0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GAZEBO_PATH', '/usr/share/gazebo-11'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:be339cea-61e7-44ea-908c-ad2eb4270051'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GZ_VERSION', 'fortress'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gaga/sad_ws/build/sad_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/gaga/sad_ws/install/vision_msgs/local/lib/python3.10/dist-packages:/home/gaga/sad_ws/install/q_visualizer/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go')]), 'shell': False}
+[29.615816] (sad_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.616452] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch\n'}
+[29.616816] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/rviz.launch.py\n'}
+[29.616927] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/real.launch.py\n'}
+[29.616994] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/sad.launch.py\n'}
+[29.617064] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/launch/all.launch.py\n'}
+[29.617290] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf\n'}
+[29.617358] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description\n'}
+[29.617425] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description/test.xacro\n'}
+[29.617516] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description/sad.xacro\n'}
+[29.617579] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/urdf/description/all.xacro\n'}
+[29.617660] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes\n'}
+[29.617724] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/next.stl\n'}
+[29.617796] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link3.stl\n'}
+[29.617863] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link1.stl\n'}
+[29.617927] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link5.stl\n'}
+[29.617991] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link6.stl\n'}
+[29.618059] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link7.stl\n'}
+[29.618131] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link2.stl\n'}
+[29.618199] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/mani.stl\n'}
+[29.618266] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/link4.stl\n'}
+[29.618336] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/meshes/endeffector.stl\n'}
+[29.618459] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config\n'}
+[29.618524] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install\n'}
+[29.618621] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.zsh\n'}
+[29.618689] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.bash\n'}
+[29.618792] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.ps1\n'}
+[29.618875] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.sh\n'}
+[29.618947] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/COLCON_IGNORE\n'}
+[29.619013] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/_local_setup_util_sh.py\n'}
+[29.619091] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/_local_setup_util_ps1.py\n'}
+[29.619163] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/setup.bash\n'}
+[29.619242] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.sh\n'}
+[29.619309] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/.colcon_install_layout\n'}
+[29.619392] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.ps1\n'}
+[29.619469] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/install/local_setup.zsh\n'}
+[29.619567] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/build\n'}
+[29.619642] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/build/COLCON_IGNORE\n'}
+[29.619712] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/build/.built_by\n'}
+[29.619781] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/sad_controllers.yaml\n'}
+[29.619858] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log\n'}
+[29.620049] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/latest_build\n'}
+[29.620354] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/latest\n'}
+[29.620396] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/build_2025-04-02_10-07-56\n'}
+[29.620430] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/build_2025-04-02_10-07-56/logger_all.log\n'}
+[29.620463] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/build_2025-04-02_10-07-56/events.log\n'}
+[29.620494] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/config/log/COLCON_IGNORE\n'}
+[29.620525] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/forward_node\n'}
+[29.620555] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/rrt_node\n'}
+[29.620584] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/obstacle_node\n'}
+[29.620614] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/spline_node\n'}
+[29.620643] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/map_node\n'}
+[29.620671] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/path_node\n'}
+[29.620699] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/path_test_node\n'}
+[29.620727] (sad_pkg) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/Inverse_node\n'}
+[29.633955] (sad_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/Inverse_node" to ""\n'}
+[29.634312] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/real_inverse_node\n'}
+[29.634347] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/motor_node\n'}
+[29.634378] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/calibration_node\n'}
+[29.634439] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/lib/sad_pkg/real_path_node\n'}
+[29.634555] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/ament_index/resource_index/package_run_dependencies/sad_pkg\n'}
+[29.634608] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/ament_index/resource_index/parent_prefix_path/sad_pkg\n'}
+[29.634647] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/ament_prefix_path.sh\n'}
+[29.634679] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/ament_prefix_path.dsv\n'}
+[29.634721] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/path.sh\n'}
+[29.634751] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/environment/path.dsv\n'}
+[29.634805] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.bash\n'}
+[29.634844] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.sh\n'}
+[29.634871] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.zsh\n'}
+[29.634899] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/local_setup.dsv\n'}
+[29.634934] (sad_pkg) StdoutLine: {'line': b'-- Installing: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/package.dsv\n'}
+[29.634969] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/ament_index/resource_index/packages/sad_pkg\n'}
+[29.634997] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/cmake/sad_pkgConfig.cmake\n'}
+[29.635024] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/cmake/sad_pkgConfig-version.cmake\n'}
+[29.635048] (sad_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/gaga/sad_ws/install/sad_pkg/share/sad_pkg/package.xml\n'}
+[29.641058] (sad_pkg) CommandEnded: {'returncode': 0}
+[29.657175] (sad_pkg) JobEnded: {'identifier': 'sad_pkg', 'rc': 0}
+[29.658418] (-) EventReactorShutdown: {}

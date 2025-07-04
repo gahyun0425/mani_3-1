@@ -23,42 +23,25 @@ def generate_launch_description():
     )
     use_gui = LaunchConfiguration('gui')
 
-    # RViz 실행
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        output='screen'
-    )
-
-    # obstacle_node 실행
-    obstacle_node = Node(
-        package='sad_pkg',  # 실제 패키지 이름으로 변경
-        executable='obstacle_node',
-        name='obstacle_node',
-        output='screen'
-    )
-
     # map_node 실행
     map_node = Node(
-        package='sad_pkg',  # 실제 패키지 이름으로 변경
+        package='sad_pkg', 
         executable='map_node',
         name='map_node',
         output='screen'
     )
 
-    # path_node 실행
-    path_test_node = Node(
-        package='sad_pkg',  # 실제 패키지 이름으로 변경
-        executable='path_test_node',
-        name='path_test_node',
+    # calibration_node 실행
+    calibration = Node(
+        package='sad_pkg', 
+        executable='calibration_node',
+        name='calibration_node',
         output='screen'
     )
 
-
     # path_node 실행
     path_node = Node(
-        package='sad_pkg',  # 실제 패키지 이름으로 변경
+        package='sad_pkg', 
         executable='path_node',
         name='path_node',
         output='screen'
@@ -66,7 +49,7 @@ def generate_launch_description():
 
     # Inverse_node 실행
     inverse_node = Node(
-        package='sad_pkg',  # 실제 패키지 이름으로 변경
+        package='sad_pkg', 
         executable='Inverse_node',
         name='Inverse_node',
         output='screen'
@@ -77,10 +60,8 @@ def generate_launch_description():
         gui_arg,
         
         # RViz, 장애물, 경로, 역기구학 노드 실행
-        rviz_node,
-        obstacle_node,
         map_node,
-        path_test_node,
+        calibration,
         path_node,
         inverse_node,
     ])

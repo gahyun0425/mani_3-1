@@ -1,0 +1,31 @@
+[0.017s] Invoking command in '/home/gaga/sad_ws/build/sad_pkg': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20
+[0.103s] [35m[1mConsolidate compiler generated dependencies of target real_inverse_node[0m
+[0.127s] [ 25%] [32mBuilding CXX object CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o[0m
+[0.127s] [ 79%] Built target path_node
+[0.127s] [ 87%] Built target obstacle_node
+[0.127s] [ 87%] Built target path_test_node
+[0.127s] [ 87%] Built target calibration_node
+[0.127s] [ 87%] Built target spline_node
+[0.127s] [ 87%] Built target real_path_node
+[0.127s] [ 87%] Built target rrt_node
+[0.127s] [ 87%] Built target map_node
+[0.127s] [ 87%] Built target motor_node
+[0.127s] [ 87%] Built target forward_node
+[0.141s] [ 95%] Built target real_inverse_node
+[6.284s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:273:34:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1> > ManipulatorNode::target_velocities_[m[K’
+[6.284s]   273 |     std::vector<Eigen::Vector3d> [01;31m[Ktarget_velocities_[m[K;
+[6.284s]       |                                  [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[6.284s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:243:34:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kstd::vector<Eigen::Matrix<double, 3, 1> > ManipulatorNode::target_velocities_[m[K’
+[6.284s]   243 |     std::vector<Eigen::Vector3d> [01;36m[Ktarget_velocities_[m[K;
+[6.284s]       |                                  [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[6.692s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:[m[K In member function ‘[01m[Kvoid ManipulatorNode::timerCallback()[m[K’:
+[6.692s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:403:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpos_err_norm[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.692s]   403 |         double [01;35m[Kpos_err_norm[m[K = position_error.norm();  // 위치 오차 크기 (m)
+[6.692s]       |                [01;35m[K^~~~~~~~~~~~[m[K
+[6.692s] [01m[K/home/gaga/sad_ws/src/sad_pkg/src/Inverse_node.cpp:416:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kori_err_deg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.693s]   416 |         double [01;35m[Kori_err_deg[m[K = angle_rad * (180.0 / M_PI);  // 방위 오차 (°)
+[6.693s]       |                [01;35m[K^~~~~~~~~~~[m[K
+[16.697s] gmake[2]: *** [CMakeFiles/Inverse_node.dir/build.make:76: CMakeFiles/Inverse_node.dir/src/Inverse_node.cpp.o] Error 1
+[16.697s] gmake[1]: *** [CMakeFiles/Makefile2:367: CMakeFiles/Inverse_node.dir/all] Error 2
+[16.697s] gmake: *** [Makefile:146: all] Error 2
+[16.699s] Invoked command in '/home/gaga/sad_ws/build/sad_pkg' returned '2': CMAKE_PREFIX_PATH=/home/gaga/sad_ws/install/vision_msgs:/home/gaga/sad_ws/install/q_visualizer:/opt/ros/humble:/home/gaga/sad_ws/install/serial:/home/gaga/sad_ws/install:/home/gaga/sad_ws/install/sad_pkg:/home/gaga/sad_ws/install/harvest_master:/home/gaga/sad_ws/install/mani_urdf:/home/gaga/sad_ws/install/harvest_go /usr/bin/cmake --build /home/gaga/sad_ws/build/sad_pkg -- -j20 -l20

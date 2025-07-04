@@ -47,11 +47,13 @@ add_executable(spline_node src/spline_node.cpp)
 add_executable(obstacle_node src/obstacle_node.cpp)
 add_executable(map_node src/map_node.cpp)
 add_executable(path_node src/path_node.cpp)
+add_executable(real_path_node src/path_node.cpp)
 add_executable(path_test_node src/path_test_node.cpp)
 add_executable(Inverse_node src/Inverse_node.cpp)
 add_executable(real_inverse_node src/real_inverse_node.cpp)
 add_executable(motor_node src/motor_node.cpp)
 add_executable(calibration_node src/calibration_node.cpp)
+add_executable(dynamixel_bringup src/only_dynamixel_node.cpp)
 
 ament_target_dependencies(forward_node rclcpp trajectory_msgs Eigen3 sensor_msgs)
 ament_target_dependencies(rrt_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs)
@@ -59,13 +61,13 @@ ament_target_dependencies(spline_node rclcpp geometry_msgs visualization_msgs Ei
 ament_target_dependencies(obstacle_node rclcpp std_msgs rosidl_typesupport_cpp vision_msgs)
 ament_target_dependencies(map_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs)
 ament_target_dependencies(path_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs tf2 tf2_geometry_msgs)
+ament_target_dependencies(real_path_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs tf2 tf2_geometry_msgs)
 ament_target_dependencies(path_test_node rclcpp geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs vision_msgs tf2 tf2_geometry_msgs)
 ament_target_dependencies(Inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs std_srvs)
 ament_target_dependencies(real_inverse_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
 ament_target_dependencies(motor_node rclcpp std_msgs serial dynamixel_sdk std_srvs)
 ament_target_dependencies(calibration_node rclcpp rclcpp_action control_msgs geometry_msgs std_msgs visualization_msgs Eigen3 sensor_msgs trajectory_msgs vision_msgs rosidl_default_runtime tf2 tf2_geometry_msgs)
-
-
+ament_target_dependencies(dynamixel_bringup rclcpp std_msgs serial dynamixel_sdk std_srvs)
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   set(ament_cmake_copyright_FOUND TRUE)
@@ -108,6 +110,8 @@ install(TARGETS
   real_inverse_node
   motor_node
   calibration_node
+  real_path_node
+  dynamixel_bringup
   DESTINATION lib/${PROJECT_NAME}
 )
 

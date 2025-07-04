@@ -1,0 +1,15 @@
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[Kdouble ManipulatorNode::computeOrientationError(const Quaternion&, const Quaternion&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:393:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdot[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  393 |         double [01;35m[Kdot[m[K = q_current.w * q_target.w + q_current.x * q_target.x + q_current.y * q_target.y + q_current.z * q_target.z;
+      |                [01;35m[K^~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:[m[K In member function ‘[01m[KControlOutput ManipulatorNode::computeControlOutput(const Vector3d&)[m[K’:
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:405:44:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KManipulatorNode::computeControl(Eigen::VectorXd&, const Vector3d&, double&)[m[K’
+  405 |         ControlOutput ctrl = [01;31m[KcomputeControl(estimated_q_, position_error, dt)[m[K;
+      |                              [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:457:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KControlOutput ManipulatorNode::computeControl(const VectorXd&, const Vector3d&, const Vector3d&, double)[m[K’
+  457 |     ControlOutput [01;36m[KcomputeControl[m[K(const VectorXd& current_q, const Vector3d& position_error, const Vector3d& orientation_axis_angle, double dt)
+      |                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gaga/sad_ws/src/sad_pkg/src/real_inverse_node.cpp:457:19:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+gmake[2]: *** [CMakeFiles/real_inverse_node.dir/build.make:76: CMakeFiles/real_inverse_node.dir/src/real_inverse_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:393: CMakeFiles/real_inverse_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
